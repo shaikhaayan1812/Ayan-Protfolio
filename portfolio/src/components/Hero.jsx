@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import heroImg from '../assets/hero.png';
+import heroImg from '../assets/ayan.png';
 
 export default function Hero() {
   const titleRef = useRef(null);
