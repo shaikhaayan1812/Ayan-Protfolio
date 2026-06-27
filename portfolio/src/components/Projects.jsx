@@ -18,7 +18,7 @@ export default function Projects() {
           <p className="section-subtitle">18+ projects in web development, 3D graphics, and interactive design</p>
         </div>
 
-        <div className="project-filters animate-on-scroll">
+        <div className="project-filters">
           {categories.map((cat) => (
             <button key={cat} className={`filter-btn${filter === cat ? ' active' : ''}`} onClick={() => setFilter(cat)}>
               {cat === 'all' ? 'All Projects' : cat}
