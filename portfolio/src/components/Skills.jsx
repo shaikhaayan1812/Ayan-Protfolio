@@ -40,8 +40,8 @@ export default function Skills() {
         }
         .skill-cat {
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 14px;
           padding: 28px;

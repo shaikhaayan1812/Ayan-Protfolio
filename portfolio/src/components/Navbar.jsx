@@ -67,8 +67,8 @@ export default function Navbar() {
         }
         .navbar.scrolled {
           background: rgba(13, 17, 23, 0.8);
-          backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
           box-shadow: 0 1px 0 var(--border-color);
           padding: 10px 0;
         }
@@ -169,8 +169,8 @@ export default function Navbar() {
             width: 280px;
             height: 100vh;
             background: rgba(22, 27, 34, 0.95);
-            backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
             flex-direction: column;
             padding: 80px 32px 32px;
             gap: 20px;

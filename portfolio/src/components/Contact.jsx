@@ -103,8 +103,8 @@ export default function Contact() {
           align-items: center;
           gap: 14px;
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 12px;
           padding: 18px 22px;
@@ -153,8 +153,8 @@ export default function Contact() {
           text-align: center;
           padding: 40px;
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 14px;
           position: relative;

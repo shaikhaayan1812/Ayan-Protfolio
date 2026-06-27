@@ -111,8 +111,8 @@ export default function About() {
         }
         .about-card {
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 14px;
           padding: 32px 28px;
@@ -185,8 +185,8 @@ export default function About() {
         .timeline-item:hover .tl-dot { transform: scale(1.3); }
         .tl-content {
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 12px;
           padding: 18px 22px;
@@ -213,6 +213,7 @@ export default function About() {
           padding: 2px 10px;
           border-radius: 4px;
           white-space: nowrap;
+          -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
         }
         .tl-company { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
@@ -238,8 +239,8 @@ export default function About() {
         }
         .stat-item {
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 12px;
           padding: 28px 16px;

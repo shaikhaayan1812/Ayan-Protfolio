@@ -249,8 +249,8 @@ a { text-decoration: none; color: inherit; }
 
 .glass {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
 }
 

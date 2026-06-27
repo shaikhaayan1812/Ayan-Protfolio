@@ -20,8 +20,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .navbar.scrolled {
           background: rgba(13, 17, 23, 0.8);
-          backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
           box-shadow: 0 1px 0 var(--border-color);
           padding: 10px 0;
         }
@@ -122,8 +122,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             width: 280px;
             height: 100vh;
             background: rgba(22, 27, 34, 0.95);
-            backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
             flex-direction: column;
             padding: 80px 32px 32px;
             gap: 20px;
@@ -207,6 +207,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           color: var(--accent-1);
           margin-bottom: 24px;
           animation: glow 3s infinite;
+          -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
         }
         .hero-title {
@@ -243,8 +244,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .about-card {
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 14px;
           padding: 32px 28px;
@@ -317,8 +318,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .timeline-item:hover .tl-dot { transform: scale(1.3); }
         .tl-content {
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 12px;
           padding: 18px 22px;
@@ -345,6 +346,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           padding: 2px 10px;
           border-radius: 4px;
           white-space: nowrap;
+          -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
         }
         .tl-company { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
@@ -370,8 +372,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .stat-item {
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 12px;
           padding: 28px 16px;
@@ -460,8 +462,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .card-link { text-decoration: none; display: block; }
         .project-card {
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 14px;
           padding: 24px;
@@ -540,8 +542,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .skill-cat {
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 14px;
           padding: 28px;
@@ -614,8 +616,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           align-items: center;
           gap: 14px;
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 12px;
           padding: 18px 22px;
@@ -664,8 +666,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           text-align: center;
           padding: 40px;
           background: var(--glass-bg);
-          backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
           border: 1px solid var(--glass-border);
           border-radius: 14px;
           position: relative;

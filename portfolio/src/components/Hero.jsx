@@ -106,6 +106,7 @@ export default function Hero() {
           color: var(--accent-1);
           margin-bottom: 24px;
           animation: glow 3s infinite;
+          -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
         }
         .hero-title {
