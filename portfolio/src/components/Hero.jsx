@@ -17,53 +17,26 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero-section">
-      <div className="hero-bg">
-        <div className="hero-gradient"></div>
-        <div className="hero-grid"></div>
-      </div>
-
       <div className="hero-content">
         <div className="hero-profile">
-          <div className="hero-image-wrapper">
-            <img src={heroImg} alt="Ayan Shaikh" className="hero-image" />
-            <div className="hero-image-ring"></div>
-          </div>
+          <img src={heroImg} alt="Ayan Shaikh" className="hero-image" />
         </div>
-
-        <div className="hero-badge">
-          <span className="badge-dot"></span>
-          Full Stack Developer | Python Django | React
-        </div>
-
+        <div className="hero-badge">BCA Student | Full Stack Developer | Business Development Executive</div>
         <h1 ref={titleRef} className="hero-title">
-          Hi, I'm{' '}
-          <span className="gradient-text">Ayan Shaikh</span>
-          <br />
-          <span className="hero-title-sub">Full Stack Developer &amp; Business Development Executive</span>
+          Hi, I'm <span style={{ color: 'var(--accent-1)' }}>Ayan Shaikh</span>
         </h1>
-
         <p ref={subtitleRef} className="hero-subtitle">
-          BCA student at Lokmanya Commerce College | Full Stack course at Top Technologies (ongoing)
-          | Business Development Executive at Orah Consultancy Services.
-          Building modern web apps with Python Django, React, and more.
+          Building modern web apps with Python Django, React, and more. 
+          Currently working as Business Development Executive at Orah Consultancy Services.
         </p>
-
         <div ref={ctaRef} className="hero-cta">
-          <a href="#projects" className="btn-primary">
-            View Projects
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a href="#contact" className="btn-secondary">
-            Contact Me
+          <a href="#projects" className="btn-primary">View Projects</a>
+          <a href="#contact" className="btn-secondary">Contact Me</a>
+          <a href="../Ayan_Shaikh_Resume.pdf" download className="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
           </a>
         </div>
-      </div>
-
-      <div className="hero-scroll">
-        <div className="scroll-mouse">
-          <div className="scroll-dot"></div>
-        </div>
-        <span>Scroll</span>
       </div>
 
       <style>{`
@@ -72,228 +45,55 @@ export default function Hero() {
           display: flex;
           align-items: center;
           justify-content: center;
-          position: relative;
-          overflow: hidden;
-          padding: 120px 24px 80px;
+          padding: 100px 24px 60px;
         }
-
-        .hero-bg {
-          position: absolute;
-          inset: 0;
-          z-index: 0;
-        }
-
-        .hero-gradient {
-          position: absolute;
-          top: -50%;
-          left: -50%;
-          width: 200%;
-          height: 200%;
-          background: radial-gradient(circle at 50% 50%, rgba(108, 99, 255, 0.08) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, rgba(0, 212, 170, 0.06) 0%, transparent 40%),
-                      radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.06) 0%, transparent 40%);
-          animation: float 20s ease-in-out infinite;
-        }
-
-        .hero-grid {
-          position: absolute;
-          inset: 0;
-          background-image: 
-            linear-gradient(rgba(108, 99, 255, 0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(108, 99, 255, 0.05) 1px, transparent 1px);
-          background-size: 60px 60px;
-          mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-          -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-        }
-
         .hero-content {
-          position: relative;
-          z-index: 1;
           text-align: center;
-          max-width: 800px;
+          max-width: 700px;
         }
-
-        .hero-profile {
-          margin-bottom: 32px;
-        }
-
-        .hero-image-wrapper {
-          position: relative;
-          width: 150px;
-          height: 150px;
-          margin: 0 auto;
-        }
-
+        .hero-profile { margin-bottom: 28px; }
         .hero-image {
-          width: 150px;
-          height: 150px;
+          width: 130px;
+          height: 130px;
           border-radius: 50%;
           object-fit: cover;
-          position: relative;
-          z-index: 1;
+          border: 3px solid var(--accent-1);
+          padding: 3px;
         }
-
-        .hero-image-ring {
-          position: absolute;
-          inset: -4px;
-          border-radius: 50%;
-          background: var(--accent-gradient);
-          z-index: 0;
-          animation: rotate 4s linear infinite;
-        }
-
-        @keyframes rotate {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-
         .hero-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 8px 20px;
-          background: rgba(108, 99, 255, 0.1);
-          border: 1px solid rgba(108, 99, 255, 0.2);
-          border-radius: 50px;
-          font-size: 0.85rem;
-          color: var(--accent-2);
-          margin-bottom: 32px;
-          animation: fadeInUp 1s ease;
+          display: inline-block;
+          padding: 6px 18px;
+          background: rgba(88, 166, 255, 0.1);
+          border: 1px solid rgba(88, 166, 255, 0.2);
+          border-radius: 6px;
+          font-size: 0.8rem;
+          color: var(--accent-1);
+          margin-bottom: 24px;
         }
-
-        .badge-dot {
-          width: 8px;
-          height: 8px;
-          background: var(--accent-2);
-          border-radius: 50%;
-          animation: pulse 2s infinite;
-        }
-
         .hero-title {
           font-family: 'Space Grotesk', sans-serif;
-          font-size: clamp(2.5rem, 6vw, 4.5rem);
+          font-size: clamp(2rem, 5vw, 3.5rem);
           font-weight: 800;
-          line-height: 1.1;
-          margin-bottom: 24px;
+          margin-bottom: 16px;
           opacity: 0;
-          transition: opacity 1s ease;
+          transition: opacity 0.8s ease;
         }
-
-        .gradient-text {
-          background: var(--accent-gradient);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-        }
-
-        .hero-title-sub {
-          display: block;
-          font-size: clamp(1.2rem, 3vw, 2rem);
-          font-weight: 400;
-          color: var(--text-secondary);
-          margin-top: 8px;
-        }
-
         .hero-subtitle {
-          font-size: 1.1rem;
+          font-size: 1rem;
           color: var(--text-secondary);
-          max-width: 600px;
-          margin: 0 auto 40px;
-          line-height: 1.8;
+          max-width: 550px;
+          margin: 0 auto 32px;
+          line-height: 1.7;
           opacity: 0;
-          transition: opacity 1s ease 0.3s;
+          transition: opacity 0.8s ease 0.3s;
         }
-
         .hero-cta {
           display: flex;
-          gap: 16px;
+          gap: 12px;
           justify-content: center;
           flex-wrap: wrap;
           opacity: 0;
-          transition: opacity 1s ease 0.6s;
-        }
-
-        .btn-primary {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 14px 32px;
-          background: var(--accent-gradient);
-          color: white;
-          border-radius: 50px;
-          font-weight: 600;
-          font-size: 1rem;
-          transition: all 0.3s;
-          box-shadow: 0 4px 20px rgba(108, 99, 255, 0.3);
-        }
-
-        .btn-primary:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 30px rgba(108, 99, 255, 0.5);
-        }
-
-        .btn-secondary {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 14px 32px;
-          background: transparent;
-          color: var(--text-primary);
-          border: 2px solid var(--border-color);
-          border-radius: 50px;
-          font-weight: 600;
-          font-size: 1rem;
-          transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-          border-color: var(--accent-1);
-          background: rgba(108, 99, 255, 0.1);
-          transform: translateY(-3px);
-        }
-
-        .hero-scroll {
-          position: absolute;
-          bottom: 40px;
-          left: 50%;
-          transform: translateX(-50%);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 8px;
-          color: var(--text-secondary);
-          font-size: 0.75rem;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          animation: float 3s ease-in-out infinite;
-        }
-
-        .scroll-mouse {
-          width: 24px;
-          height: 38px;
-          border: 2px solid var(--text-secondary);
-          border-radius: 12px;
-          display: flex;
-          justify-content: center;
-          padding-top: 8px;
-        }
-
-        .scroll-dot {
-          width: 3px;
-          height: 8px;
-          background: var(--accent-2);
-          border-radius: 2px;
-          animation: scrollAnim 2s infinite;
-        }
-
-        @keyframes scrollAnim {
-          0% { opacity: 1; transform: translateY(0); }
-          100% { opacity: 0; transform: translateY(10px); }
-        }
-
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.4; }
+          transition: opacity 0.8s ease 0.5s;
         }
       `}</style>
     </section>

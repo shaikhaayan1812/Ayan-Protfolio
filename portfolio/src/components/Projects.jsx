@@ -7,32 +7,20 @@ export default function Projects() {
   const [filter, setFilter] = useState('all');
   const ref = useScrollAnimation();
 
-  const categories = [
-    'all',
-    ...new Set(projects.map((p) => p.tech[0])),
-  ];
-
-  const filtered = filter === 'all'
-    ? projects
-    : projects.filter((p) => p.tech.includes(filter));
+  const categories = ['all', ...new Set(projects.map((p) => p.tech[0]))];
+  const filtered = filter === 'all' ? projects : projects.filter((p) => p.tech.includes(filter));
 
   return (
     <section id="projects" className="section">
       <div className="container">
         <div ref={ref} className="animate-on-scroll">
-          <h2 className="section-title">My Projects</h2>
-          <p className="section-subtitle">
-            A collection of 18 projects showcasing my skills in web development, 3D graphics, and interactive design
-          </p>
+          <h2 className="section-title"><span>My Projects</span></h2>
+          <p className="section-subtitle">18+ projects in web development, 3D graphics, and interactive design</p>
         </div>
 
         <div className="project-filters animate-on-scroll">
           {categories.map((cat) => (
-            <button
-              key={cat}
-              className={`filter-btn${filter === cat ? ' active' : ''}`}
-              onClick={() => setFilter(cat)}
-            >
+            <button key={cat} className={`filter-btn${filter === cat ? ' active' : ''}`} onClick={() => setFilter(cat)}>
               {cat === 'all' ? 'All Projects' : cat}
             </button>
           ))}
@@ -49,45 +37,27 @@ export default function Projects() {
         .project-filters {
           display: flex;
           flex-wrap: wrap;
-          gap: 12px;
+          gap: 10px;
           justify-content: center;
-          margin-bottom: 48px;
+          margin-bottom: 36px;
         }
-
         .filter-btn {
-          padding: 10px 24px;
+          padding: 8px 20px;
           background: transparent;
           border: 1px solid var(--border-color);
-          border-radius: 50px;
+          border-radius: 6px;
           color: var(--text-secondary);
-          font-size: 0.9rem;
-          font-weight: 500;
+          font-size: 0.85rem;
           cursor: pointer;
           transition: all 0.3s;
           font-family: 'Inter', sans-serif;
         }
-
-        .filter-btn:hover {
-          border-color: var(--accent-1);
-          color: var(--text-primary);
-        }
-
-        .filter-btn.active {
-          background: var(--accent-gradient);
-          border-color: transparent;
-          color: white;
-        }
-
+        .filter-btn:hover { border-color: var(--accent-1); color: var(--text-primary); }
+        .filter-btn.active { background: var(--accent-1); border-color: var(--accent-1); color: white; }
         .projects-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-          gap: 24px;
-        }
-
-        @media (max-width: 768px) {
-          .projects-grid {
-            grid-template-columns: 1fr;
-          }
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          gap: 20px;
         }
       `}</style>
     </section>
@@ -99,111 +69,71 @@ function ProjectCard({ project, index }) {
   const relPath = `../${project.folder}`;
 
   return (
-    <Link to={`/project/${project.id}`} className="project-card-link">
-      <div ref={cardRef} className="project-card animate-scale" style={{ transitionDelay: `${(index % 6) * 0.1}s` }}>
-        <div className="project-card-top" style={{ '--card-color': project.color }}>
-          <div className="project-folder-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+    <Link to={`/project/${project.id}`} className="card-link">
+      <div ref={cardRef} className="project-card" style={{ transitionDelay: `${(index % 6) * 0.08}s` }}>
+        <div className="p-card-top" style={{ '--card-clr': project.color }}>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={project.color} strokeWidth="1.5">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+          </svg>
+          <a href={relPath} target="_blank" className="p-ext-link" onClick={(e) => e.stopPropagation()} title="Open project">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
             </svg>
-          </div>
-          <div className="project-links" onClick={(e) => e.stopPropagation()}>
-            <a href={relPath} target="_blank" className="project-link" title="Open project">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-            </a>
-          </div>
+          </a>
         </div>
-
-        <h3 className="project-title">{project.title}</h3>
-        <p className="project-desc">{project.description}</p>
-
-        <div className="project-tech">
-          {project.tech.map((t) => (
-            <span key={t} className="tech-tag">{t}</span>
-          ))}
+        <h3 className="p-title">{project.title}</h3>
+        <p className="p-desc">{project.description}</p>
+        <div className="p-tech">
+          {project.tech.map((t) => <span key={t} className="p-tag">{t}</span>)}
         </div>
       </div>
 
       <style>{`
-        .project-card-link {
-          text-decoration: none;
-          display: block;
-        }
+        .card-link { text-decoration: none; display: block; }
         .project-card {
           background: var(--bg-card);
           border: 1px solid var(--border-color);
-          border-radius: 16px;
-          padding: 28px;
-          display: flex;
-          flex-direction: column;
-          transition: all 0.4s ease;
+          border-radius: 10px;
+          padding: 24px;
+          transition: all 0.3s;
           cursor: pointer;
+          height: 100%;
         }
-
         .project-card:hover {
-          transform: translateY(-8px);
-          border-color: var(--card-color, var(--accent-1));
-          box-shadow: 0 12px 40px rgba(108, 99, 255, 0.12);
+          transform: translateY(-4px);
+          border-color: var(--card-clr, var(--accent-1));
+          box-shadow: 0 8px 24px rgba(0,0,0,0.2);
         }
-
-        .project-card-top {
+        .p-card-top {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
-          margin-bottom: 20px;
+          margin-bottom: 16px;
         }
-
-        .project-folder-icon {
-          color: var(--card-color, var(--accent-1));
-        }
-
-        .project-links {
-          display: flex;
-          gap: 12px;
-        }
-
-        .project-link {
-          color: var(--text-secondary);
-          transition: color 0.3s, transform 0.3s;
-        }
-
-        .project-link:hover {
-          color: var(--card-color, var(--accent-1));
-          transform: translateY(-2px);
-        }
-
-        .project-title {
+        .p-ext-link { color: var(--text-secondary); transition: color 0.3s; }
+        .p-ext-link:hover { color: var(--card-clr, var(--accent-1)); }
+        .p-title {
           font-family: 'Space Grotesk', sans-serif;
-          font-size: 1.2rem;
+          font-size: 1.05rem;
           font-weight: 600;
-          margin-bottom: 12px;
+          margin-bottom: 10px;
           color: var(--text-primary);
         }
-
-        .project-desc {
+        .p-desc {
           color: var(--text-secondary);
-          font-size: 0.9rem;
-          line-height: 1.7;
+          font-size: 0.85rem;
+          line-height: 1.6;
           flex-grow: 1;
-          margin-bottom: 20px;
+          margin-bottom: 16px;
         }
-
-        .project-tech {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-        }
-
-        .tech-tag {
-          padding: 4px 12px;
-          background: rgba(108, 99, 255, 0.1);
-          border: 1px solid rgba(108, 99, 255, 0.15);
-          border-radius: 50px;
-          font-size: 0.75rem;
-          color: var(--accent-2);
-          font-weight: 500;
+        .p-tech { display: flex; flex-wrap: wrap; gap: 6px; }
+        .p-tag {
+          padding: 3px 10px;
+          background: rgba(88, 166, 255, 0.08);
+          border: 1px solid rgba(88, 166, 255, 0.12);
+          border-radius: 4px;
+          font-size: 0.7rem;
+          color: var(--accent-1);
         }
       `}</style>
     </Link>

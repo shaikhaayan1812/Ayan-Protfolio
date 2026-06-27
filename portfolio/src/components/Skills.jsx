@@ -1,26 +1,10 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const skillCategories = [
-  {
-    title: 'Backend',
-    skills: ['Python', 'Django', 'REST APIs', 'SQL'],
-    color: '#6c63ff',
-  },
-  {
-    title: 'Frontend',
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap 5'],
-    color: '#00d4aa',
-  },
-  {
-    title: '3D & Graphics',
-    skills: ['Three.js', 'WebGL', 'OBJLoader', 'PBR Materials', '3D Animation'],
-    color: '#ff6b9d',
-  },
-  {
-    title: 'Tools & Skills',
-    skills: ['VS Code', 'Git', 'Vite', 'Communication', 'Negotiation'],
-    color: '#ff9f43',
-  },
+  { title: 'Backend', skills: ['Python', 'Django', 'REST APIs', 'SQL'], color: '#58a6ff' },
+  { title: 'Frontend', skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap 5'], color: '#3fb950' },
+  { title: '3D & Graphics', skills: ['Three.js', 'WebGL', 'OBJLoader', 'PBR Materials', '3D Animation'], color: '#f0883e' },
+  { title: 'Tools & Skills', skills: ['VS Code', 'Git', 'Vite', 'Communication', 'Negotiation'], color: '#bc8cff' },
 ];
 
 export default function Skills() {
@@ -30,34 +14,17 @@ export default function Skills() {
     <section id="skills" className="section">
       <div className="container">
         <div ref={ref} className="animate-on-scroll">
-          <h2 className="section-title">Skills & Technologies</h2>
-          <p className="section-subtitle">
-            Technologies and tools I use to bring ideas to life
-          </p>
+          <h2 className="section-title"><span>Skills & Technologies</span></h2>
+          <p className="section-subtitle">Technologies and tools I use to bring ideas to life</p>
         </div>
 
         <div className="skills-grid">
           {skillCategories.map((cat, i) => (
-            <div
-              key={cat.title}
-              className="skill-category animate-scale"
-              style={{ transitionDelay: `${i * 0.15}s`, '--cat-color': cat.color }}
-            >
-              <h3 className="skill-cat-title">{cat.title}</h3>
-              <div className="skill-items">
+            <div key={cat.title} className="skill-cat" style={{ transitionDelay: `${i * 0.1}s`, '--cat-clr': cat.color }}>
+              <h3 className="sc-title">{cat.title}</h3>
+              <div className="sc-skills">
                 {cat.skills.map((skill) => (
-                  <div key={skill} className="skill-item">
-                    <div className="skill-bar-bg">
-                      <div
-                        className="skill-bar-fill"
-                        style={{
-                          width: `${85 + Math.random() * 15}%`,
-                          background: `var(--cat-color, var(--accent-gradient))`,
-                        }}
-                      ></div>
-                    </div>
-                    <span className="skill-name">{skill}</span>
-                  </div>
+                  <span key={skill} className="sc-tag">{skill}</span>
                 ))}
               </div>
             </div>
@@ -69,76 +36,46 @@ export default function Skills() {
         .skills-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 24px;
+          gap: 20px;
         }
-
-        .skill-category {
+        .skill-cat {
           background: var(--bg-card);
           border: 1px solid var(--border-color);
-          border-radius: 16px;
-          padding: 32px;
-          transition: all 0.4s ease;
+          border-radius: 10px;
+          padding: 28px;
+          transition: all 0.3s;
         }
-
-        .skill-category:hover {
-          border-color: var(--cat-color, var(--accent-1));
-          box-shadow: 0 12px 40px rgba(108, 99, 255, 0.1);
+        .skill-cat:hover {
+          border-color: var(--cat-clr, var(--accent-1));
           transform: translateY(-4px);
         }
-
-        .skill-cat-title {
+        .sc-title {
           font-family: 'Space Grotesk', sans-serif;
-          font-size: 1.3rem;
+          font-size: 1.1rem;
           font-weight: 600;
-          margin-bottom: 24px;
-          color: var(--cat-color, var(--accent-1));
+          margin-bottom: 20px;
+          color: var(--cat-clr, var(--accent-1));
         }
-
-        .skill-items {
+        .sc-skills {
           display: flex;
-          flex-direction: column;
-          gap: 16px;
+          flex-wrap: wrap;
+          gap: 10px;
         }
-
-        .skill-item {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-        }
-
-        .skill-bar-bg {
-          flex: 1;
-          height: 8px;
-          background: rgba(255, 255, 255, 0.06);
-          border-radius: 4px;
-          overflow: hidden;
-        }
-
-        .skill-bar-fill {
-          height: 100%;
-          border-radius: 4px;
-          transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .skill-category.animate-scale.visible .skill-bar-fill {
-          animation: skillFill 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        @keyframes skillFill {
-          from { width: 0 !important; }
-        }
-
-        .skill-name {
-          font-size: 0.9rem;
+        .sc-tag {
+          padding: 6px 16px;
+          background: rgba(88, 166, 255, 0.06);
+          border: 1px solid var(--border-color);
+          border-radius: 6px;
+          font-size: 0.85rem;
           color: var(--text-secondary);
-          min-width: 100px;
-          font-weight: 500;
+          transition: all 0.3s;
         }
-
+        .sc-tag:hover {
+          border-color: var(--cat-clr, var(--accent-1));
+          color: var(--text-primary);
+        }
         @media (max-width: 768px) {
-          .skills-grid {
-            grid-template-columns: 1fr;
-          }
+          .skills-grid { grid-template-columns: 1fr; }
         }
       `}</style>
     </section>

@@ -1,5 +1,4 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import topTechLogo from '../assets/topdownload.png';
 
 export default function About() {
   const ref = useScrollAnimation();
@@ -8,322 +7,210 @@ export default function About() {
     <section id="about" className="section">
       <div className="container">
         <div ref={ref} className="animate-on-scroll">
-          <h2 className="section-title">About Me</h2>
-          <p className="section-subtitle">
-            BCA Student | Full Stack Developer | Business Development Executive
-          </p>
+          <h2 className="section-title"><span>About Me</span></h2>
+          <p className="section-subtitle">BCA Student | Full Stack Developer | Business Development Executive</p>
         </div>
 
-        <div className="about-grid">
-          <div className="about-card animate-on-scroll-left">
+        <div className="about-cards">
+          <div className="about-card animate-on-scroll">
             <div className="about-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6c63ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-              </svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-1)" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
             <h3>Who I Am</h3>
-            <p>
-              I'm Ayan Shaikh, a BCA student at Lokmanya Commerce College and a Full Stack
-              Developer course student at Top Technologies (ongoing). I work as a Business
-              Development Executive at Orah Consultancy Services and have completed an
-              internship at Patel Solutions.
-            </p>
+            <p>I'm Ayan Shaikh, a BCA student at Lokmanya Commerce College and a Full Stack Developer course student at Top Technologies (ongoing). I work as a Business Development Executive at Orah Consultancy Services and have completed an internship at Patel Solutions.</p>
           </div>
-
-          <div className="about-card animate-scale" style={{ transitionDelay: '0.2s' }}>
+          <div className="about-card animate-on-scroll">
             <div className="about-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-              </svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
             <h3>What I Do</h3>
-            <p>
-              I build modern web applications using Python Django, React, HTML/CSS, and
-              JavaScript. I'm also skilled in communication and negotiation through my
-              current role at Orah Consultancy Services.
-            </p>
+            <p>I build modern web applications using Python Django, React, HTML/CSS, and JavaScript. I'm also skilled in communication and negotiation through my current role at Orah Consultancy Services.</p>
           </div>
-
-          <div className="about-card animate-on-scroll-right">
+          <div className="about-card animate-on-scroll">
             <div className="about-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff6b9d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-              </svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-3)" strokeWidth="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
             </div>
             <h3>My Journey</h3>
-            <p>
-              Started with HTML & CSS, then progressed to JavaScript, Python Django,
-              React, and Three.js. With 18+ completed projects and professional experience
-              in both development and business development, I bring a unique blend of
-              technical and soft skills.
-            </p>
+            <p>Started with HTML & CSS, then progressed to JavaScript, Python Django, React, and Three.js. With 18+ completed projects and professional experience in both development and business development, I bring a unique blend of technical and soft skills.</p>
           </div>
         </div>
 
-        <div className="experience-section animate-on-scroll">
-          <h3 className="section-subtitle" style={{ fontSize: '1.5rem', marginBottom: '32px', textAlign: 'center' }}>
-            Experience & Education
-          </h3>
-
+        <div className="timeline-section animate-on-scroll">
+          <h3 style={{ fontFamily: 'Space Grotesk', fontSize: '1.4rem', marginBottom: '32px', textAlign: 'center', color: 'var(--text-primary)' }}>Experience & Education</h3>
           <div className="timeline">
             <div className="timeline-item">
-              <div className="timeline-dot" style={{ background: '#6c63ff' }}></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
+              <div className="tl-dot" style={{ background: 'var(--accent-1)' }}></div>
+              <div className="tl-content">
+                <div className="tl-top">
                   <h4>Business Development Executive</h4>
-                  <span className="timeline-date">Nov 2025 - Present</span>
+                  <span className="tl-date">Nov 2025 - Present</span>
                 </div>
-                <p className="timeline-company">Orah Consultancy Services · Full-time · On-site</p>
-                <p className="timeline-desc">Communication and Negotiation</p>
+                <p className="tl-company">Orah Consultancy Services · Full-time · On-site</p>
+                <p className="tl-desc">Communication and Negotiation</p>
               </div>
             </div>
-
             <div className="timeline-item">
-              <div className="timeline-dot" style={{ background: '#00d4aa' }}></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
+              <div className="tl-dot" style={{ background: 'var(--accent-2)' }}></div>
+              <div className="tl-content">
+                <div className="tl-top">
                   <h4>Python Django Intern</h4>
-                  <span className="timeline-date">Dec 2025 - Jan 2026</span>
+                  <span className="tl-date">Dec 2025 - Jan 2026</span>
                 </div>
-                <p className="timeline-company">Patel Solutions - The Perfect Web Solutions · Internship · On-site</p>
-                <p className="timeline-desc">Python with Django, CSS, and related technologies</p>
+                <p className="tl-company">Patel Solutions - The Perfect Web Solutions · Internship · On-site</p>
+                <p className="tl-desc">Python with Django, CSS, and related technologies</p>
               </div>
             </div>
-
             <div className="timeline-item">
-              <div className="timeline-dot" style={{ background: '#ff6b9d' }}></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
+              <div className="tl-dot" style={{ background: 'var(--accent-3)' }}></div>
+              <div className="tl-content">
+                <div className="tl-top">
                   <h4>Full Stack Course (Ongoing)</h4>
-                  <span className="timeline-date">2026 - Present</span>
+                  <span className="tl-date">2026 - Present</span>
                 </div>
-                <p className="timeline-company">
-                  <img src={topTechLogo} alt="Top Technologies" className="company-logo" />
-                  Top Technologies
-                </p>
-                <p className="timeline-desc">Currently learning current top technologies in full stack development</p>
+                <p className="tl-company">Top Technologies</p>
+                <p className="tl-desc">Currently learning current top technologies in full stack development</p>
               </div>
             </div>
-
             <div className="timeline-item">
-              <div className="timeline-dot" style={{ background: '#ff9f43' }}></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
+              <div className="tl-dot" style={{ background: 'var(--accent-4)' }}></div>
+              <div className="tl-content">
+                <div className="tl-top">
                   <h4>Bachelor of Computer Applications (BCA)</h4>
-                  <span className="timeline-date">Jul 2023 - Feb 2026</span>
+                  <span className="tl-date">Jul 2023 - Feb 2026</span>
                 </div>
-                <p className="timeline-company">Lokmanya Commerce College</p>
-                <p className="timeline-desc">Grade: B</p>
+                <p className="tl-company">Lokmanya Commerce College</p>
+                <p className="tl-desc">Grade: B</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="stats-grid animate-on-scroll">
-          <div className="stat-item">
-            <span className="stat-number">18+</span>
-            <span className="stat-label">Projects</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">10+</span>
-            <span className="stat-label">Technologies</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">2</span>
-            <span className="stat-label">Work Experiences</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">100%</span>
-            <span className="stat-label">Passion</span>
-          </div>
+          <div className="stat-item"><span className="stat-num">18+</span><span className="stat-lbl">Projects</span></div>
+          <div className="stat-item"><span className="stat-num">10+</span><span className="stat-lbl">Technologies</span></div>
+          <div className="stat-item"><span className="stat-num">2</span><span className="stat-lbl">Work Experiences</span></div>
+          <div className="stat-item"><span className="stat-num">100%</span><span className="stat-lbl">Passion</span></div>
         </div>
       </div>
 
       <style>{`
-        .about-grid {
+        .about-cards {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 24px;
+          gap: 20px;
           margin-bottom: 60px;
         }
-
         .about-card {
           background: var(--bg-card);
           border: 1px solid var(--border-color);
-          border-radius: 16px;
-          padding: 32px;
-          transition: all 0.4s ease;
+          border-radius: 10px;
+          padding: 28px;
+          transition: all 0.3s;
         }
-
         .about-card:hover {
-          transform: translateY(-8px);
           border-color: var(--accent-1);
-          box-shadow: 0 12px 40px rgba(108, 99, 255, 0.15);
+          transform: translateY(-4px);
         }
-
-        .about-icon {
-          font-size: 2.5rem;
-          margin-bottom: 16px;
-        }
-
+        .about-icon { margin-bottom: 14px; }
         .about-card h3 {
           font-family: 'Space Grotesk', sans-serif;
-          font-size: 1.3rem;
-          margin-bottom: 12px;
+          font-size: 1.1rem;
+          margin-bottom: 10px;
           color: var(--text-primary);
         }
-
         .about-card p {
           color: var(--text-secondary);
           line-height: 1.7;
-          font-size: 0.95rem;
+          font-size: 0.9rem;
         }
-
-        .experience-section {
-          margin-bottom: 60px;
-        }
-
+        .timeline-section { margin-bottom: 60px; }
         .timeline {
           position: relative;
-          max-width: 700px;
+          max-width: 650px;
           margin: 0 auto;
-          padding-left: 32px;
+          padding-left: 28px;
         }
-
         .timeline::before {
           content: '';
           position: absolute;
-          left: 8px;
+          left: 6px;
           top: 0;
           bottom: 0;
           width: 2px;
           background: var(--border-color);
         }
-
-        .timeline-item {
-          position: relative;
-          margin-bottom: 32px;
-        }
-
-        .timeline-dot {
+        .timeline-item { position: relative; margin-bottom: 24px; }
+        .tl-dot {
           position: absolute;
-          left: -24px;
+          left: -22px;
           top: 4px;
-          width: 12px;
-          height: 12px;
+          width: 10px;
+          height: 10px;
           border-radius: 50%;
           border: 2px solid var(--bg-primary);
           z-index: 1;
         }
-
-        .timeline-content {
+        .tl-content {
           background: var(--bg-card);
           border: 1px solid var(--border-color);
-          border-radius: 12px;
-          padding: 20px 24px;
+          border-radius: 10px;
+          padding: 18px 22px;
           transition: all 0.3s;
         }
-
-        .timeline-content:hover {
+        .tl-content:hover {
           border-color: var(--accent-1);
-          transform: translateX(8px);
+          transform: translateX(6px);
         }
-
-        .timeline-header {
+        .tl-top {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
           flex-wrap: wrap;
-          gap: 8px;
-          margin-bottom: 6px;
+          gap: 6px;
+          margin-bottom: 4px;
         }
-
-        .timeline-header h4 {
-          font-family: 'Space Grotesk', sans-serif;
-          font-size: 1.1rem;
-          color: var(--text-primary);
-        }
-
-        .timeline-date {
-          font-size: 0.8rem;
-          color: var(--accent-2);
-          background: rgba(108, 99, 255, 0.1);
-          padding: 3px 10px;
-          border-radius: 50px;
+        .tl-top h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; color: var(--text-primary); }
+        .tl-date {
+          font-size: 0.75rem;
+          color: var(--accent-1);
+          background: rgba(88, 166, 255, 0.1);
+          padding: 2px 10px;
+          border-radius: 4px;
           white-space: nowrap;
         }
-
-        .timeline-company {
-          font-size: 0.9rem;
-          color: var(--text-secondary);
-          margin-bottom: 4px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-
-        .company-logo {
-          width: 20px;
-          height: 20px;
-          object-fit: contain;
-          border-radius: 4px;
-        }
-
-        .timeline-desc {
-          font-size: 0.85rem;
-          color: var(--text-secondary);
-          opacity: 0.8;
-        }
+        .tl-company { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
+        .tl-desc { font-size: 0.8rem; color: var(--text-secondary); opacity: 0.8; }
 
         .stats-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 24px;
-          text-align: center;
+          gap: 16px;
         }
-
         .stat-item {
           background: var(--bg-card);
           border: 1px solid var(--border-color);
-          border-radius: 16px;
-          padding: 32px 16px;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-          transition: all 0.4s ease;
+          border-radius: 10px;
+          padding: 24px 16px;
+          text-align: center;
+          transition: all 0.3s;
         }
-
-        .stat-item:hover {
-          border-color: var(--accent-1);
-          transform: scale(1.05);
-        }
-
-        .stat-number {
+        .stat-item:hover { border-color: var(--accent-1); transform: scale(1.03); }
+        .stat-num {
           font-family: 'Space Grotesk', sans-serif;
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-weight: 700;
+          display: block;
           background: var(--accent-gradient);
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
         }
-
-        .stat-label {
-          color: var(--text-secondary);
-          font-size: 0.9rem;
-          font-weight: 500;
-        }
+        .stat-lbl { color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px; display: block; }
 
         @media (max-width: 968px) {
-          .about-grid {
-            grid-template-columns: 1fr;
-          }
-          .stats-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-          .timeline-header {
-            flex-direction: column;
-          }
+          .about-cards { grid-template-columns: 1fr; }
+          .stats-grid { grid-template-columns: repeat(2, 1fr); }
+          .tl-top { flex-direction: column; }
         }
       `}</style>
     </section>

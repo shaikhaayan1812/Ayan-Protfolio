@@ -25,46 +25,30 @@ export default function Navbar() {
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-container">
         <Link to="/" className="nav-logo" onClick={() => setMenuOpen(false)}>
-          <span className="logo-bracket">&lsaquo;</span>
-          <span className="logo-text">AYAN</span>
-          <span className="logo-bracket">&rsaquo;</span>
+          <span className="logo-dev">&lt;</span>
+          <span className="logo-text">Ayan Shaikh</span>
+          <span className="logo-dev">/&gt;</span>
         </Link>
 
         <div className={`nav-links${menuOpen ? ' open' : ''}`}>
           {navItems.map((item) =>
             isHome ? (
-              <a
-                key={item.href}
-                href={item.href}
-                className="nav-link"
-                onClick={() => setMenuOpen(false)}
-              >
+              <a key={item.href} href={item.href} className="nav-link" onClick={() => setMenuOpen(false)}>
                 {item.label}
               </a>
             ) : (
-              <Link
-                key={item.href}
-                to="/"
-                className="nav-link"
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link key={item.href} to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
                 {item.label}
               </Link>
             )
           )}
+          <a href="../Ayan_Shaikh_Resume.pdf" download className="nav-resume-btn">Resume</a>
         </div>
 
-        <button
-          className={`hamburger${menuOpen ? ' open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
+        <button className={`hamburger${menuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+          <span></span><span></span><span></span>
         </button>
       </div>
-
       {menuOpen && <div className="nav-overlay" onClick={() => setMenuOpen(false)} />}
 
       <style>{`
@@ -74,17 +58,14 @@ export default function Navbar() {
           left: 0;
           right: 0;
           z-index: 1000;
-          padding: 20px 0;
-          transition: all 0.4s ease;
+          padding: 16px 0;
+          transition: all 0.3s ease;
         }
-
         .navbar.scrolled {
-          background: rgba(10, 10, 15, 0.95);
-          backdrop-filter: blur(20px);
-          padding: 12px 0;
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+          background: rgba(13, 17, 23, 0.95);
+          backdrop-filter: blur(12px);
+          box-shadow: 0 1px 0 var(--border-color);
         }
-
         .nav-container {
           max-width: 1200px;
           margin: 0 auto;
@@ -93,70 +74,31 @@ export default function Navbar() {
           align-items: center;
           justify-content: space-between;
         }
-
         .nav-logo {
           display: flex;
           align-items: center;
-          gap: 2px;
+          gap: 4px;
           font-family: 'Space Grotesk', sans-serif;
-          font-size: 1.6rem;
-          font-weight: 800;
-          text-decoration: none;
-          letter-spacing: 2px;
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: var(--text-primary);
         }
-
-        .logo-bracket {
-          color: var(--accent-2);
+        .logo-dev {
+          color: var(--accent-1);
           font-weight: 300;
-          font-size: 1.8rem;
-          opacity: 0.8;
-          transition: opacity 0.3s;
         }
-
-        .nav-logo:hover .logo-bracket {
-          opacity: 1;
-        }
-
-        .logo-text {
-          background: var(--accent-gradient);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          position: relative;
-        }
-
-        .logo-text::after {
-          content: '';
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: var(--accent-gradient);
-          transform: scaleX(0);
-          transform-origin: right;
-          transition: transform 0.4s ease;
-        }
-
-        .nav-logo:hover .logo-text::after {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-
         .nav-links {
           display: flex;
-          gap: 32px;
+          gap: 24px;
           align-items: center;
         }
-
         .nav-link {
           color: var(--text-secondary);
-          font-size: 0.95rem;
+          font-size: 0.9rem;
           font-weight: 500;
           transition: color 0.3s;
           position: relative;
         }
-
         .nav-link::after {
           content: '';
           position: absolute;
@@ -164,18 +106,24 @@ export default function Navbar() {
           left: 0;
           width: 0;
           height: 2px;
-          background: var(--accent-gradient);
+          background: var(--accent-1);
           transition: width 0.3s;
         }
-
-        .nav-link:hover {
-          color: var(--text-primary);
+        .nav-link:hover { color: var(--text-primary); }
+        .nav-link:hover::after { width: 100%; }
+        .nav-resume-btn {
+          padding: 8px 20px;
+          background: var(--accent-1);
+          color: white;
+          border-radius: 6px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          transition: all 0.3s;
         }
-
-        .nav-link:hover::after {
-          width: 100%;
+        .nav-resume-btn:hover {
+          background: #4c96e8;
+          transform: translateY(-1px);
         }
-
         .hamburger {
           display: none;
           flex-direction: column;
@@ -186,65 +134,37 @@ export default function Navbar() {
           padding: 4px;
           z-index: 1001;
         }
-
         .hamburger span {
           display: block;
-          width: 24px;
+          width: 22px;
           height: 2px;
           background: var(--text-primary);
           transition: all 0.3s;
           border-radius: 2px;
         }
-
-        .hamburger.open span:nth-child(1) {
-          transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .hamburger.open span:nth-child(2) {
-          opacity: 0;
-        }
-
-        .hamburger.open span:nth-child(3) {
-          transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        .nav-overlay {
-          display: none;
-        }
-
+        .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
         @media (max-width: 768px) {
           .nav-links {
             position: fixed;
             top: 0;
             right: -100%;
-            width: 280px;
+            width: 260px;
             height: 100vh;
             background: var(--bg-secondary);
             flex-direction: column;
-            padding: 100px 40px 40px;
-            gap: 24px;
-            transition: right 0.4s ease;
+            padding: 80px 32px 32px;
+            gap: 20px;
+            transition: right 0.3s ease;
             z-index: 999;
-            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
           }
-
-          .nav-links.open {
-            right: 0;
-          }
-
-          .hamburger {
-            display: flex;
-          }
-
-          .nav-link {
-            font-size: 1.1rem;
-          }
-
+          .nav-links.open { right: 0; }
+          .hamburger { display: flex; }
           .nav-overlay {
-            display: block;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0,0,0,0.5);
             z-index: 998;
           }
         }
