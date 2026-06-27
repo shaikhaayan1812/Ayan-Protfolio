@@ -1,4 +1,8 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import orahLogo from '../assets/orah.png';
+import patelLogo from '../assets/patel-logo.png';
+import topLogo from '../assets/topdownload.png';
+import collegLogo from '../assets/colleg.png';
 
 export default function About() {
   const ref = useScrollAnimation();
@@ -47,6 +51,7 @@ export default function About() {
                 </div>
                 <p className="tl-company">Orah Consultancy Services · Full-time · On-site</p>
                 <p className="tl-desc">Communication and Negotiation</p>
+                <img src={orahLogo} alt="Orah" className="tl-logo" />
               </div>
             </div>
             <div className="timeline-item">
@@ -58,6 +63,7 @@ export default function About() {
                 </div>
                 <p className="tl-company">Patel Solutions - The Perfect Web Solutions · Internship · On-site</p>
                 <p className="tl-desc">Python with Django, CSS, and related technologies</p>
+                <img src={patelLogo} alt="Patel Solutions" className="tl-logo" />
               </div>
             </div>
             <div className="timeline-item">
@@ -69,6 +75,7 @@ export default function About() {
                 </div>
                 <p className="tl-company">Top Technologies</p>
                 <p className="tl-desc">Currently learning current top technologies in full stack development</p>
+                <img src={topLogo} alt="Top Technologies" className="tl-logo" />
               </div>
             </div>
             <div className="timeline-item">
@@ -80,12 +87,14 @@ export default function About() {
                 </div>
                 <p className="tl-company">Lokmanya Commerce College</p>
                 <p className="tl-desc">Grade: B</p>
+                <img src={collegLogo} alt="Lokmanya Commerce College" className="tl-logo" />
               </div>
             </div>
           </div>
         </div>
 
         <div className="stats-grid">
+          <div className="stat-item"><span className="stat-num">1</span><span className="stat-lbl">Year Experience</span></div>
           <div className="stat-item"><span className="stat-num">18+</span><span className="stat-lbl">Projects</span></div>
           <div className="stat-item"><span className="stat-num">10+</span><span className="stat-lbl">Technologies</span></div>
           <div className="stat-item"><span className="stat-num">2</span><span className="stat-lbl">Work Experiences</span></div>
@@ -180,10 +189,11 @@ export default function About() {
         }
         .tl-company { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
         .tl-desc { font-size: 0.8rem; color: var(--text-secondary); opacity: 0.8; }
+        .tl-logo { height: 28px; margin-top: 10px; opacity: 0.8; object-fit: contain; }
 
         .stats-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(5, 1fr);
           gap: 16px;
         }
         .stat-item {
