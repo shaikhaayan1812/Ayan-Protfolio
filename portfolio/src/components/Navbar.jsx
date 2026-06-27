@@ -62,13 +62,15 @@ export default function Navbar() {
           left: 0;
           right: 0;
           z-index: 1000;
-          padding: 16px 0;
-          transition: all 0.3s ease;
+          padding: 14px 0;
+          transition: all 0.4s ease;
         }
         .navbar.scrolled {
-          background: rgba(13, 17, 23, 0.95);
-          backdrop-filter: blur(12px);
+          background: rgba(13, 17, 23, 0.8);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           box-shadow: 0 1px 0 var(--border-color);
+          padding: 10px 0;
         }
         .nav-container {
           max-width: 1200px;
@@ -86,10 +88,13 @@ export default function Navbar() {
           font-size: 1.2rem;
           font-weight: 700;
           color: var(--text-primary);
+          transition: all 0.3s;
         }
+        .nav-logo:hover { transform: scale(1.02); }
         .logo-dev {
           color: var(--accent-1);
           font-weight: 300;
+          animation: pulse 2s infinite;
         }
         .nav-links {
           display: flex;
@@ -100,33 +105,40 @@ export default function Navbar() {
           color: var(--text-secondary);
           font-size: 0.9rem;
           font-weight: 500;
-          transition: color 0.3s;
+          transition: all 0.3s;
           position: relative;
+          padding: 4px 0;
         }
         .nav-link::after {
           content: '';
           position: absolute;
-          bottom: -4px;
+          bottom: -2px;
           left: 0;
           width: 0;
           height: 2px;
-          background: var(--accent-1);
-          transition: width 0.3s;
+          background: var(--accent-gradient);
+          transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+          border-radius: 1px;
         }
-        .nav-link:hover { color: var(--text-primary); }
+        .nav-link:hover {
+          color: var(--text-primary);
+          transform: translateY(-1px);
+        }
         .nav-link:hover::after { width: 100%; }
         .nav-resume-btn {
           padding: 8px 20px;
-          background: var(--accent-1);
+          background: linear-gradient(135deg, var(--accent-1), #4c96e8);
           color: white;
           border-radius: 6px;
           font-size: 0.85rem;
           font-weight: 600;
           transition: all 0.3s;
+          position: relative;
+          overflow: hidden;
         }
         .nav-resume-btn:hover {
-          background: #4c96e8;
-          transform: translateY(-1px);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 16px rgba(88, 166, 255, 0.35);
         }
         .hamburger {
           display: none;
@@ -143,24 +155,26 @@ export default function Navbar() {
           width: 22px;
           height: 2px;
           background: var(--text-primary);
-          transition: all 0.3s;
+          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
           border-radius: 2px;
         }
         .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
         .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
         @media (max-width: 768px) {
           .nav-links {
             position: fixed;
             top: 0;
             right: -100%;
-            width: 260px;
+            width: 280px;
             height: 100vh;
-            background: var(--bg-secondary);
+            background: rgba(22, 27, 34, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             flex-direction: column;
             padding: 80px 32px 32px;
             gap: 20px;
-            transition: right 0.3s ease;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 999;
           }
           .nav-links.open { right: 0; }
@@ -170,6 +184,7 @@ export default function Navbar() {
             inset: 0;
             background: rgba(0,0,0,0.5);
             z-index: 998;
+            animation: fadeIn 0.3s ease;
           }
         }
       `}</style>

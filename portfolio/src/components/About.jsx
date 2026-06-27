@@ -110,17 +110,37 @@ export default function About() {
           margin-bottom: 60px;
         }
         .about-card {
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
-          padding: 28px;
-          transition: all 0.3s;
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 14px;
+          padding: 32px 28px;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .about-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var(--accent-1), transparent);
+          opacity: 0;
+          transition: opacity 0.4s;
         }
         .about-card:hover {
-          border-color: var(--accent-1);
-          transform: translateY(-4px);
+          border-color: rgba(88, 166, 255, 0.3);
+          transform: translateY(-8px);
+          box-shadow: 0 12px 40px rgba(88, 166, 255, 0.1);
         }
-        .about-icon { margin-bottom: 14px; }
+        .about-card:hover::before { opacity: 1; }
+        .about-card:nth-child(2)::before { background: linear-gradient(90deg, transparent, var(--accent-2), transparent); }
+        .about-card:nth-child(3)::before { background: linear-gradient(90deg, transparent, var(--accent-3), transparent); }
+        .about-icon { margin-bottom: 14px; transition: transform 0.3s; }
+        .about-card:hover .about-icon { transform: scale(1.1); }
         .about-card h3 {
           font-family: 'Space Grotesk', sans-serif;
           font-size: 1.1rem;
@@ -146,29 +166,36 @@ export default function About() {
           top: 0;
           bottom: 0;
           width: 2px;
-          background: var(--border-color);
+          background: linear-gradient(180deg, var(--accent-1), var(--accent-2), var(--accent-3), var(--accent-4));
+          border-radius: 1px;
         }
         .timeline-item { position: relative; margin-bottom: 24px; }
         .tl-dot {
           position: absolute;
           left: -22px;
           top: 4px;
-          width: 10px;
-          height: 10px;
+          width: 12px;
+          height: 12px;
           border-radius: 50%;
           border: 2px solid var(--bg-primary);
           z-index: 1;
-        }
-        .tl-content {
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
-          padding: 18px 22px;
+          box-shadow: 0 0 8px var(--accent-1);
           transition: all 0.3s;
         }
+        .timeline-item:hover .tl-dot { transform: scale(1.3); }
+        .tl-content {
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 12px;
+          padding: 18px 22px;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
         .tl-content:hover {
-          border-color: var(--accent-1);
-          transform: translateX(6px);
+          border-color: rgba(88, 166, 255, 0.3);
+          transform: translateX(8px);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
         .tl-top {
           display: flex;
@@ -186,10 +213,23 @@ export default function About() {
           padding: 2px 10px;
           border-radius: 4px;
           white-space: nowrap;
+          backdrop-filter: blur(4px);
         }
         .tl-company { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
         .tl-desc { font-size: 0.8rem; color: var(--text-secondary); opacity: 0.8; }
-        .tl-logo { height: 28px; margin-top: 10px; opacity: 0.8; object-fit: contain; }
+        .tl-logo {
+          height: 28px;
+          margin-top: 10px;
+          opacity: 0.7;
+          object-fit: contain;
+          transition: all 0.3s;
+          filter: grayscale(0.5);
+        }
+        .tl-content:hover .tl-logo {
+          opacity: 1;
+          filter: grayscale(0);
+          transform: scale(1.05);
+        }
 
         .stats-grid {
           display: grid;
@@ -197,14 +237,31 @@ export default function About() {
           gap: 16px;
         }
         .stat-item {
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
-          padding: 24px 16px;
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 12px;
+          padding: 28px 16px;
           text-align: center;
-          transition: all 0.3s;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
         }
-        .stat-item:hover { border-color: var(--accent-1); transform: scale(1.03); }
+        .stat-item::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at center, rgba(88, 166, 255, 0.06), transparent 70%);
+          opacity: 0;
+          transition: opacity 0.4s;
+        }
+        .stat-item:hover {
+          border-color: rgba(88, 166, 255, 0.3);
+          transform: translateY(-6px);
+          box-shadow: 0 8px 30px rgba(88, 166, 255, 0.1);
+        }
+        .stat-item:hover::before { opacity: 1; }
         .stat-num {
           font-family: 'Space Grotesk', sans-serif;
           font-size: 2rem;
@@ -214,8 +271,17 @@ export default function About() {
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
+          position: relative;
+          z-index: 1;
         }
-        .stat-lbl { color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px; display: block; }
+        .stat-lbl {
+          color: var(--text-secondary);
+          font-size: 0.85rem;
+          margin-top: 4px;
+          display: block;
+          position: relative;
+          z-index: 1;
+        }
 
         @media (max-width: 968px) {
           .about-cards { grid-template-columns: 1fr; }

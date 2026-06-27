@@ -46,19 +46,55 @@ export default function Hero() {
           align-items: center;
           justify-content: center;
           padding: 100px 24px 60px;
+          position: relative;
+          overflow: hidden;
+        }
+        .hero-section::before {
+          content: '';
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(88, 166, 255, 0.06), transparent 70%);
+          top: -100px;
+          right: -100px;
+          animation: float 6s ease-in-out infinite;
+        }
+        .hero-section::after {
+          content: '';
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(63, 185, 80, 0.04), transparent 70%);
+          bottom: -50px;
+          left: -80px;
+          animation: float 8s ease-in-out infinite reverse;
         }
         .hero-content {
           text-align: center;
           max-width: 700px;
+          position: relative;
+          z-index: 1;
         }
-        .hero-profile { margin-bottom: 28px; }
+        .hero-profile {
+          margin-bottom: 28px;
+          animation: float 4s ease-in-out infinite;
+        }
         .hero-image {
-          width: 130px;
-          height: 130px;
+          width: 140px;
+          height: 140px;
           border-radius: 50%;
           object-fit: cover;
           border: 3px solid var(--accent-1);
           padding: 3px;
+          transition: all 0.4s;
+          box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+        }
+        .hero-image:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 40px rgba(88, 166, 255, 0.4);
+          border-color: var(--accent-2);
         }
         .hero-badge {
           display: inline-block;
@@ -69,6 +105,8 @@ export default function Hero() {
           font-size: 0.8rem;
           color: var(--accent-1);
           margin-bottom: 24px;
+          animation: glow 3s infinite;
+          backdrop-filter: blur(4px);
         }
         .hero-title {
           font-family: 'Space Grotesk', sans-serif;
@@ -76,7 +114,7 @@ export default function Hero() {
           font-weight: 800;
           margin-bottom: 16px;
           opacity: 0;
-          transition: opacity 0.8s ease;
+          transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .hero-subtitle {
           font-size: 1rem;
@@ -85,7 +123,7 @@ export default function Hero() {
           margin: 0 auto 32px;
           line-height: 1.7;
           opacity: 0;
-          transition: opacity 0.8s ease 0.3s;
+          transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
         }
         .hero-cta {
           display: flex;
@@ -93,7 +131,7 @@ export default function Hero() {
           justify-content: center;
           flex-wrap: wrap;
           opacity: 0;
-          transition: opacity 0.8s ease 0.5s;
+          transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
         }
       `}</style>
     </section>

@@ -15,13 +15,15 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           left: 0;
           right: 0;
           z-index: 1000;
-          padding: 16px 0;
-          transition: all 0.3s ease;
+          padding: 14px 0;
+          transition: all 0.4s ease;
         }
         .navbar.scrolled {
-          background: rgba(13, 17, 23, 0.95);
-          backdrop-filter: blur(12px);
+          background: rgba(13, 17, 23, 0.8);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           box-shadow: 0 1px 0 var(--border-color);
+          padding: 10px 0;
         }
         .nav-container {
           max-width: 1200px;
@@ -39,10 +41,13 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           font-size: 1.2rem;
           font-weight: 700;
           color: var(--text-primary);
+          transition: all 0.3s;
         }
+        .nav-logo:hover { transform: scale(1.02); }
         .logo-dev {
           color: var(--accent-1);
           font-weight: 300;
+          animation: pulse 2s infinite;
         }
         .nav-links {
           display: flex;
@@ -53,33 +58,40 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           color: var(--text-secondary);
           font-size: 0.9rem;
           font-weight: 500;
-          transition: color 0.3s;
+          transition: all 0.3s;
           position: relative;
+          padding: 4px 0;
         }
         .nav-link::after {
           content: '';
           position: absolute;
-          bottom: -4px;
+          bottom: -2px;
           left: 0;
           width: 0;
           height: 2px;
-          background: var(--accent-1);
-          transition: width 0.3s;
+          background: var(--accent-gradient);
+          transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+          border-radius: 1px;
         }
-        .nav-link:hover { color: var(--text-primary); }
+        .nav-link:hover {
+          color: var(--text-primary);
+          transform: translateY(-1px);
+        }
         .nav-link:hover::after { width: 100%; }
         .nav-resume-btn {
           padding: 8px 20px;
-          background: var(--accent-1);
+          background: linear-gradient(135deg, var(--accent-1), #4c96e8);
           color: white;
           border-radius: 6px;
           font-size: 0.85rem;
           font-weight: 600;
           transition: all 0.3s;
+          position: relative;
+          overflow: hidden;
         }
         .nav-resume-btn:hover {
-          background: #4c96e8;
-          transform: translateY(-1px);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 16px rgba(88, 166, 255, 0.35);
         }
         .hamburger {
           display: none;
@@ -96,24 +108,26 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           width: 22px;
           height: 2px;
           background: var(--text-primary);
-          transition: all 0.3s;
+          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
           border-radius: 2px;
         }
         .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
         .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
         @media (max-width: 768px) {
           .nav-links {
             position: fixed;
             top: 0;
             right: -100%;
-            width: 260px;
+            width: 280px;
             height: 100vh;
-            background: var(--bg-secondary);
+            background: rgba(22, 27, 34, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             flex-direction: column;
             padding: 80px 32px 32px;
             gap: 20px;
-            transition: right 0.3s ease;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 999;
           }
           .nav-links.open { right: 0; }
@@ -123,6 +137,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             inset: 0;
             background: rgba(0,0,0,0.5);
             z-index: 998;
+            animation: fadeIn 0.3s ease;
           }
         }
       `})]})}var rr=``+new URL(`ayan-BgDV7mu3.png`,import.meta.url).href;function ir(){let e=(0,x.useRef)(null),t=(0,x.useRef)(null),n=(0,x.useRef)(null);return(0,x.useEffect)(()=>{let r=setTimeout(()=>{e.current&&(e.current.style.opacity=`1`),t.current&&(t.current.style.opacity=`1`),n.current&&(n.current.style.opacity=`1`)},100);return()=>clearTimeout(r)},[]),(0,j.jsxs)(`section`,{id:`hero`,className:`hero-section`,children:[(0,j.jsxs)(`div`,{className:`hero-content`,children:[(0,j.jsx)(`div`,{className:`hero-profile`,children:(0,j.jsx)(`img`,{src:rr,alt:`Ayan Shaikh`,className:`hero-image`})}),(0,j.jsx)(`div`,{className:`hero-badge`,children:`BCA Student | Full Stack Developer | Business Development Executive`}),(0,j.jsxs)(`h1`,{ref:e,className:`hero-title`,children:[`Hi, I'm `,(0,j.jsx)(`span`,{style:{color:`var(--accent-1)`},children:`Ayan Shaikh`})]}),(0,j.jsx)(`p`,{ref:t,className:`hero-subtitle`,children:`Building modern web apps with Python Django, React, and more. Currently working as Business Development Executive at Orah Consultancy Services.`}),(0,j.jsxs)(`div`,{ref:n,className:`hero-cta`,children:[(0,j.jsx)(`a`,{href:`#projects`,className:`btn-primary`,onClick:e=>{e.preventDefault(),document.getElementById(`projects`)?.scrollIntoView({behavior:`smooth`})},children:`View Projects`}),(0,j.jsx)(`a`,{href:`#contact`,className:`btn-secondary`,onClick:e=>{e.preventDefault(),document.getElementById(`contact`)?.scrollIntoView({behavior:`smooth`})},children:`Contact Me`}),(0,j.jsxs)(`a`,{href:`../Ayan_Shaikh_Resume.pdf`,download:!0,className:`btn-secondary`,children:[(0,j.jsxs)(`svg`,{width:`16`,height:`16`,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,children:[(0,j.jsx)(`path`,{d:`M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4`}),(0,j.jsx)(`polyline`,{points:`7 10 12 15 17 10`}),(0,j.jsx)(`line`,{x1:`12`,y1:`15`,x2:`12`,y2:`3`})]}),`Download Resume`]})]})]}),(0,j.jsx)(`style`,{children:`
@@ -132,19 +147,55 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           align-items: center;
           justify-content: center;
           padding: 100px 24px 60px;
+          position: relative;
+          overflow: hidden;
+        }
+        .hero-section::before {
+          content: '';
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(88, 166, 255, 0.06), transparent 70%);
+          top: -100px;
+          right: -100px;
+          animation: float 6s ease-in-out infinite;
+        }
+        .hero-section::after {
+          content: '';
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(63, 185, 80, 0.04), transparent 70%);
+          bottom: -50px;
+          left: -80px;
+          animation: float 8s ease-in-out infinite reverse;
         }
         .hero-content {
           text-align: center;
           max-width: 700px;
+          position: relative;
+          z-index: 1;
         }
-        .hero-profile { margin-bottom: 28px; }
+        .hero-profile {
+          margin-bottom: 28px;
+          animation: float 4s ease-in-out infinite;
+        }
         .hero-image {
-          width: 130px;
-          height: 130px;
+          width: 140px;
+          height: 140px;
           border-radius: 50%;
           object-fit: cover;
           border: 3px solid var(--accent-1);
           padding: 3px;
+          transition: all 0.4s;
+          box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+        }
+        .hero-image:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 40px rgba(88, 166, 255, 0.4);
+          border-color: var(--accent-2);
         }
         .hero-badge {
           display: inline-block;
@@ -155,6 +206,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           font-size: 0.8rem;
           color: var(--accent-1);
           margin-bottom: 24px;
+          animation: glow 3s infinite;
+          backdrop-filter: blur(4px);
         }
         .hero-title {
           font-family: 'Space Grotesk', sans-serif;
@@ -162,7 +215,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           font-weight: 800;
           margin-bottom: 16px;
           opacity: 0;
-          transition: opacity 0.8s ease;
+          transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .hero-subtitle {
           font-size: 1rem;
@@ -171,7 +224,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           margin: 0 auto 32px;
           line-height: 1.7;
           opacity: 0;
-          transition: opacity 0.8s ease 0.3s;
+          transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
         }
         .hero-cta {
           display: flex;
@@ -179,7 +232,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           justify-content: center;
           flex-wrap: wrap;
           opacity: 0;
-          transition: opacity 0.8s ease 0.5s;
+          transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
         }
       `})]})}function ar(){let e=(0,x.useRef)(null);return(0,x.useEffect)(()=>{let t=e.current;if(!t)return;let n=new IntersectionObserver(([e])=>{e.isIntersecting&&t.classList.add(`visible`)},{threshold:.15});return n.observe(t),()=>n.disconnect()},[]),e}var or=``+new URL(`orah-eSkw3_Zm.png`,import.meta.url).href,sr=``+new URL(`patel-logo-aw52EC6K.png`,import.meta.url).href,cr=``+new URL(`topdownload-CfdcTM1o.png`,import.meta.url).href,lr=``+new URL(`colleg-C_O2pAgs.png`,import.meta.url).href;function ur(){return(0,j.jsxs)(`section`,{id:`about`,className:`section`,children:[(0,j.jsxs)(`div`,{className:`container`,children:[(0,j.jsxs)(`div`,{ref:ar(),className:`animate-on-scroll`,children:[(0,j.jsx)(`h2`,{className:`section-title`,children:(0,j.jsx)(`span`,{children:`About Me`})}),(0,j.jsx)(`p`,{className:`section-subtitle`,children:`BCA Student | Full Stack Developer | Business Development Executive`})]}),(0,j.jsxs)(`div`,{className:`about-cards`,children:[(0,j.jsxs)(`div`,{className:`about-card`,children:[(0,j.jsx)(`div`,{className:`about-icon`,children:(0,j.jsxs)(`svg`,{width:`24`,height:`24`,viewBox:`0 0 24 24`,fill:`none`,stroke:`var(--accent-1)`,strokeWidth:`2`,children:[(0,j.jsx)(`path`,{d:`M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2`}),(0,j.jsx)(`circle`,{cx:`12`,cy:`7`,r:`4`})]})}),(0,j.jsx)(`h3`,{children:`Who I Am`}),(0,j.jsx)(`p`,{children:`I'm Ayan Shaikh, a BCA student at Lokmanya Commerce College and a Full Stack Developer course student at Top Technologies (ongoing). I work as a Business Development Executive at Orah Consultancy Services and have completed an internship at Patel Solutions.`})]}),(0,j.jsxs)(`div`,{className:`about-card`,children:[(0,j.jsx)(`div`,{className:`about-icon`,children:(0,j.jsx)(`svg`,{width:`24`,height:`24`,viewBox:`0 0 24 24`,fill:`none`,stroke:`var(--accent-2)`,strokeWidth:`2`,children:(0,j.jsx)(`polyline`,{points:`22 12 18 12 15 21 9 3 6 12 2 12`})})}),(0,j.jsx)(`h3`,{children:`What I Do`}),(0,j.jsx)(`p`,{children:`I build modern web applications using Python Django, React, HTML/CSS, and JavaScript. I'm also skilled in communication and negotiation through my current role at Orah Consultancy Services.`})]}),(0,j.jsxs)(`div`,{className:`about-card`,children:[(0,j.jsx)(`div`,{className:`about-icon`,children:(0,j.jsxs)(`svg`,{width:`24`,height:`24`,viewBox:`0 0 24 24`,fill:`none`,stroke:`var(--accent-3)`,strokeWidth:`2`,children:[(0,j.jsx)(`rect`,{x:`3`,y:`3`,width:`7`,height:`7`}),(0,j.jsx)(`rect`,{x:`14`,y:`3`,width:`7`,height:`7`}),(0,j.jsx)(`rect`,{x:`14`,y:`14`,width:`7`,height:`7`}),(0,j.jsx)(`rect`,{x:`3`,y:`14`,width:`7`,height:`7`})]})}),(0,j.jsx)(`h3`,{children:`My Journey`}),(0,j.jsx)(`p`,{children:`Started with HTML & CSS, then progressed to JavaScript, Python Django, React, and Three.js. With 18+ completed projects and professional experience in both development and business development, I bring a unique blend of technical and soft skills.`})]})]}),(0,j.jsxs)(`div`,{className:`timeline-section`,children:[(0,j.jsx)(`h3`,{style:{fontFamily:`Space Grotesk`,fontSize:`1.4rem`,marginBottom:`32px`,textAlign:`center`,color:`var(--text-primary)`},children:`Experience & Education`}),(0,j.jsxs)(`div`,{className:`timeline`,children:[(0,j.jsxs)(`div`,{className:`timeline-item`,children:[(0,j.jsx)(`div`,{className:`tl-dot`,style:{background:`var(--accent-1)`}}),(0,j.jsxs)(`div`,{className:`tl-content`,children:[(0,j.jsxs)(`div`,{className:`tl-top`,children:[(0,j.jsx)(`h4`,{children:`Business Development Executive`}),(0,j.jsx)(`span`,{className:`tl-date`,children:`Nov 2025 - Present`})]}),(0,j.jsx)(`p`,{className:`tl-company`,children:`Orah Consultancy Services · Full-time · On-site`}),(0,j.jsx)(`p`,{className:`tl-desc`,children:`Communication and Negotiation`}),(0,j.jsx)(`img`,{src:or,alt:`Orah`,className:`tl-logo`})]})]}),(0,j.jsxs)(`div`,{className:`timeline-item`,children:[(0,j.jsx)(`div`,{className:`tl-dot`,style:{background:`var(--accent-2)`}}),(0,j.jsxs)(`div`,{className:`tl-content`,children:[(0,j.jsxs)(`div`,{className:`tl-top`,children:[(0,j.jsx)(`h4`,{children:`Python Django Intern`}),(0,j.jsx)(`span`,{className:`tl-date`,children:`Dec 2025 - Jan 2026`})]}),(0,j.jsx)(`p`,{className:`tl-company`,children:`Patel Solutions - The Perfect Web Solutions · Internship · On-site`}),(0,j.jsx)(`p`,{className:`tl-desc`,children:`Python with Django, CSS, and related technologies`}),(0,j.jsx)(`img`,{src:sr,alt:`Patel Solutions`,className:`tl-logo`})]})]}),(0,j.jsxs)(`div`,{className:`timeline-item`,children:[(0,j.jsx)(`div`,{className:`tl-dot`,style:{background:`var(--accent-3)`}}),(0,j.jsxs)(`div`,{className:`tl-content`,children:[(0,j.jsxs)(`div`,{className:`tl-top`,children:[(0,j.jsx)(`h4`,{children:`Full Stack Course (Ongoing)`}),(0,j.jsx)(`span`,{className:`tl-date`,children:`2026 - Present`})]}),(0,j.jsx)(`p`,{className:`tl-company`,children:`Top Technologies`}),(0,j.jsx)(`p`,{className:`tl-desc`,children:`Currently learning current top technologies in full stack development`}),(0,j.jsx)(`img`,{src:cr,alt:`Top Technologies`,className:`tl-logo`})]})]}),(0,j.jsxs)(`div`,{className:`timeline-item`,children:[(0,j.jsx)(`div`,{className:`tl-dot`,style:{background:`var(--accent-4)`}}),(0,j.jsxs)(`div`,{className:`tl-content`,children:[(0,j.jsxs)(`div`,{className:`tl-top`,children:[(0,j.jsx)(`h4`,{children:`Bachelor of Computer Applications (BCA)`}),(0,j.jsx)(`span`,{className:`tl-date`,children:`Jul 2023 - Feb 2026`})]}),(0,j.jsx)(`p`,{className:`tl-company`,children:`Lokmanya Commerce College`}),(0,j.jsx)(`p`,{className:`tl-desc`,children:`Grade: B`}),(0,j.jsx)(`img`,{src:lr,alt:`Lokmanya Commerce College`,className:`tl-logo`})]})]})]})]}),(0,j.jsxs)(`div`,{className:`stats-grid`,children:[(0,j.jsxs)(`div`,{className:`stat-item`,children:[(0,j.jsx)(`span`,{className:`stat-num`,children:`1`}),(0,j.jsx)(`span`,{className:`stat-lbl`,children:`Year Experience`})]}),(0,j.jsxs)(`div`,{className:`stat-item`,children:[(0,j.jsx)(`span`,{className:`stat-num`,children:`18+`}),(0,j.jsx)(`span`,{className:`stat-lbl`,children:`Projects`})]}),(0,j.jsxs)(`div`,{className:`stat-item`,children:[(0,j.jsx)(`span`,{className:`stat-num`,children:`10+`}),(0,j.jsx)(`span`,{className:`stat-lbl`,children:`Technologies`})]}),(0,j.jsxs)(`div`,{className:`stat-item`,children:[(0,j.jsx)(`span`,{className:`stat-num`,children:`2`}),(0,j.jsx)(`span`,{className:`stat-lbl`,children:`Work Experiences`})]}),(0,j.jsxs)(`div`,{className:`stat-item`,children:[(0,j.jsx)(`span`,{className:`stat-num`,children:`100%`}),(0,j.jsx)(`span`,{className:`stat-lbl`,children:`Passion`})]})]})]}),(0,j.jsx)(`style`,{children:`
         .about-cards {
@@ -189,17 +242,37 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           margin-bottom: 60px;
         }
         .about-card {
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
-          padding: 28px;
-          transition: all 0.3s;
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 14px;
+          padding: 32px 28px;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .about-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var(--accent-1), transparent);
+          opacity: 0;
+          transition: opacity 0.4s;
         }
         .about-card:hover {
-          border-color: var(--accent-1);
-          transform: translateY(-4px);
+          border-color: rgba(88, 166, 255, 0.3);
+          transform: translateY(-8px);
+          box-shadow: 0 12px 40px rgba(88, 166, 255, 0.1);
         }
-        .about-icon { margin-bottom: 14px; }
+        .about-card:hover::before { opacity: 1; }
+        .about-card:nth-child(2)::before { background: linear-gradient(90deg, transparent, var(--accent-2), transparent); }
+        .about-card:nth-child(3)::before { background: linear-gradient(90deg, transparent, var(--accent-3), transparent); }
+        .about-icon { margin-bottom: 14px; transition: transform 0.3s; }
+        .about-card:hover .about-icon { transform: scale(1.1); }
         .about-card h3 {
           font-family: 'Space Grotesk', sans-serif;
           font-size: 1.1rem;
@@ -225,29 +298,36 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           top: 0;
           bottom: 0;
           width: 2px;
-          background: var(--border-color);
+          background: linear-gradient(180deg, var(--accent-1), var(--accent-2), var(--accent-3), var(--accent-4));
+          border-radius: 1px;
         }
         .timeline-item { position: relative; margin-bottom: 24px; }
         .tl-dot {
           position: absolute;
           left: -22px;
           top: 4px;
-          width: 10px;
-          height: 10px;
+          width: 12px;
+          height: 12px;
           border-radius: 50%;
           border: 2px solid var(--bg-primary);
           z-index: 1;
-        }
-        .tl-content {
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
-          padding: 18px 22px;
+          box-shadow: 0 0 8px var(--accent-1);
           transition: all 0.3s;
         }
+        .timeline-item:hover .tl-dot { transform: scale(1.3); }
+        .tl-content {
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 12px;
+          padding: 18px 22px;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
         .tl-content:hover {
-          border-color: var(--accent-1);
-          transform: translateX(6px);
+          border-color: rgba(88, 166, 255, 0.3);
+          transform: translateX(8px);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
         .tl-top {
           display: flex;
@@ -265,10 +345,23 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           padding: 2px 10px;
           border-radius: 4px;
           white-space: nowrap;
+          backdrop-filter: blur(4px);
         }
         .tl-company { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
         .tl-desc { font-size: 0.8rem; color: var(--text-secondary); opacity: 0.8; }
-        .tl-logo { height: 28px; margin-top: 10px; opacity: 0.8; object-fit: contain; }
+        .tl-logo {
+          height: 28px;
+          margin-top: 10px;
+          opacity: 0.7;
+          object-fit: contain;
+          transition: all 0.3s;
+          filter: grayscale(0.5);
+        }
+        .tl-content:hover .tl-logo {
+          opacity: 1;
+          filter: grayscale(0);
+          transform: scale(1.05);
+        }
 
         .stats-grid {
           display: grid;
@@ -276,14 +369,31 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           gap: 16px;
         }
         .stat-item {
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
-          padding: 24px 16px;
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 12px;
+          padding: 28px 16px;
           text-align: center;
-          transition: all 0.3s;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
         }
-        .stat-item:hover { border-color: var(--accent-1); transform: scale(1.03); }
+        .stat-item::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at center, rgba(88, 166, 255, 0.06), transparent 70%);
+          opacity: 0;
+          transition: opacity 0.4s;
+        }
+        .stat-item:hover {
+          border-color: rgba(88, 166, 255, 0.3);
+          transform: translateY(-6px);
+          box-shadow: 0 8px 30px rgba(88, 166, 255, 0.1);
+        }
+        .stat-item:hover::before { opacity: 1; }
         .stat-num {
           font-family: 'Space Grotesk', sans-serif;
           font-size: 2rem;
@@ -293,8 +403,17 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
+          position: relative;
+          z-index: 1;
         }
-        .stat-lbl { color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px; display: block; }
+        .stat-lbl {
+          color: var(--text-secondary);
+          font-size: 0.85rem;
+          margin-top: 4px;
+          display: block;
+          position: relative;
+          z-index: 1;
+        }
 
         @media (max-width: 968px) {
           .about-cards { grid-template-columns: 1fr; }
@@ -313,15 +432,25 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           padding: 8px 20px;
           background: transparent;
           border: 1px solid var(--border-color);
-          border-radius: 6px;
+          border-radius: 8px;
           color: var(--text-secondary);
           font-size: 0.85rem;
           cursor: pointer;
           transition: all 0.3s;
           font-family: 'Inter', sans-serif;
         }
-        .filter-btn:hover { border-color: var(--accent-1); color: var(--text-primary); }
-        .filter-btn.active { background: var(--accent-1); border-color: var(--accent-1); color: white; }
+        .filter-btn:hover {
+          border-color: var(--accent-1);
+          color: var(--text-primary);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(88, 166, 255, 0.1);
+        }
+        .filter-btn.active {
+          background: linear-gradient(135deg, var(--accent-1), #4c96e8);
+          border-color: transparent;
+          color: white;
+          box-shadow: 0 4px 16px rgba(88, 166, 255, 0.3);
+        }
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -330,27 +459,51 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       `})]})}function pr({project:e,index:t}){let n=ar(),r=`../${e.folder}`;return(0,j.jsxs)(Pn,{to:`/project/${e.id}`,className:`card-link`,children:[(0,j.jsxs)(`div`,{ref:n,className:`project-card`,style:{transitionDelay:`${t%6*.08}s`},children:[(0,j.jsxs)(`div`,{className:`p-card-top`,style:{"--card-clr":e.color},children:[(0,j.jsx)(`svg`,{width:`28`,height:`28`,viewBox:`0 0 24 24`,fill:`none`,stroke:e.color,strokeWidth:`1.5`,children:(0,j.jsx)(`path`,{d:`M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z`})}),(0,j.jsx)(`a`,{href:r,target:`_blank`,className:`p-ext-link`,onClick:e=>e.stopPropagation(),title:`Open project`,children:(0,j.jsxs)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,children:[(0,j.jsx)(`path`,{d:`M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6`}),(0,j.jsx)(`polyline`,{points:`15 3 21 3 21 9`}),(0,j.jsx)(`line`,{x1:`10`,y1:`14`,x2:`21`,y2:`3`})]})})]}),(0,j.jsx)(`h3`,{className:`p-title`,children:e.title}),(0,j.jsx)(`p`,{className:`p-desc`,children:e.description}),(0,j.jsx)(`div`,{className:`p-tech`,children:e.tech.map(e=>(0,j.jsx)(`span`,{className:`p-tag`,children:e},e))})]}),(0,j.jsx)(`style`,{children:`
         .card-link { text-decoration: none; display: block; }
         .project-card {
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 14px;
           padding: 24px;
-          transition: all 0.3s;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
           cursor: pointer;
           height: 100%;
+          position: relative;
+          overflow: hidden;
+        }
+        .project-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var(--card-clr, var(--accent-1)), transparent);
+          opacity: 0;
+          transition: opacity 0.4s;
         }
         .project-card:hover {
-          transform: translateY(-4px);
-          border-color: var(--card-clr, var(--accent-1));
-          box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+          transform: translateY(-8px);
+          border-color: rgba(var(--card-clr, 88, 166, 255), 0.3);
+          box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
+        .project-card:hover::before { opacity: 1; }
         .p-card-top {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
           margin-bottom: 16px;
         }
-        .p-ext-link { color: var(--text-secondary); transition: color 0.3s; }
-        .p-ext-link:hover { color: var(--card-clr, var(--accent-1)); }
+        .p-ext-link {
+          color: var(--text-secondary);
+          transition: all 0.3s;
+          padding: 4px;
+          border-radius: 6px;
+        }
+        .p-ext-link:hover {
+          color: var(--card-clr, var(--accent-1));
+          background: rgba(255,255,255,0.03);
+        }
         .p-title {
           font-family: 'Space Grotesk', sans-serif;
           font-size: 1.05rem;
@@ -373,6 +526,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           border-radius: 4px;
           font-size: 0.7rem;
           color: var(--accent-1);
+          transition: all 0.3s;
+        }
+        .p-tag:hover {
+          background: rgba(88, 166, 255, 0.15);
+          transform: translateY(-1px);
         }
       `})]})}var mr=[{title:`Backend`,skills:[`Python`,`Django`,`REST APIs`,`SQL`],color:`#58a6ff`},{title:`Frontend`,skills:[`HTML5`,`CSS3`,`JavaScript`,`React`,`Bootstrap 5`],color:`#3fb950`},{title:`3D & Graphics`,skills:[`Three.js`,`WebGL`,`OBJLoader`,`PBR Materials`,`3D Animation`],color:`#f0883e`},{title:`Tools & Skills`,skills:[`VS Code`,`Git`,`Vite`,`Communication`,`Negotiation`],color:`#bc8cff`}];function hr(){return(0,j.jsxs)(`section`,{id:`skills`,className:`section`,children:[(0,j.jsxs)(`div`,{className:`container`,children:[(0,j.jsxs)(`div`,{ref:ar(),className:`animate-on-scroll`,children:[(0,j.jsx)(`h2`,{className:`section-title`,children:(0,j.jsx)(`span`,{children:`Skills & Technologies`})}),(0,j.jsx)(`p`,{className:`section-subtitle`,children:`Technologies and tools I use to bring ideas to life`})]}),(0,j.jsx)(`div`,{className:`skills-grid`,children:mr.map((e,t)=>(0,j.jsxs)(`div`,{className:`skill-cat`,style:{transitionDelay:`${t*.1}s`,"--cat-clr":e.color},children:[(0,j.jsx)(`h3`,{className:`sc-title`,children:e.title}),(0,j.jsx)(`div`,{className:`sc-skills`,children:e.skills.map(e=>(0,j.jsx)(`span`,{className:`sc-tag`,children:e},e))})]},e.title))})]}),(0,j.jsx)(`style`,{children:`
         .skills-grid {
@@ -381,40 +539,65 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           gap: 20px;
         }
         .skill-cat {
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 14px;
           padding: 28px;
-          transition: all 0.3s;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .skill-cat::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var(--cat-clr, var(--accent-1)), transparent);
+          opacity: 0;
+          transition: opacity 0.4s;
         }
         .skill-cat:hover {
-          border-color: var(--cat-clr, var(--accent-1));
-          transform: translateY(-4px);
+          border-color: rgba(255,255,255,0.08);
+          transform: translateY(-8px);
+          box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
+        .skill-cat:hover::before { opacity: 1; }
         .sc-title {
           font-family: 'Space Grotesk', sans-serif;
           font-size: 1.1rem;
           font-weight: 600;
           margin-bottom: 20px;
           color: var(--cat-clr, var(--accent-1));
+          position: relative;
+          z-index: 1;
         }
         .sc-skills {
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
+          position: relative;
+          z-index: 1;
         }
         .sc-tag {
-          padding: 6px 16px;
+          padding: 7px 18px;
           background: rgba(88, 166, 255, 0.06);
           border: 1px solid var(--border-color);
-          border-radius: 6px;
+          border-radius: 8px;
           font-size: 0.85rem;
           color: var(--text-secondary);
           transition: all 0.3s;
+          cursor: default;
         }
         .sc-tag:hover {
           border-color: var(--cat-clr, var(--accent-1));
           color: var(--text-primary);
+          background: rgba(88, 166, 255, 0.1);
+          transform: translateY(-2px) scale(1.03);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         @media (max-width: 768px) {
           .skills-grid { grid-template-columns: 1fr; }
@@ -430,17 +613,34 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           display: flex;
           align-items: center;
           gap: 14px;
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 12px;
           padding: 18px 22px;
-          transition: all 0.3s;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
           text-decoration: none;
+          position: relative;
+          overflow: hidden;
+        }
+        .c-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var(--accent-1), transparent);
+          opacity: 0;
+          transition: opacity 0.4s;
         }
         .c-card:hover {
-          border-color: var(--accent-1);
-          transform: translateY(-2px);
+          border-color: rgba(88, 166, 255, 0.3);
+          transform: translateY(-4px);
+          box-shadow: 0 8px 30px rgba(88, 166, 255, 0.1);
         }
+        .c-card:hover::before { opacity: 1; }
         .c-icon {
           width: 44px;
           height: 44px;
@@ -451,26 +651,59 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           border-radius: 10px;
           color: var(--accent-1);
           flex-shrink: 0;
+          transition: all 0.3s;
+        }
+        .c-card:hover .c-icon {
+          background: rgba(88, 166, 255, 0.15);
+          transform: scale(1.1) rotate(-5deg);
         }
         .c-card h4 { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 2px; }
         .c-card p { color: var(--text-primary); font-weight: 500; font-size: 0.9rem; }
 
         .resume-section {
           text-align: center;
-          padding: 32px;
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
+          padding: 40px;
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 14px;
+          position: relative;
+          overflow: hidden;
+        }
+        .resume-section::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at center, rgba(88, 166, 255, 0.04), transparent 70%);
         }
         .resume-section p {
           color: var(--text-secondary);
           margin-bottom: 16px;
+          position: relative;
+          z-index: 1;
+        }
+        .resume-section .btn-primary {
+          position: relative;
+          z-index: 1;
         }
 
         .footer {
           margin-top: 80px;
           padding: 28px 0;
           border-top: 1px solid var(--border-color);
+          position: relative;
+        }
+        .footer::before {
+          content: '';
+          position: absolute;
+          top: -1px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 2px;
+          background: var(--accent-gradient);
+          border-radius: 1px;
         }
         .f-content {
           display: flex;
@@ -487,8 +720,17 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         .f-info a, .f-info span { color: var(--text-secondary); font-size: 0.8rem; }
         .f-info a:hover { color: var(--accent-1); }
         .f-social { display: flex; gap: 16px; }
-        .f-social a { color: var(--text-secondary); transition: color 0.3s; }
-        .f-social a:hover { color: var(--accent-1); }
+        .f-social a {
+          color: var(--text-secondary);
+          transition: all 0.3s;
+          padding: 6px;
+          border-radius: 8px;
+        }
+        .f-social a:hover {
+          color: var(--accent-1);
+          background: rgba(88, 166, 255, 0.08);
+          transform: translateY(-2px);
+        }
 
         @media (max-width: 768px) {
           .contact-grid { grid-template-columns: 1fr; }

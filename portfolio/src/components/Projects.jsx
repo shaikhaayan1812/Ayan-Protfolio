@@ -45,15 +45,25 @@ export default function Projects() {
           padding: 8px 20px;
           background: transparent;
           border: 1px solid var(--border-color);
-          border-radius: 6px;
+          border-radius: 8px;
           color: var(--text-secondary);
           font-size: 0.85rem;
           cursor: pointer;
           transition: all 0.3s;
           font-family: 'Inter', sans-serif;
         }
-        .filter-btn:hover { border-color: var(--accent-1); color: var(--text-primary); }
-        .filter-btn.active { background: var(--accent-1); border-color: var(--accent-1); color: white; }
+        .filter-btn:hover {
+          border-color: var(--accent-1);
+          color: var(--text-primary);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(88, 166, 255, 0.1);
+        }
+        .filter-btn.active {
+          background: linear-gradient(135deg, var(--accent-1), #4c96e8);
+          border-color: transparent;
+          color: white;
+          box-shadow: 0 4px 16px rgba(88, 166, 255, 0.3);
+        }
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -91,27 +101,51 @@ function ProjectCard({ project, index }) {
       <style>{`
         .card-link { text-decoration: none; display: block; }
         .project-card {
-          background: var(--bg-card);
-          border: 1px solid var(--border-color);
-          border-radius: 10px;
+          background: var(--glass-bg);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid var(--glass-border);
+          border-radius: 14px;
           padding: 24px;
-          transition: all 0.3s;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
           cursor: pointer;
           height: 100%;
+          position: relative;
+          overflow: hidden;
+        }
+        .project-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var(--card-clr, var(--accent-1)), transparent);
+          opacity: 0;
+          transition: opacity 0.4s;
         }
         .project-card:hover {
-          transform: translateY(-4px);
-          border-color: var(--card-clr, var(--accent-1));
-          box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+          transform: translateY(-8px);
+          border-color: rgba(var(--card-clr, 88, 166, 255), 0.3);
+          box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
+        .project-card:hover::before { opacity: 1; }
         .p-card-top {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
           margin-bottom: 16px;
         }
-        .p-ext-link { color: var(--text-secondary); transition: color 0.3s; }
-        .p-ext-link:hover { color: var(--card-clr, var(--accent-1)); }
+        .p-ext-link {
+          color: var(--text-secondary);
+          transition: all 0.3s;
+          padding: 4px;
+          border-radius: 6px;
+        }
+        .p-ext-link:hover {
+          color: var(--card-clr, var(--accent-1));
+          background: rgba(255,255,255,0.03);
+        }
         .p-title {
           font-family: 'Space Grotesk', sans-serif;
           font-size: 1.05rem;
@@ -134,6 +168,11 @@ function ProjectCard({ project, index }) {
           border-radius: 4px;
           font-size: 0.7rem;
           color: var(--accent-1);
+          transition: all 0.3s;
+        }
+        .p-tag:hover {
+          background: rgba(88, 166, 255, 0.15);
+          transform: translateY(-1px);
         }
       `}</style>
     </Link>
