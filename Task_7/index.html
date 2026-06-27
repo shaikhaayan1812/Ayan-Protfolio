@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Information Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-track">
+      <div class="brand">
+        <span class="brand-icon">&#9670;</span>
+        <span class="brand-text">CINEMA</span>
+      </div>
+      <div class="nav-pills">
+        <a href="#hero">Home</a>
+        <a href="#details">Info</a>
+        <a href="#cast">Stars</a>
+        <a href="#ratings">Score</a>
+        <a href="#upcoming">New</a>
+        <a href="#reviews">Voice</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-dual">
+      <div class="hero-poster-frame">
+        <div class="hero-poster-box">
+          <img src="promt/promt1.jpg" alt="Movie Poster" class="poster-img">
+        </div>
+      </div>
+      <div class="hero-info">
+        <div class="hero-breadcrumb">
+          <span class="crumb-dot" style="background:#00f5d4"></span>
+          Now Showing Worldwide
+        </div>
+        <h1 class="hero-heading">
+          <span class="h-sub">INTERSTELLAR</span>
+          <span class="h-main">BEYOND THE STARS</span>
+        </h1>
+        <div class="hero-stats">
+          <div class="h-stat">
+            <span class="h-stat-num">2014</span>
+            <span class="h-stat-lbl">Year</span>
+          </div>
+          <div class="h-stat">
+            <span class="h-stat-num">2h 49m</span>
+            <span class="h-stat-lbl">Runtime</span>
+          </div>
+          <div class="h-stat">
+            <span class="h-stat-num">&#9733; 8.7</span>
+            <span class="h-stat-lbl">IMDb</span>
+          </div>
+        </div>
+        <p class="hero-desc">A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+        <div class="hero-actions">
+          <span class="btn-solid">Watch Now</span>
+          <span class="btn-ghost">+ Add List</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details" id="details">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-accent"></div>
+        <h2 class="section-title">Movie File</h2>
+      </div>
+      <div class="detail-slab">
+        <div class="detail-side">
+          <div class="side-mock">
+            <img src="promt/promt2.png" alt="Official Poster" class="side-img">
+          </div>
+        </div>
+        <div class="detail-main">
+          <div class="detail-header">
+            <h3>Interstellar</h3>
+            <span class="detail-rating">&#9733; 8.7</span>
+          </div>
+          <div class="detail-chips">
+            <span class="chip">Sci-Fi</span>
+            <span class="chip">Adventure</span>
+            <span class="chip">2h 49m</span>
+            <span class="chip">2014</span>
+          </div>
+          <div class="detail-rows">
+            <div class="drow"><span class="drow-label">Director</span><span class="drow-val">Christopher Nolan</span></div>
+            <div class="drow"><span class="drow-label">Release</span><span class="drow-val">November 7, 2014</span></div>
+            <div class="drow"><span class="drow-label">Language</span><span class="drow-val">English</span></div>
+          </div>
+          <div class="detail-credit">
+            <span class="credit-line">a film by <strong>Neil Tran</strong></span>
+            <span class="credit-cast">Lars Peeters &nbsp;|&nbsp; Drew Feig &nbsp;|&nbsp; Samira Hadid</span>
+          </div>
+          <div class="detail-blurb">
+            <p>"A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."</p>
+            <span>Set in a dystopian future where Earth is becoming uninhabitable, former NASA pilot Joseph Cooper is tasked with leading a mission through a newly discovered wormhole near Saturn to find a new habitable planet among the stars.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt cast" id="cast">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-accent"></div>
+        <h2 class="section-title">Star Cast</h2>
+      </div>
+      <div class="cast-band">
+        <div class="cast-tile">
+          <div class="tile-mock">
+            <img src="promt/promt2_1.png" alt="Matthew McConaughey" class="cast-img">
+          </div>
+          <div class="tile-name">Matthew McConaughey</div>
+          <div class="tile-role">as Cooper</div>
+        </div>
+        <div class="cast-tile">
+          <div class="tile-mock">
+            <img src="promt/promt2_2.png" alt="Anne Hathaway" class="cast-img">
+          </div>
+          <div class="tile-name">Anne Hathaway</div>
+          <div class="tile-role">as Brand</div>
+        </div>
+        <div class="cast-tile">
+          <div class="tile-mock">
+            <img src="promt/promt2_3.png" alt="Jessica Chastain" class="cast-img">
+          </div>
+          <div class="tile-name">Jessica Chastain</div>
+          <div class="tile-role">as Murphy</div>
+        </div>
+        <div class="cast-tile">
+          <div class="tile-mock">
+            <img src="promt/promt2_4.png" alt="Michael Caine" class="cast-img">
+          </div>
+          <div class="tile-name">Michael Caine</div>
+          <div class="tile-role">as Brand</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ratings" id="ratings">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-accent"></div>
+        <h2 class="section-title">Ratings</h2>
+      </div>
+      <div class="ratings-band">
+        <div class="rate-block" style="--bar:87%">
+          <div class="rate-head">
+            <span class="rate-icon" style="background:#00f5d4">IMDb</span>
+            <span class="rate-score">8.7</span>
+          </div>
+          <div class="rate-bar"><div class="rate-fill" style="width:87%"></div></div>
+          <span class="rate-label">IMDb Rating</span>
+        </div>
+        <div class="rate-block" style="--bar:92%">
+          <div class="rate-head">
+            <span class="rate-icon" style="background:#f15bb5">RT</span>
+            <span class="rate-score">92%</span>
+          </div>
+          <div class="rate-bar"><div class="rate-fill" style="width:92%"></div></div>
+          <span class="rate-label">Rotten Tomatoes</span>
+        </div>
+        <div class="rate-block" style="--bar:74%">
+          <div class="rate-head">
+            <span class="rate-icon" style="background:#fee440;color:#0a0a0f">MET</span>
+            <span class="rate-score">74</span>
+          </div>
+          <div class="rate-bar"><div class="rate-fill" style="width:74%"></div></div>
+          <span class="rate-label">Metacritic</span>
+        </div>
+        <div class="rate-block" style="--bar:95%">
+          <div class="rate-head">
+            <span class="rate-icon" style="background:#9b5de5">AUD</span>
+            <span class="rate-score">95%</span>
+          </div>
+          <div class="rate-bar"><div class="rate-fill" style="width:95%;background:linear-gradient(90deg,#9b5de5,#00f5d4)"></div></div>
+          <span class="rate-label">Audience Score</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt trailer" id="trailer">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-accent"></div>
+        <h2 class="section-title">Watch Trailer</h2>
+      </div>
+      <div class="trailer-stage">
+        <div class="trailer-frame">
+          <iframe src="https://player.vimeo.com/video/1030871131" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="upcoming" id="upcoming">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-accent"></div>
+        <h2 class="section-title">Coming Soon</h2>
+      </div>
+      <div class="upcoming-deck">
+        <div class="deck-card">
+          <div class="deck-mock">
+            <span class="deck-date">2023</span>
+            <img src="promt/p31.png" alt="Oppenheimer" class="deck-img">
+          </div>
+          <div class="deck-info">
+            <h3>Oppenheimer</h3>
+            <span>Biography / Drama</span>
+          </div>
+        </div>
+        <div class="deck-card">
+          <div class="deck-mock">
+            <span class="deck-date">2024</span>
+            <img src="promt/p32.png" alt="Dune: Part Two" class="deck-img">
+          </div>
+          <div class="deck-info">
+            <h3>Dune: Part Two</h3>
+            <span>Sci-Fi / Adventure</span>
+          </div>
+        </div>
+        <div class="deck-card">
+          <div class="deck-mock">
+            <span class="deck-date">2025</span>
+            <img src="promt/p33.png" alt="Mission: Impossible 8" class="deck-img">
+          </div>
+          <div class="deck-info">
+            <h3>Mission: Impossible 8</h3>
+            <span>Action / Thriller</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt recommended" id="recommended">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-accent"></div>
+        <h2 class="section-title">Recommended</h2>
+      </div>
+      <div class="rec-wall">
+        <div class="rec-post">
+          <div class="rec-mock">
+            <img src="promt/41.png" alt="Inception" class="rec-img">
+          </div>
+          <div class="rec-credit">
+            <h3>Inception</h3>
+            <span>2010 &middot; Sci-Fi</span>
+          </div>
+        </div>
+        <div class="rec-post">
+          <div class="rec-mock">
+            <img src="promt/42.png" alt="The Dark Knight" class="rec-img">
+          </div>
+          <div class="rec-credit">
+            <h3>The Dark Knight</h3>
+            <span>2008 &middot; Action</span>
+          </div>
+        </div>
+        <div class="rec-post">
+          <div class="rec-mock">
+            <img src="promt/43.png" alt="The Martian" class="rec-img">
+          </div>
+          <div class="rec-credit">
+            <h3>The Martian</h3>
+            <span>2015 &middot; Adventure</span>
+          </div>
+        </div>
+        <div class="rec-post">
+          <div class="rec-mock">
+            <img src="promt/44.png" alt="Gravity" class="rec-img">
+          </div>
+          <div class="rec-credit">
+            <h3>Gravity</h3>
+            <span>2013 &middot; Thriller</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-alt reviews" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-accent"></div>
+        <h2 class="section-title">Audience Voice</h2>
+      </div>
+      <div class="reviews-panel">
+        <div class="vox-card">
+          <div class="vox-header">
+            <span class="vox-avatar" style="background:linear-gradient(135deg,#00f5d4,#00b4d8)">JD</span>
+            <div>
+              <strong>John Doe</strong>
+              <div class="vox-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+          <p>"A masterpiece of modern cinema. Christopher Nolan has outdone himself with this visually stunning and emotionally gripping story."</p>
+        </div>
+        <div class="vox-card">
+          <div class="vox-header">
+            <span class="vox-avatar" style="background:linear-gradient(135deg,#f15bb5,#fee440)">AS</span>
+            <div>
+              <strong>Alice Smith</strong>
+              <div class="vox-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
+          </div>
+          <p>"Interstellar is an emotional rollercoaster that blends hard sci-fi with profound human themes. The visuals are breathtaking."</p>
+        </div>
+        <div class="vox-card">
+          <div class="vox-header">
+            <span class="vox-avatar" style="background:linear-gradient(135deg,#9b5de5,#00f5d4)">MJ</span>
+            <div>
+              <strong>Mike Johnson</strong>
+              <div class="vox-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+          <p>"One of the greatest sci-fi films of all time. The wormhole and black hole sequences are visually groundbreaking."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-slab">
+        <div class="footer-brand">
+          <span class="brand-icon">&#9670;</span>
+          <span class="brand-text">CINEMA</span>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#details">Movies</a>
+          <a href="#upcoming">Upcoming</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#footer">Contact</a>
+        </div>
+      </div>
+      <div class="footer-line"></div>
+      <p class="footer-copy">&copy; 2026 Movie Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

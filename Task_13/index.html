@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily News</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="successModal" class="modal-overlay">
+    <div class="modal-box">
+      <span class="modal-check">&#10003;</span>
+      <h3>Subscribed Successfully!</h3>
+      <p>Thank you for subscribing to Daily News. You'll receive the latest headlines every morning.</p>
+      <button class="modal-btn" onclick="closeModal()">Great!</button>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-top">
+        <div class="logo">Daily<span>News</span></div>
+        <div class="header-right">
+          <div class="weather-widget" id="weatherWidget">
+            <span class="weather-icon">&#9728;&#65039;</span>
+            <span class="weather-temp">32&deg;C</span>
+            <span class="weather-loc">Mumbai</span>
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search news...">
+            <span class="search-icon">&#128269;</span>
+          </div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Politics</a>
+        <a href="#">Technology</a>
+        <a href="#">Business</a>
+        <a href="#">Sports</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Health</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="breaking">
+    <div class="container">
+      <div class="breaking-bar">
+        <span class="breaking-label">BREAKING</span>
+        <div class="breaking-ticker" id="liveTicker">
+          <div class="ticker-track">
+            <span>&#9672; Major tech merger announced between two industry giants</span>
+            <span>&#9672; Global summit on climate change concludes with historic agreement</span>
+            <span>&#9672; Breakthrough in AI research could transform healthcare industry</span>
+            <span>&#9672; Stock markets reach all-time high amid economic recovery</span>
+            <span>&#9672; New space mission launched to explore Jupiter's icy moons</span>
+            <span>&#9672; Electric vehicle sales surge past petrol cars for first time</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-news">
+    <div class="container">
+      <div class="hero-news-grid">
+        <div class="hero-news-text">
+          <span class="hero-cat">Technology</span>
+          <h2>Revolutionary AI Model Breaks All Previous Records in Medical Diagnosis</h2>
+          <p class="hero-summary">A new artificial intelligence system developed by researchers has achieved unprecedented accuracy in detecting early-stage diseases, potentially saving millions of lives through early intervention.</p>
+          <div class="hero-meta">
+            <span class="hero-author">By Sarah Johnson</span>
+            <span class="hero-date">June 6, 2026</span>
+          </div>
+        </div>
+        <div class="hero-news-img">
+          <div class="img-placeholder"><img src="11.png" alt="AI in Healthcare"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="latest">
+    <div class="container">
+      <div class="section-head"><h2>Latest Headlines</h2></div>
+      <div class="news-grid" id="newsGrid">
+        <div class="news-card">
+          <div class="img-placeholder news-img"><img src="3.png"></div>
+          <div class="news-body">
+            <span class="news-cat">Technology</span>
+            <h3>India Launches First Manned Space Mission to the Moon</h3>
+            <p class="news-desc">ISRO's historic Gaganyaan mission successfully lands Indian astronauts on the lunar surface for the first time.</p>
+            <span class="news-date">June 6, 2026</span>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="img-placeholder news-img"><img src="2.png"></div>
+          <div class="news-body">
+            <span class="news-cat">Business</span>
+            <h3>India Becomes World's Third Largest Economy</h3>
+            <p class="news-desc">India surpasses Japan and Germany to claim the third spot in global GDP rankings with 8.5% growth rate.</p>
+            <span class="news-date">June 6, 2026</span>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="img-placeholder news-img"><img src="1.png"></div>
+          <div class="news-body">
+            <span class="news-cat">Politics</span>
+            <h3>New Policy Reforms Announced for Digital Economy</h3>
+            <p class="news-desc">Government unveils comprehensive reforms aimed at boosting the digital economy with new incentives.</p>
+            <span class="news-date">June 5, 2026</span>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="img-placeholder news-img"><img src="4.png"></div>
+          <div class="news-body">
+            <span class="news-cat">Sports</span>
+            <h3>Underdog Team Clinches Championship in Stunning Upset</h3>
+            <p class="news-desc">Against all odds, the team secured victory in the final minutes of the match.</p>
+            <span class="news-date">June 4, 2026</span>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="img-placeholder news-img"><img src="6.png"></div>
+          <div class="news-body">
+            <span class="news-cat">Entertainment</span>
+            <h3>Blockbuster Movie Breaks Opening Weekend Records</h3>
+            <p class="news-desc">The highly anticipated sequel shatters box office expectations worldwide.</p>
+            <span class="news-date">June 3, 2026</span>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="img-placeholder news-img"><img src="5.png"></div>
+          <div class="news-body">
+            <span class="news-cat">Health</span>
+            <h3>New AI-Powered Drug Discovery Cures Rare Disease</h3>
+            <p class="news-desc">Indian researchers use artificial intelligence to develop breakthrough treatment for a rare genetic disorder.</p>
+            <span class="news-date">June 3, 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured">
+    <div class="container">
+      <div class="section-head"><h2>Featured Article</h2></div>
+      <div class="featured-grid">
+        <div class="featured-img">
+          <div class="img-placeholder featured-img-placeholder"><img src="RCB.png"></div>
+        </div>
+        <div class="featured-text">
+          <span class="hero-cat">Sports</span>
+          <h2>RCB Creates History: Second IPL Title Sealed in Thrilling Final</h2>
+          <p>In a nail-biting final that kept millions on the edge of their seats, Royal Challengers Bengaluru clinched their second IPL title with a commanding performance. Chasing a challenging target of 186, RCB's batting lineup fired in unison, with Virat Kohli anchoring the innings with a masterful 78 off 52 balls, while Glenn Maxwell's explosive 45 off 22 balls in the death overs turned the tide in RCB's favor.</p>
+          <p>The bowlers held their nerve in the final overs, with Mohammed Siraj picking up 3 crucial wickets to restrict the opposition. The Chinnaswamy Stadium erupted as the winning runs were struck, marking an emotional moment for the franchise and its loyal fans who had waited years for this glorious triumph. Captain Faf du Plessis dedicated the victory to the RCB faithful, calling it "the greatest night in the franchise's history."</p>
+          <div class="hero-meta">
+            <span class="hero-author">By Sports Desk</span>
+            <span class="hero-date">June 3, 2026 &middot; 8 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comments-section">
+    <div class="container">
+      <div class="section-head"><h2>Comments</h2></div>
+      <div class="comments-list">
+        <div class="comment-card">
+          <div class="comment-avatar">JD</div>
+          <div class="comment-body">
+            <div class="comment-author">James D.</div>
+            <span class="comment-date">June 6, 2026 at 10:30 AM</span>
+            <p class="comment-text">Great article! The hybrid model has been a game-changer for our team. Productivity actually went up after we adopted flexible schedules.</p>
+            <div class="comment-actions">
+              <span class="comment-like">&#128077; 24</span>
+              <span class="comment-reply">Reply</span>
+            </div>
+          </div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-avatar">SP</div>
+          <div class="comment-body">
+            <div class="comment-author">Sarah P.</div>
+            <span class="comment-date">June 6, 2026 at 11:15 AM</span>
+            <p class="comment-text">I'm still skeptical about async communication. Sometimes you just need a quick face-to-face conversation to resolve complex issues.</p>
+            <div class="comment-actions">
+              <span class="comment-like">&#128077; 18</span>
+              <span class="comment-reply">Reply</span>
+            </div>
+          </div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-avatar">MR</div>
+          <div class="comment-body">
+            <div class="comment-author">Mike R.</div>
+            <span class="comment-date">June 6, 2026 at 2:00 PM</span>
+            <p class="comment-text">The data about Fortune 500 companies is eye-opening. I wonder how small businesses are adapting to these changes differently.</p>
+            <div class="comment-actions">
+              <span class="comment-like">&#128077; 12</span>
+              <span class="comment-reply">Reply</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comment-form">
+        <h4>Leave a Comment</h4>
+        <div class="comment-input-group">
+          <input type="text" id="commentName" placeholder="Your Name">
+          <textarea id="commentText" placeholder="Share your thoughts..." rows="3"></textarea>
+          <button id="submitComment" class="comment-submit">Post Comment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related">
+    <div class="container">
+      <div class="section-head"><h2>Related News</h2></div>
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="img-placeholder news-img"><img src="n1.png"></div>
+          <div class="news-body">
+            <span class="news-cat">Technology</span>
+            <h3>Startup Raises $500M for AI-Powered Coding Tool</h3>
+            <p class="news-desc">The platform uses machine learning to automate software development.</p>
+            <span class="news-date">June 2, 2026</span>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="img-placeholder news-img"><img src="n2.png"></div>
+          <div class="news-body">
+            <span class="news-cat">Business</span>
+            <h3>Global Trade Agreement Signed by 50 Nations</h3>
+            <p class="news-desc">Historic pact aims to reduce tariffs and boost international commerce.</p>
+            <span class="news-date">June 2, 2026</span>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="img-placeholder news-img"><img src="n3.png"></div>
+          <div class="news-body">
+            <span class="news-cat">Science</span>
+            <h3>NASA Announces New Mission to Explore Jupiter's Moons</h3>
+            <p class="news-desc">The ambitious mission will search for signs of life beyond Earth.</p>
+            <span class="news-date">June 1, 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-box">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest news delivered straight to your inbox every morning.</p>
+        <div class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email">
+          <button type="submit" id="subscribeBtn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Daily<span>News</span></h3>
+          <p>Your trusted source for breaking news, in-depth analysis, and engaging stories from around the world.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="#">Politics</a>
+          <a href="#">Technology</a>
+          <a href="#">Business</a>
+          <a href="#">Sports</a>
+        </div>
+        <div class="footer-links">
+          <h4>More</h4>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Careers</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-line"></div>
+      <p class="footer-copy">&copy; 2026 Daily News. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="bottom-ticker">
+    <div class="ticker-track-reverse">
+      <span>&#9672; Breaking: Global markets hit all-time high &#9672; New AI breakthrough in healthcare &#9672; Electric vehicle sales surge 40% this quarter &#9672; Major climate agreement signed by 120 nations &#9672; Tech giant announces revolutionary chip &#9672; Sports underdog clinches championship title &#9672; Space mission discovers water on Mars</span>
+    </div>
+  </div>
+
+  <script>
+    // Newsletter Modal
+    function closeModal() {
+      document.getElementById('successModal').classList.remove('active');
+    }
+
+    document.getElementById('subscribeBtn').addEventListener('click', () => {
+      const email = document.getElementById('newsletterEmail').value.trim();
+      if (email) {
+        document.getElementById('successModal').classList.add('active');
+      } else {
+        alert('Please enter your email address.');
+      }
+    });
+
+    document.getElementById('successModal').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) closeModal();
+    });
+
+    // Comment Submit
+    document.getElementById('submitComment').addEventListener('click', () => {
+      const name = document.getElementById('commentName').value.trim();
+      const text = document.getElementById('commentText').value.trim();
+      if (!name || !text) { alert('Please fill in your name and comment.'); return; }
+
+      const card = document.createElement('div');
+      card.className = 'comment-card';
+      const initials = name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+      const now = new Date();
+      const dateStr = now.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + ' at ' + now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+
+      card.innerHTML = `
+        <div class="comment-avatar">${initials}</div>
+        <div class="comment-body">
+          <div class="comment-author">${name}</div>
+          <span class="comment-date">${dateStr}</span>
+          <p class="comment-text">${text}</p>
+          <div class="comment-actions">
+            <span class="comment-like">&#128077; 0</span>
+            <span class="comment-reply">Reply</span>
+          </div>
+        </div>
+      `;
+      document.querySelector('.comments-list').appendChild(card);
+      document.getElementById('commentName').value = '';
+      document.getElementById('commentText').value = '';
+    });
+
+    // Live ticker duplication for seamless scroll
+    const track = document.querySelector('.ticker-track');
+    const items = track.innerHTML;
+    track.innerHTML = items + items;
+  </script>
+
+</body>
+</html>

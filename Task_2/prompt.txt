@@ -1,0 +1,43 @@
+PROMPT: College Admission Portal Website
+
+Build a complete College Admission Portal using HTML5, CSS3, and JavaScript with the following sections and features:
+
+1. Navigation Bar - Sticky header with links to all sections (Home, About, Courses, Fees, Admission, Scholarship, Testimonials, Contact). Mobile responsive with hamburger menu using CSS-only checkbox toggle (no JS).
+
+2. Hero Section - Full-screen hero with a background video (colleg.mp4) that plays automatically on loop. A semi-transparent dark overlay on top. Content includes: heading text, paragraph, and an "Apply Now" button that scrolls to the admission form.
+
+3. Video Promo Section - Removed (merged into hero).
+
+4. About College - Section describing the institution's vision, with a text column (highlights as bullet list with icons) and an image column side by side.
+
+5. Courses Offered - CSS Grid layout showing 6 courses with icon, title, and description. Cards have hover lift effect.
+
+6. Fee Structure - Styled HTML table with columns: Course Name, Duration, Annual Fee (INR). Alternating row colors and hover effect.
+
+7. Admission Form - Professional form with fields: Full Name, Email, Phone Number, Course Selection (dropdown), File Upload for documents, and a checkbox agreement. Built-in HTML5 validation (all fields required). No JavaScript validation.
+
+8. Important Notes - Section with warm yellow background (#fff8e7). List items with left border accent and icons showing document requirements and deadlines.
+
+9. Scholarship Section - 4 cards in grid layout showing different scholarship types (Merit, Sports, EWS, Girl Child) with icons.
+
+10. Student Testimonials - 3 cards with student photos (from Unsplash), names, batch info, and quotes.
+
+11. Footer - 3-column grid: college info with social media icon links, quick links, and contact info (address, phone, email, hours). Dark background.
+
+Design Requirements:
+- Color scheme: Navy (#0a1628, #1a3a6b), White (#fff), Light Gray (#f4f6f9), Gold accent (#f0a500)
+- Font: Inter from Google Fonts
+- Icons: Font Awesome 6
+- Fully responsive (mobile-first breakpoints at 900px and 768px)
+- Modern, clean, professional look
+- Smooth scroll, card hover animations
+
+Separate Contact Page (contact.html):
+- Dark theme with gradient hero
+- Sky-blue accent color (#38bdf8)
+- Contact info cards on left, contact form on right
+- Map placeholder section
+- Poppins font
+
+College Name: Top College
+File Structure: index.html, style.css, contact.html

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top College of Excellence | Admission Portal</title>
+  <link rel="icon" type="image/png" href="tops.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <a href="#" class="logo"><i class="fas fa-graduation-cap"></i> Top<span>College</span></a>
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#fees">Fees</a></li>
+          <li><a href="#admission">Admission</a></li>
+          <li><a href="#scholarship">Scholarship</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION with Video BG + Apply Now ===== -->
+  <section class="hero" id="hero">
+    <video class="hero-video-bg" autoplay muted loop playsinline>
+      <source src="colleg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Shape Your Future at Top College</h1>
+      <p>Empowering the next generation of leaders with world-class education, innovation, and opportunity since 1998.</p>
+      <a href="#admission" class="btn btn-primary hero-btn"><i class="fas fa-paper-plane"></i> Apply Now</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT COLLEGE ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Our College</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Top College of Excellence is a premier institution dedicated to academic excellence, research innovation, and holistic student development. With over 25 years of legacy, we have nurtured thousands of professionals who lead in diverse fields across the globe.</p>
+          <p>Our vision is to create a transformative educational experience that blends rigorous academics with real-world skills, ethical values, and a global perspective. We believe in fostering creativity, critical thinking, and lifelong learning in every student.</p>
+          <ul class="about-highlights">
+            <li><i class="fas fa-check-circle"></i> NAAC A+ Accredited</li>
+            <li><i class="fas fa-check-circle"></i> 500+ Industry Partners</li>
+            <li><i class="fas fa-check-circle"></i> 95% Placement Record</li>
+            <li><i class="fas fa-check-circle"></i> 40+ Acre Smart Campus</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80" alt="College campus">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES OFFERED ===== -->
+  <section class="courses section" id="courses">
+    <div class="container">
+      <div class="section-header">
+        <h2>Courses Offered</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="course-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>B.Tech Computer Science</h3>
+          <p>AI, ML, cybersecurity, and full-stack development with hands-on lab experience and industry internships.</p>
+        </div>
+        <div class="course-card">
+          <div class="course-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>BBA</h3>
+          <p>Business administration with specializations in marketing, finance, HR, and entrepreneurship.</p>
+        </div>
+        <div class="course-card">
+          <div class="course-icon"><i class="fas fa-flask"></i></div>
+          <h3>B.Sc. Biotechnology</h3>
+          <p>Molecular biology, genetics, and bioinformatics with state-of-the-art research laboratories.</p>
+        </div>
+        <div class="course-card">
+          <div class="course-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>LLB (Hons)</h3>
+          <p>Comprehensive legal education with moot courts, internships at law firms, and judicial exposure.</p>
+        </div>
+        <div class="course-card">
+          <div class="course-icon"><i class="fas fa-calculator"></i></div>
+          <h3>B.Com (Hons)</h3>
+          <p>Accounting, taxation, and financial management with training in industry-standard software tools.</p>
+        </div>
+        <div class="course-card">
+          <div class="course-icon"><i class="fas fa-palette"></i></div>
+          <h3>BA in Fine Arts</h3>
+          <p>Visual arts, digital design, and creative expression guided by renowned artists and designers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEE STRUCTURE ===== -->
+  <section class="fees section" id="fees">
+    <div class="container">
+      <div class="section-header">
+        <h2>Fee Structure</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="table-wrapper">
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th>Course Name</th>
+              <th>Duration</th>
+              <th>Annual Fee (INR)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>B.Tech Computer Science</td><td>4 Years</td><td>₹1,85,000</td></tr>
+            <tr><td>BBA</td><td>3 Years</td><td>₹1,20,000</td></tr>
+            <tr><td>B.Sc. Biotechnology</td><td>3 Years</td><td>₹1,10,000</td></tr>
+            <tr><td>LLB (Hons)</td><td>3 Years</td><td>₹1,35,000</td></tr>
+            <tr><td>B.Com (Hons)</td><td>3 Years</td><td>₹95,000</td></tr>
+            <tr><td>BA in Fine Arts</td><td>3 Years</td><td>₹85,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADMISSION FORM ===== -->
+  <section class="admission section" id="admission">
+    <div class="container">
+      <div class="section-header">
+        <h2>Admission Form</h2>
+        <div class="divider"></div>
+      </div>
+      <form class="admission-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+            <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-group">
+            <label for="course"><i class="fas fa-book"></i> Select Course</label>
+            <select id="course" required>
+              <option value="">-- Choose a course --</option>
+              <option value="B.Tech Computer Science">B.Tech Computer Science</option>
+              <option value="BBA">BBA</option>
+              <option value="B.Sc. Biotechnology">B.Sc. Biotechnology</option>
+              <option value="LLB (Hons)">LLB (Hons)</option>
+              <option value="B.Com (Hons)">B.Com (Hons)</option>
+              <option value="BA in Fine Arts">BA in Fine Arts</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="documents"><i class="fas fa-file-upload"></i> Upload Documents (Marksheets, ID, etc.)</label>
+          <div class="file-input-wrapper">
+            <input type="file" id="documents" accept=".pdf,.jpg,.jpeg,.png" required>
+            <span class="file-label"><i class="fas fa-cloud-upload-alt"></i> Choose files</span>
+          </div>
+        </div>
+        <div class="form-group form-checkbox">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">I confirm that all information provided is true and correct.</label>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== IMPORTANT NOTES ===== -->
+  <section class="important section" id="important">
+    <div class="container">
+      <div class="section-header">
+        <h2>Important Notes</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="important-content">
+        <ul class="important-list">
+          <li><i class="fas fa-file-pdf"></i> All documents must be uploaded in PDF, JPG, or PNG format (max 5 MB each).</li>
+          <li><i class="fas fa-calendar-alt"></i> Application deadline for the 2026–27 academic year is <strong>July 15, 2026</strong>.</li>
+          <li><i class="fas fa-id-card"></i> Upload a recent passport-size photograph and a government-issued ID proof.</li>
+          <li><i class="fas fa-percent"></i> Minimum 60% aggregate in 10+2 or equivalent examination required.</li>
+          <li><i class="fas fa-rupee-sign"></i> Application fee of ₹500 is non-refundable and must be paid online.</li>
+          <li><i class="fas fa-flag"></i> Original documents must be presented at the time of physical verification.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCHOLARSHIP SECTION ===== -->
+  <section class="scholarship section" id="scholarship">
+    <div class="container">
+      <div class="section-header">
+        <h2>Scholarship & Financial Aid</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="scholarship-grid">
+        <div class="scholar-card">
+          <i class="fas fa-star"></i>
+          <h3>Merit Scholarship</h3>
+          <p>Up to 100% tuition fee waiver for students scoring 90% or above in their qualifying examination.</p>
+        </div>
+        <div class="scholar-card">
+          <i class="fas fa-trophy"></i>
+          <h3>Sports Excellence</h3>
+          <p>50% fee concession for state / national level sportspersons with proven achievements.</p>
+        </div>
+        <div class="scholar-card">
+          <i class="fas fa-home"></i>
+          <h3>Economically Weaker Section</h3>
+          <p>Need-based financial aid covering up to 75% of tuition for families with annual income below ₹2.5 lakh.</p>
+        </div>
+        <div class="scholar-card">
+          <i class="fas fa-female"></i>
+          <h3>Girl Child Empowerment</h3>
+          <p>Special 25% fee reduction for all female applicants to promote gender equality in higher education.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STUDENT TESTIMONIALS ===== -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Students Say</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-img">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80" alt="Rahul Sharma">
+          </div>
+          <p class="testimonial-text">"Top College gave me the platform to grow both academically and personally. The faculty mentorship and placement training were exceptional. I'm now placed at Microsoft!"</p>
+          <h4>Rahul Sharma</h4>
+          <span class="testimonial-role">B.Tech CSE, 2025 Batch</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-img">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80" alt="Priya Patel">
+          </div>
+          <p class="testimonial-text">"The hands-on learning approach and state-of-the-art labs helped me gain real-world skills. I secured a research internship at IISC Bangalore thanks to the guidance here."</p>
+          <h4>Priya Patel</h4>
+          <span class="testimonial-role">B.Sc. Biotechnology, 2024 Batch</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-img">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&q=80" alt="Arjun Mehta">
+          </div>
+          <p class="testimonial-text">"From moot courts to corporate internships, the exposure I received was unparalleled. I cleared the CLAT exam with support from the college's dedicated legal studies cell."</p>
+          <h4>Arjun Mehta</h4>
+          <span class="testimonial-role">LLB (Hons), 2025 Batch</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3><i class="fas fa-graduation-cap"></i> Top College</h3>
+        <p>Empowering minds, transforming futures. Join us on a journey of excellence and discovery.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#admission">Admission</a></li>
+          <li><a href="#scholarship">Scholarship</a></li>
+          <li><a href="#fees">Fee Structure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 123, Education Hub, Sector 12,<br>Mumbai, Maharashtra 400001</p>
+        <p><i class="fas fa-phone"></i> +91 22 6789 1234</p>
+        <p><i class="fas fa-envelope"></i> admissions@metrocollege.edu.in</p>
+        <p><i class="fas fa-clock"></i> Mon–Sat: 9:00 AM – 5:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Top College of Excellence. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

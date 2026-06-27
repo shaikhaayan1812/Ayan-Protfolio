@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyageVista — Luxury Travel Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">Voyage<span>Vista</span></a>
+            <input type="checkbox" id="menu" class="menu-check">
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#book" class="nav-book">Book Now</a></li>
+            </ul>
+            <label for="menu" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-canvas"></div>
+        <div class="container hero-wrap">
+            <div class="hero-content">
+                <span class="hero-pill">Curated Experiences Since 2012</span>
+                <h1>Discover the World's <span class="gold">Most Extraordinary</span> Destinations</h1>
+                <p>From hidden tropical islands to alpine retreats — we craft journeys that redefine luxury travel.</p>
+                <div class="hero-actions">
+                    <a href="#destinations" class="btn btn-primary">Explore Destinations</a>
+                    <a href="#contact" class="btn btn-ghost">Plan Your Trip →</a>
+                </div>
+            </div>
+            <div class="hero-bar">
+                <div class="hero-bar-inner">
+                    <div class="bar-item">
+                        <span class="bar-label">Destination</span>
+                        <div class="bar-select-wrap">
+                            <select>
+                                <option value="">Select Destination</option>
+                                <option>Maldives</option>
+                                <option>Bali</option>
+                                <option>Switzerland</option>
+                                <option>Dubai</option>
+                                <option>Paris</option>
+                                <option>Goa</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Check In</span>
+                        <div class="bar-input-wrap">
+                            <input type="text" placeholder="DD-MM-YYYY">
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Check Out</span>
+                        <div class="bar-input-wrap">
+                            <input type="text" placeholder="DD-MM-YYYY">
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Travelers</span>
+                        <div class="bar-select-wrap">
+                            <select>
+                                <option value="">Select Travelers</option>
+                                <option>1 Person</option>
+                                <option>2 People</option>
+                                <option>3 People</option>
+                                <option>4 People</option>
+                                <option>5+ People</option>
+                            </select>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary bar-btn">Search</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 2. DESTINATIONS ===== -->
+    <section class="dests" id="destinations">
+        <div class="container">
+            <div class="section-top">
+                <span class="section-tag">✦ Trending Now</span>
+                <h2>Popular Destinations</h2>
+                <p>Handpicked paradises curated by our travel experts</p>
+            </div>
+            <div class="dests-grid">
+                <div class="dest">
+                    <div class="dest-img" style="background: linear-gradient(145deg, #0D6EFD, #00B894);">
+                        <span class="dest-badge">★ 4.9</span>
+                        <div class="dest-hover">
+                            <a href="#dest-maldives" class="dest-link">View Details →</a>
+                        </div>
+                    </div>
+                    <div class="dest-meta">
+                        <h3>Maldives</h3>
+                        <p>Crystal atolls, private villas, pure serenity</p>
+                        <span class="dest-price">From <strong>₹29,999</strong></span>
+                    </div>
+                </div>
+                <div class="dest">
+                    <div class="dest-img" style="background: linear-gradient(145deg, #7C3AED, #F59E0B);">
+                        <span class="dest-badge">★ 4.8</span>
+                        <div class="dest-hover">
+                            <a href="#dest-bali" class="dest-link">View Details →</a>
+                        </div>
+                    </div>
+                    <div class="dest-meta">
+                        <h3>Bali</h3>
+                        <p>Rice terraces, temple gates, tropical soul</p>
+                        <span class="dest-price">From <strong>₹24,999</strong></span>
+                    </div>
+                </div>
+                <div class="dest">
+                    <div class="dest-img" style="background: linear-gradient(145deg, #059669, #0D6EFD);">
+                        <span class="dest-badge">★ 4.9</span>
+                        <div class="dest-hover">
+                            <a href="#dest-switzerland" class="dest-link">View Details →</a>
+                        </div>
+                    </div>
+                    <div class="dest-meta">
+                        <h3>Switzerland</h3>
+                        <p>Alpine peaks, mirror lakes, fairy-tale towns</p>
+                        <span class="dest-price">From <strong>₹34,999</strong></span>
+                    </div>
+                </div>
+                <div class="dest">
+                    <div class="dest-img" style="background: linear-gradient(145deg, #F59E0B, #DC2626);">
+                        <span class="dest-badge">★ 4.7</span>
+                        <div class="dest-hover">
+                            <a href="#dest-dubai" class="dest-link">View Details →</a>
+                        </div>
+                    </div>
+                    <div class="dest-meta">
+                        <h3>Dubai</h3>
+                        <p>Gold souks, desert dunes, futuristic skyline</p>
+                        <span class="dest-price">From <strong>₹19,999</strong></span>
+                    </div>
+                </div>
+                <div class="dest">
+                    <div class="dest-img" style="background: linear-gradient(145deg, #EC4899, #4F46E5);">
+                        <span class="dest-badge">★ 4.8</span>
+                        <div class="dest-hover">
+                            <a href="#dest-paris" class="dest-link">View Details →</a>
+                        </div>
+                    </div>
+                    <div class="dest-meta">
+                        <h3>Paris</h3>
+                        <p>Eiffel lights, café terraces, timeless romance</p>
+                        <span class="dest-price">From <strong>₹39,999</strong></span>
+                    </div>
+                </div>
+                <div class="dest">
+                    <div class="dest-img" style="background: linear-gradient(145deg, #059669, #F59E0B);">
+                        <span class="dest-badge">★ 4.6</span>
+                        <div class="dest-hover">
+                            <a href="#dest-goa" class="dest-link">View Details →</a>
+                        </div>
+                    </div>
+                    <div class="dest-meta">
+                        <h3>Goa</h3>
+                        <p>Golden beaches, spice trails, Portuguese charm</p>
+                        <span class="dest-price">From <strong>₹14,999</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3. WHY US ===== -->
+    <section class="why" id="about">
+        <div class="container">
+            <div class="section-top">
+                <span class="section-tag">✦ Why VoyageVista</span>
+                <h2>Travel Redefined</h2>
+                <p>Four pillars that set us apart in the world of luxury travel</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-num">01</div>
+                    <h4>Best Travel Experience</h4>
+                    <p>Every itinerary is hand-crafted with premium hotels, private transfers, and expert local guides.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">02</div>
+                    <h4>Affordable Packages</h4>
+                    <p>Luxury travel at intelligently competitive prices with zero hidden costs.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">03</div>
+                    <h4>Safe Travel</h4>
+                    <p>Full travel insurance, verified partners, and 24/7 concierge support included.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">04</div>
+                    <h4>24/7 Support</h4>
+                    <p>A dedicated travel advisor on call — any time, any place, any question.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. PACKAGES ===== -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="section-top">
+                <span class="section-tag">✦ Tour Packages</span>
+                <h2>Choose Your Journey</h2>
+                <p>Tailored experiences for every kind of traveler</p>
+            </div>
+            <div class="pack-grid">
+                <div class="pack-card">
+                    <div class="pack-head">
+                        <h3>Basic</h3>
+                        <p class="pack-price"><span>₹</span>15,999</p>
+                        <p class="pack-sub">Per person</p>
+                    </div>
+                    <div class="pack-body">
+                        <ul>
+                            <li><span class="ok">✓</span> 3-Star Hotel Stay</li>
+                            <li><span class="ok">✓</span> Daily Breakfast</li>
+                            <li><span class="ok">✓</span> City Tour</li>
+                            <li><span class="no">✗</span> Airport Transfers</li>
+                            <li><span class="no">✗</span> Travel Insurance</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="pack-card pack-popular">
+                    <div class="pack-pop">Popular</div>
+                    <div class="pack-head">
+                        <h3>Family</h3>
+                        <p class="pack-price"><span>₹</span>39,999</p>
+                        <p class="pack-sub">Family of 4</p>
+                    </div>
+                    <div class="pack-body">
+                        <ul>
+                            <li><span class="ok">✓</span> Family Resort Stay</li>
+                            <li><span class="ok">✓</span> All Meals Included</li>
+                            <li><span class="ok">✓</span> Sightseeing Tours</li>
+                            <li><span class="ok">✓</span> Airport Transfers</li>
+                            <li><span class="no">✗</span> Travel Insurance</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="pack-card pack-premium">
+                    <div class="pack-pop pack-pop-gold">Best Value</div>
+                    <div class="pack-head pack-head-gold">
+                        <h3>Honeymoon</h3>
+                        <p class="pack-price gold-text"><span>₹</span>49,999</p>
+                        <p class="pack-sub">Per couple</p>
+                    </div>
+                    <div class="pack-body">
+                        <ul>
+                            <li><span class="ok">✓</span> 5-Star Luxury Resort</li>
+                            <li><span class="ok">✓</span> Candle Light Dinner</li>
+                            <li><span class="ok">✓</span> Couple Activities</li>
+                            <li><span class="ok">✓</span> Airport Transfers</li>
+                            <li><span class="ok">✓</span> Travel Insurance</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. FAMILY ===== -->
+    <section class="family">
+        <div class="container family-wrap">
+            <div class="family-visual">
+                <div class="family-art">
+                    <div class="family-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family First</h3>
+                    <p>Memories stitched together</p>
+                </div>
+            </div>
+            <div class="family-info">
+                <span class="section-tag">✦ Family Special</span>
+                <h2>Perfect Family Vacation Awaits</h2>
+                <p>Every generation has its own idea of fun — we make sure everyone gets it. From toddler-safe pools to grandparent-friendly tours, our family packages cover it all.</p>
+                <div class="family-rows">
+                    <div class="f-row">
+                        <span>🏖️</span>
+                        <div>
+                            <strong>Family Resorts</strong>
+                            <p>Kid-friendly luxury with activities for all ages</p>
+                        </div>
+                    </div>
+                    <div class="f-row">
+                        <span>🎨</span>
+                        <div>
+                            <strong>Kids Activities</strong>
+                            <p>Supervised workshops, treasure hunts, and more</p>
+                        </div>
+                    </div>
+                    <div class="f-row">
+                        <span>🍽️</span>
+                        <div>
+                            <strong>Meals Included</strong>
+                            <p>Multi-cuisine buffets with dedicated kids menus</p>
+                        </div>
+                    </div>
+                    <div class="f-row">
+                        <span>🚌</span>
+                        <div>
+                            <strong>Transportation</strong>
+                            <p>Private vehicles with child safety seats</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Book Family Package</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. HONEYMOON ===== -->
+    <section class="honeymoon">
+        <div class="container">
+            <div class="section-top">
+                <span class="section-tag" style="background: rgba(245,158,11,0.15); color: #F59E0B;">✦ Honeymoon Special</span>
+                <h2 style="color:#fff;">Romantic Honeymoon Escape</h2>
+                <p style="color:rgba(255,255,255,0.6);">Begin your forever with an unforgettable getaway</p>
+            </div>
+            <div class="hm-card">
+                <span class="hm-badge">💕 Just Married</span>
+                <div class="hm-icon">💑</div>
+                <h3>Luxury Honeymoon Experience</h3>
+                <div class="hm-grid">
+                    <div class="hm-item">
+                        <span>🏰</span>
+                        <p>Luxury Hotel</p>
+                    </div>
+                    <div class="hm-item">
+                        <span>📸</span>
+                        <p>Couple Photoshoot</p>
+                    </div>
+                    <div class="hm-item">
+                        <span>🍷</span>
+                        <p>Candle Light Dinner</p>
+                    </div>
+                    <div class="hm-item">
+                        <span>🏖️</span>
+                        <p>Private Beach Access</p>
+                    </div>
+                </div>
+                <p class="hm-price">Starting at ₹49,999 / couple</p>
+                <a href="#contact" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. TESTIMONIALS ===== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-top">
+                <span class="section-tag">✦ Hear From Travelers</span>
+                <h2>What Our Guests Say</h2>
+                <p>Real stories from real people who traveled with us</p>
+            </div>
+            <div class="testi-wrap">
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"VoyageVista planned our entire Bali honeymoon and it was flawless. The private villa, the sunset dinner, the spa — every detail was perfect."</p>
+                    <div class="testi-user">
+                        <div class="testi-av" style="background: linear-gradient(135deg, #4F46E5, #7C3AED);">AM</div>
+                        <div>
+                            <strong>Ananya & Mohit</strong>
+                            <span>Honeymoon in Bali</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"Our Switzerland family trip was magical. The kids loved the train rides through the Alps, and we loved how everything was organised without a hitch."</p>
+                    <div class="testi-user">
+                        <div class="testi-av" style="background: linear-gradient(135deg, #059669, #4F46E5);">PR</div>
+                        <div>
+                            <strong>Priya Rajan</strong>
+                            <span>Family Trip to Switzerland</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"I've travelled with many agencies but VoyageVista's attention to detail is unmatched. From the hotel choices to the guides — world class."</p>
+                    <div class="testi-user">
+                        <div class="testi-av" style="background: linear-gradient(135deg, #F59E0B, #DC2626);">VK</div>
+                        <div>
+                            <strong>Vikram Khanna</strong>
+                            <span>Frequent Traveler</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 8. INQUIRY FORM ===== -->
+    <section class="inquiry" id="contact">
+        <div class="container">
+            <div class="section-top">
+                <span class="section-tag">✦ Plan Your Trip</span>
+                <h2>Let's Make It Happen</h2>
+                <p>Share your dream and we'll craft the perfect itinerary</p>
+            </div>
+            <div class="form-box">
+                <form class="form-grid">
+                    <div class="field">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="field">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="field">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="field">
+                        <label>Destination</label>
+                        <select required>
+                            <option value="">Select destination</option>
+                            <option>Maldives</option>
+                            <option>Bali</option>
+                            <option>Switzerland</option>
+                            <option>Dubai</option>
+                            <option>Paris</option>
+                            <option>Goa</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Package Type</label>
+                        <select required>
+                            <option value="">Select package</option>
+                            <option>Basic — ₹15,999</option>
+                            <option>Family — ₹39,999</option>
+                            <option>Honeymoon — ₹49,999</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Travel Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="field full">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="Any special requests or preferences..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-btn">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 9. STATS ===== -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-wrap">
+                <div class="stat-item">
+                    <div class="stat-num">10,000+</div>
+                    <p>Happy Travelers</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">150+</div>
+                    <p>Tour Packages</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">50+</div>
+                    <p>Destinations</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">24/7</div>
+                    <p>Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 10. CONTACT ===== -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-top">
+                <span class="section-tag">✦ Get In Touch</span>
+                <h2>We'd Love to Hear From You</h2>
+                <p>Reach out anytime — our team is ready to help</p>
+            </div>
+            <div class="contact-wrap">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h4>Our Address</h4>
+                    <p>42 Voyage Vista Tower,<br>Bandra Kurla Complex,<br>Mumbai — 400051, India</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h4>Phone Number</h4>
+                    <p>+91 1800 889 9999<br>+91 98765 01111</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h4>Email Address</h4>
+                    <p>hello@voyagevista.in<br>reservations@voyagevista.in</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <h4>Business Hours</h4>
+                    <p>Mon — Sat: 9:00 AM — 9:00 PM<br>Sun: 10:00 AM — 4:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 11. FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">Voyage<span>Vista</span></div>
+                    <p>Premium travel agency crafting unforgettable journeys across the globe. Experience luxury, comfort, and adventure with VoyageVista.</p>
+                    <div class="footer-social">
+                        <a href="#" class="soc" aria-label="Facebook">f</a>
+                        <a href="#" class="soc" aria-label="Twitter">t</a>
+                        <a href="#" class="soc" aria-label="Instagram">in</a>
+                        <a href="#" class="soc" aria-label="LinkedIn">li</a>
+                        <a href="#" class="soc" aria-label="YouTube">yt</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="#">Maldives</a></li>
+                        <li><a href="#">Bali</a></li>
+                        <li><a href="#">Switzerland</a></li>
+                        <li><a href="#">Dubai</a></li>
+                        <li><a href="#">Paris</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Packages</h4>
+                    <ul>
+                        <li><a href="#">Basic Package</a></li>
+                        <li><a href="#">Family Package</a></li>
+                        <li><a href="#">Honeymoon Package</a></li>
+                        <li><a href="#">Custom Tours</a></li>
+                        <li><a href="#">Group Discounts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 VoyageVista Travel Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== DESTINATION DETAIL PAGES (:target) ================================================================== -->
+
+    <!-- ===== MALDIVES ===== -->
+    <section class="detail-page" id="dest-maldives">
+        <div class="detail-wrap">
+            <div class="detail-banner">
+                <div class="detail-banner-bg" style="background: linear-gradient(145deg, #0D6EFD, #00B894, #0055AA);"></div>
+                <a href="#destinations" class="detail-close">✕ Close</a>
+                <div class="detail-banner-content">
+                    <span class="detail-tag">★ 4.9 · Tropical Paradise</span>
+                    <h1>Maldives</h1>
+                    <p>Crystal-clear lagoons, powdery white beaches, and overwater villas — the ultimate island escape</p>
+                </div>
+            </div>
+            <div class="detail-body">
+                <div class="container">
+                    <div class="detail-section">
+                        <h2>About Maldives</h2>
+                        <p>The Maldives is a tropical paradise of 1,190 coral islands grouped across 26 atolls in the Indian Ocean. Known for its crystal-clear turquoise waters, pristine white-sand beaches, and luxurious overwater villas, it's the world's premier destination for romance, relaxation, and water sports.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Trip Highlights</h2>
+                        <div class="detail-highlights">
+                            <div class="hl-card"><span>🏖️</span><h4>Private Beaches</h4><p>Secluded white sand beaches with crystal clear waters</p></div>
+                            <div class="hl-card"><span>🏠</span><h4>Overwater Villas</h4><p>Luxury villas with glass floors and private pools</p></div>
+                            <div class="hl-card"><span>🐠</span><h4>Coral Reefs</h4><p>World-class snorkeling and diving spots</p></div>
+                            <div class="hl-card"><span>🌅</span><h4>Sunset Cruises</h4><p>Traditional dhoni boat rides at golden hour</p></div>
+                            <div class="hl-card"><span>🍽️</span><h4>Underwater Dining</h4><p>Restaurants surrounded by marine life</p></div>
+                            <div class="hl-card"><span>💆</span><h4>Beach Spa</h4><p>Overwater spa treatments with ocean views</p></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Suggested Itinerary</h2>
+                        <div class="detail-timeline">
+                            <div class="tl-item"><div class="tl-day">Day 1</div><div class="tl-info"><h4>Arrival in Malé</h4><p>Welcome at Velana International Airport. Speedboat transfer to your resort. Welcome drink and sunset orientation.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 2</div><div class="tl-info"><h4>Beach & Water Sports</h4><p>Morning snorkeling in the house reef. Jet skiing and parasailing. Beachside barbecue dinner.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 3</div><div class="tl-info"><h4>Island Hopping</h4><p>Visit local fishing island. Sandbank picnic. Dolphin cruise at sunset. Underwater restaurant dinner.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 4</div><div class="tl-info"><h4>Spa & Relaxation</h4><p>Full-day spa package. Overwater villa relaxation. Private beach candlelight dinner.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 5</div><div class="tl-info"><h4>Departure</h4><p>Final breakfast over the lagoon. Souvenir shopping. Speedboat transfer to airport.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Packages</h2>
+                        <div class="detail-pricing">
+                            <div class="dp-card"><h4>Beach Escape</h4><p class="dp-price">₹29,999</p><p class="dp-sub">Per person · 3 Nights</p><ul><li>✓ Beach Villa</li><li>✓ Breakfast Only</li><li>✓ Snorkeling Gear</li><li>✓ Airport Transfer</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                            <div class="dp-card dp-featured" style="--feat-clr:#0D6EFD"><span class="dp-badge">Popular</span><h4>Romantic Getaway</h4><p class="dp-price">₹49,999</p><p class="dp-sub">Per couple · 4 Nights</p><ul><li>✓ Overwater Villa</li><li>✓ All Meals</li><li>✓ Sunset Cruise</li><li>✓ Spa Session</li><li>✓ Private Transfer</li></ul><a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#0D6EFD,#0055AA);border-color:#0D6EFD;">Book Now</a></div>
+                            <div class="dp-card"><h4>Ultra Luxury</h4><p class="dp-price">₹89,999</p><p class="dp-sub">Per person · 5 Nights</p><ul><li>✓ Presidential Villa</li><li>✓ Gourmet Dining</li><li>✓ Private Butler</li><li>✓ All Water Sports</li><li>✓ Helicopter Transfer</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>What's Included</h2>
+                        <div class="detail-included">
+                            <div class="inc-item"><span>✅</span> Hotel Accommodation</div>
+                            <div class="inc-item"><span>✅</span> Daily Meals (as per plan)</div>
+                            <div class="inc-item"><span>✅</span> Airport Transfers</div>
+                            <div class="inc-item"><span>✅</span> Water Activities</div>
+                            <div class="inc-item"><span>✅</span> Travel Guide</div>
+                            <div class="inc-item"><span>✅</span> 24/7 Support</div>
+                            <div class="inc-item"><span>✅</span> Travel Insurance</div>
+                            <div class="inc-item"><span>✅</span> All Taxes & Fees</div>
+                        </div>
+                    </div>
+                    <div class="detail-cta">
+                        <a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#0D6EFD,#0055AA);border-color:#0D6EFD;">Book Maldives Trip</a>
+                        <a href="#destinations" class="btn btn-ghost-dark">← Back to Destinations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BALI ===== -->
+    <section class="detail-page" id="dest-bali">
+        <div class="detail-wrap">
+            <div class="detail-banner">
+                <div class="detail-banner-bg" style="background: linear-gradient(145deg, #7C3AED, #F59E0B, #6D28D9);"></div>
+                <a href="#destinations" class="detail-close">✕ Close</a>
+                <div class="detail-banner-content">
+                    <span class="detail-tag">★ 4.8 · Island of Gods</span>
+                    <h1>Bali</h1>
+                    <p>Rice terraces, ancient temples, vibrant culture, and tropical bliss — Bali is a feast for the soul</p>
+                </div>
+            </div>
+            <div class="detail-body">
+                <div class="container">
+                    <div class="detail-section">
+                        <h2>About Bali</h2>
+                        <p>Bali, the "Island of the Gods," is a world-renowned destination known for its lush rice terraces, ancient Hindu temples, vibrant arts scene, and stunning beaches. From the cultural heart of Ubud to the surf breaks of Seminyak, Bali offers a rich and diverse travel experience.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Trip Highlights</h2>
+                        <div class="detail-highlights">
+                            <div class="hl-card"><span>🛕</span><h4>Uluwatu Temple</h4><p>Clifftop temple with stunning ocean views</p></div>
+                            <div class="hl-card"><span>🌾</span><h4>Tegalalang Rice Terraces</h4><p>Iconic green terraces and swinging spots</p></div>
+                            <div class="hl-card"><span>🐒</span><h4>Monkey Forest</h4><p>Sacred forest with playful monkeys</p></div>
+                            <div class="hl-card"><span>🌋</span><h4>Mount Batur</h4><p>Sunrise trek to an active volcano</p></div>
+                            <div class="hl-card"><span>🏄</span><h4>Surfing</h4><p>World-class waves at Uluwatu & Padang Padang</p></div>
+                            <div class="hl-card"><span>💆</span><h4>Bali Spa</h4><p>Traditional massages and wellness retreats</p></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Suggested Itinerary</h2>
+                        <div class="detail-timeline">
+                            <div class="tl-item"><div class="tl-day">Day 1</div><div class="tl-info"><h4>Arrival in Bali</h4><p>Airport pickup. Check into resort in Seminyak. Evening beach walk and welcome dinner.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 2</div><div class="tl-info"><h4>Ubud Cultural Tour</h4><p>Visit Tegallalang Rice Terraces, Monkey Forest, Ubud Palace. Traditional Balinese dance performance.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 3</div><div class="tl-info"><h4>Uluwatu & Beaches</h4><p>Uluwatu Temple visit. Surfing at Padang Padang. Kecak fire dance at sunset.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 4</div><div class="tl-info"><h4>Adventure Day</h4><p>Mount Batur sunrise trek. White water rafting in Ayung River. Spa evening.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 5</div><div class="tl-info"><h4>Departure</h4><p>Leisurely breakfast. Last-minute shopping at local markets. Transfer to Ngurah Rai Airport.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Packages</h2>
+                        <div class="detail-pricing">
+                            <div class="dp-card"><h4>Bali Explorer</h4><p class="dp-price">₹24,999</p><p class="dp-sub">Per person · 4 Nights</p><ul><li>✓ 4-Star Resort</li><li>✓ Breakfast Daily</li><li>✓ Ubud Tour</li><li>✓ Airport Transfer</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                            <div class="dp-card dp-featured" style="--feat-clr:#7C3AED"><span class="dp-badge">Popular</span><h4>Bali Honeymoon</h4><p class="dp-price">₹44,999</p><p class="dp-sub">Per couple · 5 Nights</p><ul><li>✓ Luxury Villa</li><li>✓ All Meals</li><li>✓ Couple Spa</li><li>✓ Sunset Cruise</li><li>✓ Private Transfers</li></ul><a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#7C3AED,#6D28D9);border-color:#7C3AED;">Book Now</a></div>
+                            <div class="dp-card"><h4>Bali Adventure</h4><p class="dp-price">₹34,999</p><p class="dp-sub">Per person · 5 Nights</p><ul><li>✓ 4-Star Hotel</li><li>✓ All Meals</li><li>✓ Batur Trek</li><li>✓ Rafting & Surfing</li><li>✓ All Transfers</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>What's Included</h2>
+                        <div class="detail-included">
+                            <div class="inc-item"><span>✅</span> Hotel Accommodation</div>
+                            <div class="inc-item"><span>✅</span> Daily Meals (as per plan)</div>
+                            <div class="inc-item"><span>✅</span> Airport Transfers</div>
+                            <div class="inc-item"><span>✅</span> Sightseeing Tours</div>
+                            <div class="inc-item"><span>✅</span> Travel Guide</div>
+                            <div class="inc-item"><span>✅</span> Adventure Activities</div>
+                            <div class="inc-item"><span>✅</span> Travel Insurance</div>
+                            <div class="inc-item"><span>✅</span> 24/7 Support</div>
+                        </div>
+                    </div>
+                    <div class="detail-cta">
+                        <a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#7C3AED,#6D28D9);border-color:#7C3AED;">Book Bali Trip</a>
+                        <a href="#destinations" class="btn btn-ghost-dark">← Back to Destinations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SWITZERLAND ===== -->
+    <section class="detail-page" id="dest-switzerland">
+        <div class="detail-wrap">
+            <div class="detail-banner">
+                <div class="detail-banner-bg" style="background: linear-gradient(145deg, #059669, #0D6EFD, #047857);"></div>
+                <a href="#destinations" class="detail-close">✕ Close</a>
+                <div class="detail-banner-content">
+                    <span class="detail-tag">★ 4.9 · Alpine Wonderland</span>
+                    <h1>Switzerland</h1>
+                    <p>Towering Alps, pristine lakes, charming villages — experience the magic of Switzerland</p>
+                </div>
+            </div>
+            <div class="detail-body">
+                <div class="container">
+                    <div class="detail-section">
+                        <h2>About Switzerland</h2>
+                        <p>Switzerland is the epitome of natural beauty — from the majestic Matterhorn to the serene shores of Lake Geneva. Known for its precision, luxury, and breathtaking landscapes, it's a dream destination for nature lovers, skiers, and romantics alike.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Trip Highlights</h2>
+                        <div class="detail-highlights">
+                            <div class="hl-card"><span>🏔️</span><h4>Matterhorn</h4><p>Iconic Alpine peak in Zermatt</p></div>
+                            <div class="hl-card"><span>🚂</span><h4>Glacier Express</h4><p>Scenic train ride through the Alps</p></div>
+                            <div class="hl-card"><span>🏞️</span><h4>Lake Geneva</h4><p>Crystal clear lake with Alpine views</p></div>
+                            <div class="hl-card"><span>🏘️</span><h4>Interlaken</h4><p>Adventure capital between two lakes</p></div>
+                            <div class="hl-card"><span>🎿</span><h4>Skiing</h4><p>World-class slopes in St. Moritz</p></div>
+                            <div class="hl-card"><span>🍫</span><h4>Chocolate Tour</h4><p>Visit Swiss chocolate factories</p></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Suggested Itinerary</h2>
+                        <div class="detail-timeline">
+                            <div class="tl-item"><div class="tl-day">Day 1</div><div class="tl-info"><h4>Arrival in Zurich</h4><p>Arrive at Zurich Airport. Transfer to hotel. Old Town walking tour. Dinner by the lake.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 2</div><div class="tl-info"><h4>Zurich to Interlaken</h4><p>Train ride through scenic countryside. Arrive in Interlaken. Paragliding or lake cruise.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 3</div><div class="tl-info"><h4>Jungfraujoch Excursion</h4><p>Top of Europe — train to Jungfraujoch. Ice palace, panoramic views, snow fun.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 4</div><div class="tl-info"><h4>Lucerne & Chapel Bridge</h4><p>Visit Chapel Bridge, Lion Monument. Boat ride on Lake Lucerne. Swiss fondue dinner.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 5</div><div class="tl-info"><h4>Departure</h4><p>Breakfast with Alpine views. Chocolate shopping. Transfer to Zurich Airport.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Packages</h2>
+                        <div class="detail-pricing">
+                            <div class="dp-card"><h4>Alpine Explorer</h4><p class="dp-price">₹34,999</p><p class="dp-sub">Per person · 4 Nights</p><ul><li>✓ 3-Star Hotel</li><li>✓ Breakfast Daily</li><li>✓ Interlaken Tour</li><li>✓ Train Pass</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                            <div class="dp-card dp-featured" style="--feat-clr:#059669"><span class="dp-badge">Popular</span><h4>Swiss Family</h4><p class="dp-price">₹79,999</p><p class="dp-sub">Family of 4 · 6 Nights</p><ul><li>✓ 4-Star Hotels</li><li>✓ Half Board Meals</li><li>✓ Jungfraujoch Trip</li><li>✓ Glacier Express</li><li>✓ All Transfers</li></ul><a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#059669,#047857);border-color:#059669;">Book Now</a></div>
+                            <div class="dp-card"><h4>Luxury Alpine</h4><p class="dp-price">₹64,999</p><p class="dp-sub">Per person · 5 Nights</p><ul><li>✓ 5-Star Resort</li><li>✓ All Meals</li><li>✓ Ski Pass & Gear</li><li>✓ Private Guide</li><li>✓ Spa Access</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>What's Included</h2>
+                        <div class="detail-included">
+                            <div class="inc-item"><span>✅</span> Hotel Accommodation</div>
+                            <div class="inc-item"><span>✅</span> Daily Meals (as per plan)</div>
+                            <div class="inc-item"><span>✅</span> Scenic Train Pass</div>
+                            <div class="inc-item"><span>✅</span> Sightseeing Tours</div>
+                            <div class="inc-item"><span>✅</span> English Guide</div>
+                            <div class="inc-item"><span>✅</span> Mountain Excursions</div>
+                            <div class="inc-item"><span>✅</span> Travel Insurance</div>
+                            <div class="inc-item"><span>✅</span> 24/7 Support</div>
+                        </div>
+                    </div>
+                    <div class="detail-cta">
+                        <a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#059669,#047857);border-color:#059669;">Book Switzerland Trip</a>
+                        <a href="#destinations" class="btn btn-ghost-dark">← Back to Destinations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DUBAI ===== -->
+    <section class="detail-page" id="dest-dubai">
+        <div class="detail-wrap">
+            <div class="detail-banner">
+                <div class="detail-banner-bg" style="background: linear-gradient(145deg, #DC2626, #F59E0B, #B91C1C);"></div>
+                <a href="#destinations" class="detail-close">✕ Close</a>
+                <div class="detail-banner-content">
+                    <span class="detail-tag">★ 4.7 · City of Gold</span>
+                    <h1>Dubai</h1>
+                    <p>Ultra-modern skyscrapers, golden deserts, luxury shopping — a city beyond imagination</p>
+                </div>
+            </div>
+            <div class="detail-body">
+                <div class="container">
+                    <div class="detail-section">
+                        <h2>About Dubai</h2>
+                        <p>Dubai is a futuristic metropolis in the desert, home to the world's tallest building, man-made islands, and unparalleled luxury. From gold souks to sky-high infinity pools, desert safaris to Michelin-star dining — Dubai offers an extraordinary blend of tradition and innovation.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Trip Highlights</h2>
+                        <div class="detail-highlights">
+                            <div class="hl-card"><span>🏗️</span><h4>Burj Khalifa</h4><p>World's tallest building with sky-high views</p></div>
+                            <div class="hl-card"><span>🏝️</span><h4>Palm Jumeirah</h4><p>Iconic man-made island paradise</p></div>
+                            <div class="hl-card"><span>🏜️</span><h4>Desert Safari</h4><p>Dune bashing, camel rides, BBQ under stars</p></div>
+                            <div class="hl-card"><span>🛍️</span><h4>Dubai Mall</h4><p>World's largest shopping & entertainment hub</p></div>
+                            <div class="hl-card"><span>🎡</span><h4>Atlantis</h4><p>Luxury resort with aquarium and water park</p></div>
+                            <div class="hl-card"><span>🏎️</span><h4>Ferrari World</h4><p>Thrill rides at world's fastest roller coaster</p></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Suggested Itinerary</h2>
+                        <div class="detail-timeline">
+                            <div class="tl-item"><div class="tl-day">Day 1</div><div class="tl-info"><h4>Arrival in Dubai</h4><p>Airport pickup. Check into luxury hotel. Evening Dhow cruise on Dubai Creek.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 2</div><div class="tl-info"><h4>City Tour</h4><p>Burj Khalifa observation deck. Dubai Mall. Dubai Fountain show. Dinner at Atlantis.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 3</div><div class="tl-info"><h4>Desert Safari</h4><p>Dune bashing. Quad biking. Camel ride. Arabic BBQ dinner under the stars.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 4</div><div class="tl-info"><h4>Adventure Day</h4><p>Ferrari World Abu Dhabi or water parks. Evening at Dubai Marina. Yacht dinner.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 5</div><div class="tl-info"><h4>Departure</h4><p>Gold Souk and Spice Souk shopping. Transfer to Dubai International Airport.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Packages</h2>
+                        <div class="detail-pricing">
+                            <div class="dp-card"><h4>City Break</h4><p class="dp-price">₹19,999</p><p class="dp-sub">Per person · 3 Nights</p><ul><li>✓ 4-Star Hotel</li><li>✓ Breakfast Daily</li><li>✓ City Tour</li><li>✓ Airport Transfer</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                            <div class="dp-card dp-featured" style="--feat-clr:#F59E0B"><span class="dp-badge">Popular</span><h4>Family Fun</h4><p class="dp-price">₹54,999</p><p class="dp-sub">Family of 4 · 5 Nights</p><ul><li>✓ 5-Star Resort</li><li>✓ All Meals</li><li>✓ Desert Safari</li><li>✓ Theme Parks</li><li>✓ All Transfers</li></ul><a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#F59E0B,#D97706);border-color:#F59E0B;">Book Now</a></div>
+                            <div class="dp-card"><h4>Luxury Dubai</h4><p class="dp-price">₹49,999</p><p class="dp-sub">Per person · 5 Nights</p><ul><li>✓ 7-Star Hotel</li><li>✓ Half Board</li><li>✓ Burj Khalifa Access</li><li>✓ Yacht Tour</li><li>✓ Private Transfers</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>What's Included</h2>
+                        <div class="detail-included">
+                            <div class="inc-item"><span>✅</span> Hotel Accommodation</div>
+                            <div class="inc-item"><span>✅</span> Daily Meals (as per plan)</div>
+                            <div class="inc-item"><span>✅</span> Airport Transfers</div>
+                            <div class="inc-item"><span>✅</span> Sightseeing Tours</div>
+                            <div class="inc-item"><span>✅</span> Desert Safari</div>
+                            <div class="inc-item"><span>✅</span> Travel Guide</div>
+                            <div class="inc-item"><span>✅</span> Travel Insurance</div>
+                            <div class="inc-item"><span>✅</span> 24/7 Support</div>
+                        </div>
+                    </div>
+                    <div class="detail-cta">
+                        <a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#F59E0B,#D97706);border-color:#F59E0B;">Book Dubai Trip</a>
+                        <a href="#destinations" class="btn btn-ghost-dark">← Back to Destinations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PARIS ===== -->
+    <section class="detail-page" id="dest-paris">
+        <div class="detail-wrap">
+            <div class="detail-banner">
+                <div class="detail-banner-bg" style="background: linear-gradient(145deg, #EC4899, #4F46E5, #BE185D);"></div>
+                <a href="#destinations" class="detail-close">✕ Close</a>
+                <div class="detail-banner-content">
+                    <span class="detail-tag">★ 4.8 · City of Love</span>
+                    <h1>Paris</h1>
+                    <p>Eiffel lights, world-class art, café terraces, and timeless romance — Paris is always a good idea</p>
+                </div>
+            </div>
+            <div class="detail-body">
+                <div class="container">
+                    <div class="detail-section">
+                        <h2>About Paris</h2>
+                        <p>Paris, the City of Light, is the world's most romantic destination. From the iconic Eiffel Tower to the hallowed halls of the Louvre, from charming sidewalk cafés to chic boutiques — every corner of Paris exudes elegance, history, and romance.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Trip Highlights</h2>
+                        <div class="detail-highlights">
+                            <div class="hl-card"><span>🗼</span><h4>Eiffel Tower</h4><p>Iconic monument with panoramic city views</p></div>
+                            <div class="hl-card"><span>🎨</span><h4>Louvre Museum</h4><p>World's largest art museum & Mona Lisa</p></div>
+                            <div class="hl-card"><span>⛪</span><h4>Notre-Dame</h4><p>Masterpiece of Gothic architecture</p></div>
+                            <div class="hl-card"><span>🥐</span><h4>French Cuisine</h4><p>Michelin dining, croissants, and wine</p></div>
+                            <div class="hl-card"><span>🛍️</span><h4>Champs-Élysées</h4><p>World-famous avenue for luxury shopping</p></div>
+                            <div class="hl-card"><span>🚢</span><h4>Seine Cruise</h4><p>Romantic boat ride under Parisian bridges</p></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Suggested Itinerary</h2>
+                        <div class="detail-timeline">
+                            <div class="tl-item"><div class="tl-day">Day 1</div><div class="tl-info"><h4>Arrival in Paris</h4><p>Check into hotel in Le Marais. Evening Seine river cruise. Dinner at a traditional bistro.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 2</div><div class="tl-info"><h4>Iconic Landmarks</h4><p>Eiffel Tower summit. Champs-Élysées walk. Arc de Triomphe. Lunch at a sidewalk café.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 3</div><div class="tl-info"><h4>Art & Culture</h4><p>Louvre Museum (Mona Lisa, Venus de Milo). Montmartre & Sacré-Cœur. Moulin Rouge show.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 4</div><div class="tl-info"><h4>Palace & Gardens</h4><p>Day trip to Versailles Palace. Marie Antoinette's estate. Evening at Latin Quarter.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 5</div><div class="tl-info"><h4>Departure</h4><p>Croissant breakfast. Last-minute shopping. Transfer to Charles de Gaulle Airport.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Packages</h2>
+                        <div class="detail-pricing">
+                            <div class="dp-card"><h4>Paris Explorer</h4><p class="dp-price">₹39,999</p><p class="dp-sub">Per person · 4 Nights</p><ul><li>✓ 3-Star Hotel</li><li>✓ Breakfast Daily</li><li>✓ Eiffel Tour</li><li>✓ Seine Cruise</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                            <div class="dp-card dp-featured" style="--feat-clr:#EC4899"><span class="dp-badge">Popular</span><h4>Romantic Paris</h4><p class="dp-price">₹69,999</p><p class="dp-sub">Per couple · 5 Nights</p><ul><li>✓ 4-Star Boutique Hotel</li><li>✓ Half Board</li><li>✓ Louvre Tour</li><li>✓ Versailles Trip</li><li>✓ Couple Photoshoot</li></ul><a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#EC4899,#BE185D);border-color:#EC4899;">Book Now</a></div>
+                            <div class="dp-card"><h4>Luxury Paris</h4><p class="dp-price">₹59,999</p><p class="dp-sub">Per person · 5 Nights</p><ul><li>✓ 5-Star Palace Hotel</li><li>✓ All Meals</li><li>✓ Private Guide</li><li>✓ Michelin Dinner</li><li>✓ Shopping Tour</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>What's Included</h2>
+                        <div class="detail-included">
+                            <div class="inc-item"><span>✅</span> Hotel Accommodation</div>
+                            <div class="inc-item"><span>✅</span> Daily Meals (as per plan)</div>
+                            <div class="inc-item"><span>✅</span> Airport Transfers</div>
+                            <div class="inc-item"><span>✅</span> Museum Tickets</div>
+                            <div class="inc-item"><span>✅</span> English Guide</div>
+                            <div class="inc-item"><span>✅</span> Seine Cruise</div>
+                            <div class="inc-item"><span>✅</span> Travel Insurance</div>
+                            <div class="inc-item"><span>✅</span> 24/7 Support</div>
+                        </div>
+                    </div>
+                    <div class="detail-cta">
+                        <a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#EC4899,#BE185D);border-color:#EC4899;">Book Paris Trip</a>
+                        <a href="#destinations" class="btn btn-ghost-dark">← Back to Destinations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GOA ===== -->
+    <section class="detail-page" id="dest-goa">
+        <div class="detail-wrap">
+            <div class="detail-banner">
+                <div class="detail-banner-bg" style="background: linear-gradient(145deg, #059669, #F59E0B, #047857);"></div>
+                <a href="#destinations" class="detail-close">✕ Close</a>
+                <div class="detail-banner-content">
+                    <span class="detail-tag">★ 4.6 · Beach Paradise</span>
+                    <h1>Goa</h1>
+                    <p>Golden beaches, vibrant nightlife, Portuguese heritage, and tropical vibes — Goa is India's party capital</p>
+                </div>
+            </div>
+            <div class="detail-body">
+                <div class="container">
+                    <div class="detail-section">
+                        <h2>About Goa</h2>
+                        <p>Goa is India's smallest but most vibrant state, famous for its stunning beaches, Portuguese colonial architecture, and laid-back hippie culture. From the bustling shores of Baga to the serene sands of Palolem, Goa offers sun, surf, seafood, and soul.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Trip Highlights</h2>
+                        <div class="detail-highlights">
+                            <div class="hl-card"><span>🏖️</span><h4>Baga Beach</h4><p>Vibrant beach with water sports & shacks</p></div>
+                            <div class="hl-card"><span>⛪</span><h4>Basilica of Bom Jesus</h4><p>UNESCO heritage church with Baroque architecture</p></div>
+                            <div class="hl-card"><span>🌴</span><h4>Palolem Beach</h4><p>Serene crescent-shaped beach paradise</p></div>
+                            <div class="hl-card"><span>🍹</span><h4>Nightlife</h4><p>Beach parties, clubs, and live music</p></div>
+                            <div class="hl-card"><span>🛕</span><h4>Fort Aguada</h4><p>17th-century Portuguese fort with ocean views</p></div>
+                            <div class="hl-card"><span>🐊</span><h4>Dudhsagar Falls</h4><p>Majestic waterfall and jungle trek</p></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Suggested Itinerary</h2>
+                        <div class="detail-timeline">
+                            <div class="tl-item"><div class="tl-day">Day 1</div><div class="tl-info"><h4>Arrival in Goa</h4><p>Airport pickup. Check into beach resort. Evening walk on Baga Beach. Seafood dinner.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 2</div><div class="tl-info"><h4>North Goa Tour</h4><p>Visit Fort Aguada, Calangute Beach, Anjuna Flea Market. Sunset at Chapora Fort.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 3</div><div class="tl-info"><h4>South Goa Serenity</h4><p>Palolem Beach relaxation. Dolphin spotting boat ride. Portuguese colonial walk.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 4</div><div class="tl-info"><h4>Adventure & Waterfalls</h4><p>Dudhsagar Waterfall trek. River rafting. Casino cruise in the evening.</p></div></div>
+                            <div class="tl-item"><div class="tl-day">Day 5</div><div class="tl-info"><h4>Departure</h4><p>Beachside breakfast. Spice plantation tour. Transfer to Goa International Airport.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Packages</h2>
+                        <div class="detail-pricing">
+                            <div class="dp-card"><h4>Beach Break</h4><p class="dp-price">₹14,999</p><p class="dp-sub">Per person · 3 Nights</p><ul><li>✓ 3-Star Resort</li><li>✓ Breakfast Daily</li><li>✓ North Goa Tour</li><li>✓ Airport Transfer</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                            <div class="dp-card dp-featured" style="--feat-clr:#059669"><span class="dp-badge">Popular</span><h4>Goa Family Fun</h4><p class="dp-price">₹34,999</p><p class="dp-sub">Family of 4 · 4 Nights</p><ul><li>✓ 4-Star Beach Resort</li><li>✓ All Meals</li><li>✓ Water Sports</li><li>✓ Waterfall Trip</li><li>✓ All Transfers</li></ul><a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#059669,#047857);border-color:#059669;">Book Now</a></div>
+                            <div class="dp-card"><h4>Party Package</h4><p class="dp-price">₹22,999</p><p class="dp-sub">Per person · 4 Nights</p><ul><li>✓ 4-Star Resort</li><li>✓ Breakfast & Dinner</li><li>✓ Club Entry Pass</li><li>✓ Casino Cruise</li><li>✓ Airport Transfer</li></ul><a href="#contact" class="btn btn-outline">Book Now</a></div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>What's Included</h2>
+                        <div class="detail-included">
+                            <div class="inc-item"><span>✅</span> Hotel Accommodation</div>
+                            <div class="inc-item"><span>✅</span> Daily Meals (as per plan)</div>
+                            <div class="inc-item"><span>✅</span> Airport Transfers</div>
+                            <div class="inc-item"><span>✅</span> Sightseeing Tours</div>
+                            <div class="inc-item"><span>✅</span> Water Sports</div>
+                            <div class="inc-item"><span>✅</span> Travel Guide</div>
+                            <div class="inc-item"><span>✅</span> Travel Insurance</div>
+                            <div class="inc-item"><span>✅</span> 24/7 Support</div>
+                        </div>
+                    </div>
+                    <div class="detail-cta">
+                        <a href="#contact" class="btn btn-primary" style="background:linear-gradient(135deg,#059669,#047857);border-color:#059669;">Book Goa Trip</a>
+                        <a href="#destinations" class="btn btn-ghost-dark">← Back to Destinations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

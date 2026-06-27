@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tandoori Nights</title>
+<link rel="icon" href="image copy 2.png" type="image/png">
+
+<style>
+
+:root{
+    --bg-dark: #0f0f0f;
+    --card-bg: #1a1a1a;
+    --primary: #d35400;
+    --secondary: #f39c12;
+    --text-light: #ffffff;
+    --text-gray: #cccccc;
+    --border-dim: #2a2a2a;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background: var(--card-bg);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color: var(--secondary);
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    height:40px;
+    width:auto;
+    display:block;
+    background:black;
+    border-radius:4px;
+    padding:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color: var(--text-light);
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color: var(--secondary);
+}
+
+/* Hero Section */
+
+.hero{
+    height:70vh;
+    min-height:400px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-video{
+    position:absolute;
+    top:0;left:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    z-index:0;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-content h1{
+    font-size:70px;
+    color: var(--secondary);
+}
+
+.hero-content p{
+    margin-top:15px;
+    font-size:22px;
+    color: var(--text-gray);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background: var(--primary);
+    color: var(--text-light);
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background: var(--secondary);
+}
+
+/* Categories */
+
+.categories{
+    padding:80px 8% 40px;
+}
+
+.cat-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+@media(max-width:700px){
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:400px){
+    .cat-grid{grid-template-columns:1fr;}
+}
+
+.cat-item{
+    background:var(--card-bg);
+    border:1px solid var(--border-dim);
+    border-radius:16px;
+    padding:40px 15px;
+    text-align:center;
+    text-decoration:none;
+    color:var(--text-light);
+    transition:.3s;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.cat-item::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75));
+    z-index:1;
+    transition:.3s;
+}
+
+.cat-item:hover::before{
+    background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55));
+}
+
+.cat-item:hover{
+    border-color:var(--secondary);
+    transform:translateY(-6px);
+    box-shadow:0 8px 25px rgba(243,156,18,.2);
+}
+
+.cat-item .icon{
+    font-size:40px;
+    display:block;
+    margin-bottom:10px;
+    position:relative;
+    z-index:2;
+}
+
+.cat-item span:last-child{
+    font-size:15px;
+    font-weight:600;
+    display:block;
+    position:relative;
+    z-index:2;
+}
+
+.cat-indian{background-image:url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&h=400&fit=crop');}
+.cat-chinese{background-image:url('https://images.unsplash.com/photo-1525755662778-989d0524087e?w=600&h=400&fit=crop');}
+.cat-italian{background-image:url('https://images.unsplash.com/photo-1498579150354-977475b7ea0b?w=600&h=400&fit=crop');}
+.cat-mexican{background-image:url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=600&h=400&fit=crop');}
+.cat-japanese{background-image:url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&h=400&fit=crop');}
+.cat-desserts{background-image:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&h=400&fit=crop');}
+
+@media(max-width:900px){
+    .cat-grid{grid-template-columns:repeat(3,1fr);}
+}
+
+@media(max-width:500px){
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+/* Special Section */
+
+.special{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color: var(--secondary);
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background: var(--card-bg);
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color: var(--secondary);
+    margin-bottom:10px;
+}
+
+/* Weekend Special */
+
+.weekend{
+    padding:40px 8% 80px;
+}
+
+.weekend-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.weekend-item{
+    background:var(--card-bg);
+    border:1px solid var(--border-dim);
+    border-radius:16px;
+    overflow:hidden;
+    transition:.3s;
+    position:relative;
+}
+
+.weekend-item:hover{
+    transform:translateY(-6px);
+    border-color:var(--secondary);
+    box-shadow:0 8px 30px rgba(243,156,18,.12);
+}
+
+.weekend-item img{
+    width:100%;height:160px;object-fit:cover;display:block;
+}
+
+.weekend-item .info{
+    padding:20px;
+    text-align:center;
+}
+
+.weekend-item .badge{
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--primary);
+    color:var(--text-light);
+    padding:4px 16px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+    white-space:nowrap;
+}
+
+.weekend-item .icon{
+    font-size:40px;
+    display:block;
+    margin:10px 0 8px;
+}
+
+.weekend-item h4{
+    font-size:17px;
+    color:var(--secondary);
+    margin-bottom:4px;
+}
+
+.weekend-item .price{
+    color:var(--primary);
+    font-weight:800;
+    font-size:18px;
+}
+
+.weekend-item .tag{
+    color:var(--text-gray);
+    font-size:13px;
+    margin-top:5px;
+}
+
+@media(max-width:700px){
+    .weekend-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:450px){
+    .weekend-grid{grid-template-columns:1fr;}
+}
+
+/* About */
+
+.about{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    color: var(--text-gray);
+    line-height:1.8;
+}
+
+/* Contact */
+
+.contact{
+    background: var(--card-bg);
+    padding:70px;
+    text-align:center;
+}
+
+.contact h2{
+    color: var(--secondary);
+    margin-bottom:20px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:black;
+    color:#888;
+}
+
+</style>
+</head>
+<body>
+
+<script>
+history.scrollRestoration = 'manual';
+</script>
+
+<nav>
+    <div class="logo"><img src="image copy 2.png" alt="Tandoori Nights"> Tandoori Nights</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#categories">Menu</a></li>
+        <li><a href="#special">Specials</a></li>
+        <li><a href="#weekend">Weekend</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="mainvidio.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1>Tandoori Nights</h1>
+        <p>Bold Flavors • Warm Nights • Memorable Bites</p>
+        <a href="book-table.html" class="btn">Book a Table</a>
+    </div>
+</section>
+
+<section id="categories" class="categories">
+    <h2 class="section-title">Categories</h2>
+    <div class="cat-grid">
+        <a href="indian.html" class="cat-item cat-indian">
+            <span class="icon"></span>
+            <span>Indian</span>
+        </a>
+        <a href="chinese.html" class="cat-item cat-chinese">
+            <span class="icon"></span>
+            <span>Chinese</span>
+        </a>
+        <a href="italian.html" class="cat-item cat-italian">
+            <span class="icon"></span>
+            <span>Italian</span>
+        </a>
+        <a href="mexican.html" class="cat-item cat-mexican">
+            <span class="icon"></span>
+            <span>Mexican</span>
+        </a>
+        <a href="japanese.html" class="cat-item cat-japanese">
+            <span class="icon"></span>
+            <span>Japanese</span>
+        </a>
+        <a href="desserts.html" class="cat-item cat-desserts">
+            <span class="icon"></span>
+            <span>Desserts</span>
+        </a>
+    </div>
+</section>
+
+<section id="special" class="special">
+    <h2 class="section-title">Today's Specials</h2>
+
+    <div class="cards">
+
+        <div class="card">
+         <img src="https://images.pexels.com/photos/29173111/pexels-photo-29173111.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop">
+            <div class="card-content">
+                <h3>Tandoori Chicken</h3>
+                <p>Freshly grilled with authentic spices.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://static.vecteezy.com/system/resources/previews/055/990/298/non_2x/a-bowl-of-curry-with-meat-and-bread-on-a-table-photo.jpg">
+            <div class="card-content">
+                <h3>Butter Chicken</h3>
+                <p>Rich creamy gravy with traditional taste.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.tNPqcnFGxfNFOG6F2UFugwHaEP?rs=1&pid=ImgDetMain&o=7&rm=3">
+            <div class="card-content">
+                <h3>Tandoori Platter</h3>
+                <p>Perfect combination of smoky delights.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="weekend" class="weekend">
+    <h2 class="section-title">Weekend Specials</h2>
+    <div class="weekend-grid">
+        <div class="weekend-item">
+      
+            <img src="https://www.recipesbyfreya.com/wp-content/uploads/2026/02/k8dkdd94fmorpiws8xdp.webp" alt="Prawn">
+            <div class="info">
+                <span class="icon"></span>
+                <h4>Prawn Ghee Roast</h4>
+                <div class="price">₹ 449</div>
+                <p class="tag">Mangalorean-style, fiery & buttery</p>
+            </div>
+        </div>
+        <div class="weekend-item">
+            
+            <img src="https://tse3.mm.bing.net/th/id/OIP.8u4Qw0F3yb9xZTCnIyr8xQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Dal Makhani">
+            <div class="info">
+                <span class="icon"></span>
+                <h4>Dal Makhani</h4>
+                <div class="price">₹ 299</div>
+                <p class="tag">Slow-cooked overnight with cream & spices</p>
+            </div>
+        </div>
+        <div class="weekend-item">
+       
+            <img src="https://th.bing.com/th/id/OIP.h7vhDASLfEpQp67pcrRujgHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Lamb">
+            <div class="info">
+                <span class="icon"></span>
+                <h4>Leg of Lamb</h4>
+                <div class="price">₹ 699</div>
+                <p class="tag">Marinated 24 hrs, roasted in tandoor</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2 class="section-title">About Us</h2>
+    <p>
+        Welcome to Tandoori Nights, where every dish is crafted
+        with passion and traditional Indian flavors. Experience
+        the warmth of authentic tandoori cooking in a cozy
+        atmosphere.
+    </p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Ahmedabad, Gujarat</p>
+    <p>📞 +91 9313866346</p>
+    <p>✉ Shaikhaayan1812@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 Tandoori Nights | All Rights Reserved
+</footer>
+
+</body>
+</html>

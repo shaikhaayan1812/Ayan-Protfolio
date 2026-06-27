@@ -1,0 +1,128 @@
+========================================
+  TANDOORI NIGHTS - Website Documentation
+========================================
+
+PROJECT: Tandoori Nights Restaurant Website
+FOLDER: Task_1
+MAIN FILE: restaurant.html
+
+========================================
+FILES IN PROJECT
+========================================
+
+HTML Files:
+  - restaurant.html   (Main homepage)
+  - book-table.html   (Table booking page)
+  - indian.html       (Indian cuisine menu)
+  - chinese.html      (Chinese cuisine menu)
+  - italian.html      (Italian cuisine menu)
+  - mexican.html      (Mexican cuisine menu)
+  - japanese.html     (Japanese cuisine menu)
+  - desserts.html     (Desserts menu)
+
+Media Files:
+  - mainvidio.mp4           (Hero background video)
+  - main22.png              (Hero background image - backup)
+  - mainimage.png           (Extra image)
+  - image copy 2.png        (Logo image + Favicon)
+  - image copy.png          (Spring Rolls image)
+  - image.png               (Veg Manchurian image)
+  - Dalmakhani.png          (Dal Makhani image)
+  - Guacamole & Chips.png   (Guacamole image)
+  - gulab.png               (Gulab Jamun image)
+  - icecream.png            (Extra image)
+
+========================================
+WEBSITE SECTIONS (restaurant.html)
+========================================
+
+1. NAVBAR
+   - Logo (text + image copy 2.png)
+   - Navigation links: Home, Menu, Specials, Weekend, About, Contact
+   - Smooth scrolling on click
+
+2. HERO SECTION
+   - Full-width background video (mainvidio.mp4)
+   - Dark overlay for readability
+   - Title: "Tandoori Nights"
+   - Tagline: "Bold Flavors • Warm Nights • Memorable Bites"
+   - CTA Button: "Book a Table" → links to book-table.html
+
+3. CATEGORIES
+   - 6 cuisine categories (Indian, Chinese, Italian, Mexican, Japanese, Desserts)
+   - Displayed as 3x2 grid
+   - Each has background image + dark overlay + emoji
+   - Clickable → links to respective cuisine pages
+
+4. TODAY'S SPECIALS
+   - 3 featured dishes (Tandoori Chicken, Butter Chicken, Tandoori Platter)
+   - Card layout with images
+
+5. WEEKEND SPECIALS
+   - 3 items: Prawn Ghee Roast, Dal Makhani, Leg of Lamb
+   - Day badges (Fri-Sun, Sat-Sun, Sunday Only)
+   - Images + prices + descriptions
+
+6. ABOUT US
+   - Brief description of the restaurant
+
+7. CONTACT
+   - Address: Ahmedabad, Gujarat
+   - Phone: +91 9876543210
+   - Email: info@tandoorinights.com
+
+8. FOOTER
+   - Copyright 2026
+
+========================================
+BOOKING PAGE (book-table.html)
+========================================
+  - Form fields: Name, Phone, Email, Date, Time, Guests, Occasion, Special Requests
+  - Submit button shows success alert
+  - Matches dark theme of main page
+
+========================================
+COLOR THEME
+========================================
+  --bg-dark: #0f0f0f        (Dark background)
+  --card-bg: #1a1a1a        (Card background)
+  --primary: #d35400        (Orange - buttons, prices)
+  --secondary: #f39c12      (Gold - headings, accents)
+  --text-light: #ffffff     (White text)
+  --text-gray: #cccccc      (Gray text)
+  --border-dim: #2a2a2a     (Subtle borders)
+
+========================================
+FEATURES
+========================================
+  - Dark theme design
+  - Smooth scroll navigation
+  - Video background on hero
+  - Responsive grids (mobile-friendly)
+  - Hover effects on cards
+  - Table booking form
+  - Favicon on browser tab
+  - Scroll to top on page refresh
+
+========================================
+DEVELOPMENT STEPS
+========================================
+
+Step 1: Created main HTML structure with navbar, hero, specials, about, contact
+Step 2: Added CSS variables for dark theme color scheme
+Step 3: Added Categories section (6 cuisines, 3x2 grid)
+Step 4: Added background images to category cards
+Step 5: Created book-table.html booking page
+Step 6: Rewrote all 6 cuisine pages with matching dark theme
+Step 7: Added food images to all menu item cards
+Step 8: Added Weekend Specials section
+Step 9: Replaced hero image with video background
+Step 10: Added smooth scrolling
+Step 11: Added favicon
+Step 12: Set scroll restoration to manual (starts at top)
+Step 13: Added local PNG images for specific dishes
+Step 14: Organized all files into Task_1 folder
+
+========================================
+END OF DOCUMENTATION
+========================================

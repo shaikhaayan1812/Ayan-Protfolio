@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Library - Your Ultimate Music Destination</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <span class="logo-icon">&#9835;</span>
+        <span class="logo-text">Music Library</span>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#songs" class="nav-link">Songs</a></li>
+          <li><a href="#top10" class="nav-link">Top 10 Songs</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary btn-listen">Listen Now</a>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Your Ultimate<br>Music Library</h1>
+        <p class="hero-subtitle">Discover trending songs, playlists, and music collections.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Browse Songs</a>
+          <a href="#" class="btn btn-outline">Explore Categories</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="hero.png" alt="Hero Music" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MUSIC CATEGORIES ===== -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Music Categories</h2>
+        <p class="section-subtitle">Explore a wide variety of music genres curated for you.</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card">
+          <div class="placeholder-box placeholder-category">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop" alt="Pop Music" class="category-img">
+            <audio controls class="category-audio"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Pop</h3>
+            <p class="category-desc">Catchy melodies and chart-topping hits.</p>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="placeholder-box placeholder-category">
+            <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&h=300&fit=crop" alt="Rock Music" class="category-img">
+            <audio controls class="category-audio"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Rock</h3>
+            <p class="category-desc">Electric riffs and powerful vocals.</p>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="placeholder-box placeholder-category">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=300&fit=crop" alt="Hip-Hop Music" class="category-img">
+            <audio controls class="category-audio"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg"></audio>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Hip-Hop</h3>
+            <p class="category-desc">Beats, rhymes, and urban culture.</p>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="placeholder-box placeholder-category">
+            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=300&fit=crop" alt="Classical Music" class="category-img">
+            <audio controls class="category-audio"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg"></audio>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Classical</h3>
+            <p class="category-desc">Timeless compositions and symphonies.</p>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="placeholder-box placeholder-category">
+            <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=400&h=300&fit=crop" alt="Jazz Music" class="category-img">
+            <audio controls class="category-audio"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mpeg"></audio>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Jazz</h3>
+            <p class="category-desc">Smooth rhythms and soulful improvisation.</p>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="placeholder-box placeholder-category">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.VRK7tQLJxRoi3nYbCX2bCgHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Bollywood Music" class="category-img">
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Bollywood</h3>
+            <p class="category-desc">Vibrant soundtracks from Indian cinema.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED SONGS ===== -->
+  <section class="section" id="songs">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Songs</h2>
+        <p class="section-subtitle">Handpicked tracks you don't want to miss.</p>
+      </div>
+      <div class="songs-grid">
+        <div class="song-card">
+          <img src="song/midnight-dreams.jpg" alt="Midnight Dreams" class="song-img">
+          <div class="song-info">
+            <h3 class="song-name">Midnight Dreams</h3>
+            <p class="artist-name">Luna Ray</p>
+            <span class="duration">3:45</span>
+            <audio controls class="audio-player">
+              <source src="song/mixkit-beautiful-dream-493.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+        <div class="song-card">
+          <img src="song/electric-pulse.jpg" alt="Electric Pulse" class="song-img">
+          <div class="song-info">
+            <h3 class="song-name">Electric Pulse</h3>
+            <p class="artist-name">Neon Vortex</p>
+            <span class="duration">4:12</span>
+            <audio controls class="audio-player">
+              <source src="song/mixkit-tech-house-vibes-130.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+        <div class="song-card">
+          <img src="song/ocean-breeze.jpg" alt="Ocean Breeze" class="song-img">
+          <div class="song-info">
+            <h3 class="song-name">Ocean Breeze</h3>
+            <p class="artist-name">Coral Waves</p>
+            <span class="duration">3:28</span>
+            <audio controls class="audio-player">
+              <source src="song/mixkit-serene-view-443.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+        <div class="song-card">
+          <img src="song/crystal-eyes.jpg" alt="Crystal Eyes" class="song-img">
+          <div class="song-info">
+            <h3 class="song-name">CRYSTAL EYES</h3>
+            <p class="artist-name">Aurora Sky</p>
+            <span class="duration">5:01</span>
+            <audio controls class="audio-player">
+              <source src="song/mixkit-a-very-happy-christmas-897.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+        <div class="song-card">
+          <img src="song/golden-hour.jpg" alt="Golden Hour" class="song-img">
+          <div class="song-info">
+            <h3 class="song-name">Golden Hour</h3>
+            <p class="artist-name">Sunset Blvd</p>
+            <span class="duration">3:55</span>
+            <audio controls class="audio-player">
+              <source src="song/mixkit-hazy-after-hours-132.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+        <div class="song-card">
+          <img src="song/thunder-strike.jpg" alt="Thunder Strike" class="song-img">
+          <div class="song-info">
+            <h3 class="song-name">Thunder Strike</h3>
+            <p class="artist-name">Volt Audio</p>
+            <span class="duration">4:30</span>
+            <audio controls class="audio-player">
+              <source src="song/mixkit-deep-urban-623.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOP 10 SONGS ===== -->
+  <section class="section" id="top10">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Top 10 Songs</h2>
+        <p class="section-subtitle">The most played tracks this week.</p>
+      </div>
+      <div class="top10-list">
+
+        <div class="top-card top-one">
+          <div class="rank rank-gold">#1</div>
+          <img src="song/midnight-dreams.jpg" alt="Midnight Dreams" class="top-img">
+          <div class="top-info">
+            <h3 class="top-song-name">Midnight Dreams</h3>
+            <p class="top-artist">Luna Ray</p>
+          </div>
+          <span class="top-duration">3:45</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-beautiful-dream-493.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="top-card top-two">
+          <div class="rank rank-silver">#2</div>
+          <img src="song/electric-pulse.jpg" alt="Electric Pulse" class="top-img">
+          <div class="top-info">
+            <h3 class="top-song-name">Electric Pulse</h3>
+            <p class="top-artist">Neon Vortex</p>
+          </div>
+          <span class="top-duration">4:12</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-tech-house-vibes-130.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="top-card top-three">
+          <div class="rank rank-bronze">#3</div>
+          <img src="song/ocean-breeze.jpg" alt="Ocean Breeze" class="top-img">
+          <div class="top-info">
+            <h3 class="top-song-name">Ocean Breeze</h3>
+            <p class="top-artist">Coral Waves</p>
+          </div>
+          <span class="top-duration">3:28</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-serene-view-443.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="top-card">
+          <div class="rank">#4</div>
+          <img src="song/crystal-eyes.jpg" alt="Crystal Eyes" class="top-img">
+          <div class="top-info">
+            <h3 class="top-song-name">Crystal Eyes</h3>
+            <p class="top-artist">Gemma Stone</p>
+          </div>
+          <span class="top-duration">3:40</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-a-very-happy-christmas-897.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="top-card">
+          <div class="rank">#5</div>
+          <img src="song/golden-hour.jpg" alt="Golden Hour" class="top-img">
+          <div class="top-info">
+            <h3 class="top-song-name">Golden Hour</h3>
+            <p class="top-artist">Sunset Blvd</p>
+          </div>
+          <span class="top-duration">3:55</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-hazy-after-hours-132.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="top-card">
+          <div class="rank">#6</div>
+          <img src="song/thunder-strike.jpg" alt="Thunder Strike" class="top-img">
+          <div class="top-info">
+            <h3 class="top-song-name">Thunder Strike</h3>
+            <p class="top-artist">Volt Audio</p>
+          </div>
+          <span class="top-duration">4:30</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-deep-urban-623.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="top-card">
+          <div class="rank">#7</div>
+          <img src="song/starlight.jpg" alt="Starlight" class="top-img">
+          <div class="top-info">
+            <h3 class="top-song-name">Starlight</h3>
+            <p class="top-artist">Aurora Sky</p>
+          </div>
+          <span class="top-duration">5:01</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-sun-and-his-daughter-580.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="top-card">
+          <div class="rank">#8</div>
+          <img
+            src="https://th.bing.com/th/id/OIP.pFw9XcKpL29h55tdxgTTmAHaHa?w=155&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="Firestorm" class="top-img">
+          <div class="top-info">
+            <h3 class="top-song-name">Firestorm</h3>
+            <p class="top-artist">Blaze Union</p>
+          </div>
+          <span class="top-duration">4:18</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-driving-ambition-32.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="top-card">
+          <div class="rank">#9</div>
+          <div class="placeholder-box placeholder-top">
+            <img
+              src="data:image/webp;base64,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"
+              alt="Velvet Night" class="top-img">
+          </div>
+          <div class="top-info">
+            <h3 class="top-song-name">Velvet Night</h3>
+            <p class="top-artist">Mira Dusk</p>
+          </div>
+          <span class="top-duration">3:50</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-cbpd-400.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="top-card">
+          <div class="rank">#10</div>
+          <div class="placeholder-box placeholder-top">
+            <img
+              src="https://tse1.explicit.bing.net/th/id/OIP.aLMteok9Jlpc0iedXnc7ggHaK0?pid=ImgDet&w=184&h=268&c=7&dpr=1.3&o=7&rm=3"
+              alt="Echo Chamber" class="top-img">
+          </div>
+          <div class="top-info">
+            <h3 class="top-song-name">Echo Chamber</h3>
+            <p class="top-artist">Reverb Theory</p>
+          </div>
+          <span class="top-duration">4:05</span>
+          <audio controls class="audio-player-top">
+            <source src="song/mixkit-hip-hop-02-738.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ===== MUSIC VIDEO SECTION ===== -->
+  <section class="section" id="videos">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Popular Music Videos</h2>
+        <p class="section-subtitle">Watch the hottest music videos trending now.</p>
+      </div>
+      <div class="videos-grid">
+        <div class="video-card">
+          <div class="placeholder-box placeholder-video">
+            <a href="https://www.youtube.com/watch?v=ig4KGirGWM0" target="_blank">
+              <img
+src="https://img.youtube.com/vi/ig4KGirGWM0/hqdefault.jpg"
+                alt="Afro House Mix 2026" class="video-img">
+            </a>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Afro House Mix 2026 | AMAPIANO - Binary Bongos #10</h3>
+            <p class="video-artist">Binary Bongos</p>
+            <span class="video-views">4K Views</span>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="placeholder-box placeholder-video">
+            <a href="https://www.youtube.com/watch?v=fqVxdrRIeHQ" target="_blank">
+              <img
+src="https://img.youtube.com/vi/fqVxdrRIeHQ/hqdefault.jpg"
+                alt="Raven - Electric Pulse" class="video-img">
+            </a>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Raven - Electric Pulse: Nu-Disco Energy Meets Soulful Deep House</h3>
+            <p class="video-artist">R&B VANGUARD</p>
+            <span class="video-views">4.2M Views</span>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="placeholder-box placeholder-video">
+            <a href="https://www.youtube.com/watch?v=A6LiOLnRA4o" target="_blank">
+              <img
+src="https://img.youtube.com/vi/A6LiOLnRA4o/hqdefault.jpg"
+                alt="I Can / Loved You, Forever" class="video-img">
+            </a>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">I Can / Loved You, Forever (Nu-Disco / Soulful Deep House)</h3>
+            <p class="video-artist">Monika XYZ</p>
+            <span class="video-views">3.8M Views</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">Experience music like never before.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#9835;</div>
+          <h3 class="feature-title">Unlimited Music</h3>
+          <p class="feature-desc">Access millions of songs without limits. Stream anytime, anywhere.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#9834;</div>
+          <h3 class="feature-title">High Quality Audio</h3>
+          <p class="feature-desc">Crystal clear sound with lossless audio quality for true music lovers.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#9733;</div>
+          <h3 class="feature-title">Top Artists</h3>
+          <p class="feature-desc">Follow your favorite artists and discover new talent every day.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#9881;</div>
+          <h3 class="feature-title">Latest Releases</h3>
+          <p class="feature-desc">Be the first to hear new albums and singles as they drop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MUSIC STATS ===== -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">5000+</span>
+          <span class="stat-label">Songs</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Categories</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Artists</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">1M+</span>
+          <span class="stat-label">Listeners</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Have a question or suggestion? We'd love to hear from you.</p>
+      </div>
+      <div class="contact-wrapper">
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" class="form-input" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-input" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-input" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-input form-textarea" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo footer-logo">
+            <span class="logo-icon">&#9835;</span>
+            <span class="logo-text">Music Library</span>
+          </div>
+          <p class="footer-desc">Your ultimate destination for music discovery. Stream, explore, and connect with the
+            world of music.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#songs">Songs</a></li>
+            <li><a href="#top10">Top 10 Songs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#">Pop</a></li>
+            <li><a href="#">Rock</a></li>
+            <li><a href="#">Hip-Hop</a></li>
+            <li><a href="#">Classical</a></li>
+            <li><a href="#">Jazz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Info</h4>
+          <ul class="footer-links">
+            <li>hello@musiclibrary.com</li>
+            <li>+1 (555) 123-4567</li>
+            <li>New York, NY 10001</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Music Library. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

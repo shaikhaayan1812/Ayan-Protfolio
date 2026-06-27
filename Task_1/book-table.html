@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Table - Tandoori Nights</title>
+<style>
+
+:root{
+    --bg-dark: #0f0f0f;
+    --card-bg: #1a1a1a;
+    --primary: #d35400;
+    --secondary: #f39c12;
+    --text-light: #ffffff;
+    --text-gray: #cccccc;
+    --border-dim: #2a2a2a;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: var(--bg-dark);
+    color: var(--text-light);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background: var(--card-bg);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color: var(--secondary);
+}
+
+nav a{
+    color: var(--text-light);
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color: var(--secondary);
+}
+
+.booking-wrap{
+    width:100%;
+    max-width:600px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.booking-wrap h1{
+    text-align:center;
+    color: var(--secondary);
+    font-size:36px;
+    margin-bottom:8px;
+}
+
+.booking-wrap .sub{
+    text-align:center;
+    color: var(--text-gray);
+    margin-bottom:40px;
+}
+
+.booking-form{
+    background: var(--card-bg);
+    border:1px solid var(--border-dim);
+    border-radius:20px;
+    padding:40px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    font-size:14px;
+    font-weight:600;
+    color: var(--text-gray);
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:12px 16px;
+    border:1px solid var(--border-dim);
+    border-radius:10px;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-size:15px;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color: var(--secondary);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:#666;
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:80px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.submit-btn{
+    width:100%;
+    padding:14px;
+    background: var(--primary);
+    color: var(--text-light);
+    border:none;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:6px;
+}
+
+.submit-btn:hover{
+    background: var(--secondary);
+}
+
+.back-link{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    color: var(--text-gray);
+    text-decoration:none;
+    font-size:14px;
+}
+
+.back-link:hover{
+    color: var(--secondary);
+}
+
+footer{
+    width:100%;
+    text-align:center;
+    padding:20px;
+    background:black;
+    color:#888;
+    margin-top:auto;
+}
+
+@media(max-width:500px){
+    .form-row{grid-template-columns:1fr;}
+    .booking-form{padding:25px;}
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Tandoori Nights</div>
+    <a href="restaurant.html">← Back</a>
+</nav>
+
+<div class="booking-wrap">
+    <h1>Book a Table</h1>
+    <p class="sub">Reserve your spot for a memorable dining experience</p>
+
+    <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="hello@example.com">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time</label>
+                <input type="time" id="time" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="guests">Guests</label>
+                <select id="guests">
+                    <option>1 Person</option>
+                    <option selected>2 People</option>
+                    <option>3 People</option>
+                    <option>4 People</option>
+                    <option>5 People</option>
+                    <option>6+ People</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="occasion">Occasion</label>
+                <select id="occasion">
+                    <option>Regular Dining</option>
+                    <option>Birthday</option>
+                    <option>Anniversary</option>
+                    <option>Date Night</option>
+                    <option>Business Dinner</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Special Requests</label>
+            <textarea id="message" placeholder="Any preferences or requests..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Confirm Booking</button>
+    </form>
+
+    <a href="restaurant.html" class="back-link">← Back to Home</a>
+</div>
+
+<footer>
+    © 2026 Tandoori Nights | All Rights Reserved
+</footer>
+
+<script>
+document.getElementById('bookingForm').onsubmit = function(e){
+    e.preventDefault();
+    alert('Your table has been booked! We look forward to serving you.');
+};
+</script>
+
+</body>
+</html>

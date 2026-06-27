@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chinese — Tandoori Nights</title>
+<style>
+:root{
+    --bg-dark: #0f0f0f;
+    --card-bg: #1a1a1a;
+    --primary: #d35400;
+    --secondary: #f39c12;
+    --text-light: #ffffff;
+    --text-gray: #cccccc;
+    --border-dim: #2a2a2a;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:var(--bg-dark);color:var(--text-light);min-height:100vh;display:flex;flex-direction:column;}
+
+nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 8%;background:var(--card-bg);
+}
+.logo{font-size:28px;font-weight:bold;color:var(--secondary);text-decoration:none;}
+.nav-right a{
+    color:var(--text-gray);text-decoration:none;font-size:14px;transition:.3s;
+    border:1px solid var(--border-dim);padding:8px 18px;border-radius:30px;
+}
+.nav-right a:hover{color:var(--secondary);border-color:var(--secondary);}
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1200&h=500&fit=crop') center/cover no-repeat;
+    padding:70px 20px;text-align:center;
+}
+.hero h1{font-size:48px;color:var(--secondary);}
+.hero p{color:var(--text-gray);font-size:18px;margin-top:8px;}
+
+.container{max-width:1200px;margin:0 auto;padding:0 20px;flex:1;}
+
+.menu-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:24px;padding:50px 0 70px;
+}
+.menu-item{
+    background:var(--card-bg);border:1px solid var(--border-dim);
+    border-radius:18px;overflow:hidden;transition:.3s;
+}
+.menu-item:hover{
+    transform:translateY(-6px);border-color:var(--secondary);
+    box-shadow:0 8px 30px rgba(243,156,18,.12);
+}
+.menu-item img{
+    width:100%;height:180px;object-fit:cover;display:block;
+}
+.menu-item .info{padding:20px;text-align:center;}
+.menu-item .emoji{font-size:32px;display:block;margin-bottom:6px;}
+.menu-item h3{font-size:17px;margin-bottom:3px;color:var(--secondary);}
+.menu-item .price{color:var(--primary);font-weight:800;font-size:19px;margin:5px 0;}
+.menu-item .desc{color:var(--text-gray);font-size:13px;}
+
+@media(max-width:800px){.menu-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:500px){.menu-grid{grid-template-columns:1fr;}}
+
+footer{
+    text-align:center;padding:20px;background:black;
+    color:#888;font-size:14px;margin-top:auto;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="restaurant.html" class="logo">Tandoori Nights</a>
+    <div class="nav-right"><a href="restaurant.html">← Back</a></div>
+</nav>
+
+<div class="hero">
+    <h1>🥟 Chinese</h1>
+    <p>Wok-tossed wonders from the heart of Sichuan</p>
+</div>
+
+<div class="container">
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400&h=250&fit=crop" alt="Chilli Chicken">
+            <div class="info">
+                <span class="emoji">🍗</span><h3>Chilli Chicken</h3>
+                <div class="price">₹ 269</div>
+                <p class="desc">Boneless chicken, soy, chili sauce</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="image.png" alt="Veg Manchurian">
+            <div class="info">
+                <span class="emoji">🥬</span><h3>Veg Manchurian</h3>
+                <div class="price">₹ 199</div>
+                <p class="desc">Mixed veg balls, tangy gravy</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400&h=250&fit=crop" alt="Dim Sum">
+            <div class="info">
+                <span class="emoji">🥟</span><h3>Dim Sum Basket</h3>
+                <div class="price">₹ 299</div>
+                <p class="desc">Steamed dumplings, 6 pcs</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=250&fit=crop" alt="Fried Rice">
+            <div class="info">
+                <span class="emoji">🍚</span><h3>Fried Rice</h3>
+                <div class="price">₹ 219</div>
+                <p class="desc">Wok-tossed rice, egg & veggies</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=250&fit=crop" alt="Hakka Noodles">
+            <div class="info">
+                <span class="emoji">🍜</span><h3>Hakka Noodles</h3>
+                <div class="price">₹ 229</div>
+                <p class="desc">Stir-fried noodles, shredded veggies</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="image copy.png" alt="Spring Rolls">
+            <div class="info">
+                <span class="emoji">🌯</span><h3>Spring Rolls</h3>
+                <div class="price">₹ 179</div>
+                <p class="desc">Crispy rolls, sweet chili dip</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>© 2026 Tandoori Nights | All Rights Reserved</footer>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <input type="checkbox" id="nav-toggle" hidden>
+      <div class="nav-brand">
+        <label for="nav-toggle" class="brand-icon">&#9776;</label>
+        <span class="brand-name">Student<span>Dashboard</span></span>
+      </div>
+      <div class="nav-links">
+        <a href="#info">Profile</a>
+        <a href="#attendance">Attendance</a>
+        <a href="#assignments">Assignments</a>
+        <a href="#notices">Notices</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="info">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="profile-card">
+          <div class="profile-avatar">AS</div>
+          <div class="profile-info">
+            <h2>Ayan Shaikh</h2>
+            <span class="profile-badge">Student</span>
+            <div class="profile-details">
+              <div class="p-row"><span class="p-lbl">Roll No</span><span class="p-val">2024CS001</span></div>
+              <div class="p-row"><span class="p-lbl">Semester</span><span class="p-val">4th</span></div>
+              <div class="p-row"><span class="p-lbl">Branch</span><span class="p-val">Computer Science</span></div>
+              <div class="p-row"><span class="p-lbl">Email</span><span class="p-val">ayan@college.edu</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-card"><span class="stat-num">92%</span><span class="stat-lbl">Attendance</span></div>
+          <div class="stat-card"><span class="stat-num">8</span><span class="stat-lbl">Assignments</span></div>
+          <div class="stat-card"><span class="stat-num">5</span><span class="stat-lbl">Completed</span></div>
+          <div class="stat-card"><span class="stat-num">12</span><span class="stat-lbl">Notices</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="attendance" id="attendance">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-dot"></div>
+        <h2 class="section-title">Attendance Record</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="attendance-table">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Total Classes</th>
+              <th>Attended</th>
+              <th>Percentage</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Data Structures</td><td>30</td><td>28</td><td>93%</td><td><span class="status pass">Pass</span></td></tr>
+            <tr><td>Database Systems</td><td>28</td><td>26</td><td>93%</td><td><span class="status pass">Pass</span></td></tr>
+            <tr><td>Operating Systems</td><td>32</td><td>29</td><td>91%</td><td><span class="status pass">Pass</span></td></tr>
+            <tr><td>Computer Networks</td><td>26</td><td>24</td><td>92%</td><td><span class="status pass">Pass</span></td></tr>
+            <tr><td>Mathematics</td><td>30</td><td>27</td><td>90%</td><td><span class="status pass">Pass</span></td></tr>
+            <tr><td>English</td><td>24</td><td>22</td><td>92%</td><td><span class="status pass">Pass</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="assignments" id="assignments">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-dot"></div>
+        <h2 class="section-title">Assignment List</h2>
+      </div>
+      <div class="assign-grid">
+        <div class="assign-card">
+          <div class="assign-top">
+            <span class="assign-sub">DS</span>
+            <span class="assign-status submitted">Submitted</span>
+          </div>
+          <h3>Binary Tree Implementation</h3>
+          <p class="assign-date">Due: 10 Jan 2026</p>
+        </div>
+        <div class="assign-card">
+          <div class="assign-top">
+            <span class="assign-sub">DBMS</span>
+            <span class="assign-status pending">Pending</span>
+          </div>
+          <h3>ER Diagram Design</h3>
+          <p class="assign-date">Due: 15 Jan 2026</p>
+        </div>
+        <div class="assign-card">
+          <div class="assign-top">
+            <span class="assign-sub">OS</span>
+            <span class="assign-status submitted">Submitted</span>
+          </div>
+          <h3>Process Scheduling Algorithm</h3>
+          <p class="assign-date">Due: 8 Jan 2026</p>
+        </div>
+        <div class="assign-card">
+          <div class="assign-top">
+            <span class="assign-sub">CN</span>
+            <span class="assign-status late">Late</span>
+          </div>
+          <h3>Network Topology Report</h3>
+          <p class="assign-date">Due: 5 Jan 2026</p>
+        </div>
+        <div class="assign-card">
+          <div class="assign-top">
+            <span class="assign-sub">MATH</span>
+            <span class="assign-status pending">Pending</span>
+          </div>
+          <h3>Calculus Assignment Set 3</h3>
+          <p class="assign-date">Due: 20 Jan 2026</p>
+        </div>
+        <div class="assign-card">
+          <div class="assign-top">
+            <span class="assign-sub">ENG</span>
+            <span class="assign-status submitted">Submitted</span>
+          </div>
+          <h3>Essay: Technology Impact</h3>
+          <p class="assign-date">Due: 3 Jan 2026</p>
+        </div>
+        <div class="assign-card">
+          <div class="assign-top">
+            <span class="assign-sub">DS</span>
+            <span class="assign-status pending">Pending</span>
+          </div>
+          <h3>Graph Algorithms</h3>
+          <p class="assign-date">Due: 25 Jan 2026</p>
+        </div>
+        <div class="assign-card">
+          <div class="assign-top">
+            <span class="assign-sub">DBMS</span>
+            <span class="assign-status submitted">Submitted</span>
+          </div>
+          <h3>SQL Queries Practice</h3>
+          <p class="assign-date">Due: 28 Dec 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notices" id="notices">
+    <div class="container">
+      <div class="section-head">
+        <div class="head-dot"></div>
+        <h2 class="section-title">Notice Board <span class="notice-count"></span></h2>
+      </div>
+      <input type="radio" name="nf" id="f-all" checked hidden>
+      <input type="radio" name="nf" id="f-gen" hidden>
+      <input type="radio" name="nf" id="f-acad" hidden>
+      <input type="radio" name="nf" id="f-event" hidden>
+      <input type="radio" name="nf" id="f-exam" hidden>
+      <div class="notice-filters">
+        <label for="f-all" class="filter-btn active">All</label>
+        <label for="f-gen" class="filter-btn">General</label>
+        <label for="f-acad" class="filter-btn">Academic</label>
+        <label for="f-event" class="filter-btn">Event</label>
+        <label for="f-exam" class="filter-btn">Exam</label>
+      </div>
+      <div class="notice-board">
+        <div class="notice-list">
+          <div class="notice-item notice-exam"><span class="notice-date">06 Jun</span><div class="notice-body"><h3>Final Exam Schedule Released</h3><p>Download your final exam timetable from the portal. Exams start from 15 June.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">05 Jun</span><div class="notice-body"><h3>Project Submission Deadline Extended</h3><p>The deadline for the major project has been extended to 20 June.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">04 Jun</span><div class="notice-body"><h3>Hackathon 2026 Registrations Open</h3><p>Register your teams for the annual college hackathon. Prizes worth 50k.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">03 Jun</span><div class="notice-body"><h3>Library Timings Changed</h3><p>Library will remain open till 10 PM during exam season.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">02 Jun</span><div class="notice-body"><h3>Guest Lecture on AI</h3><p>Prof. Sharma from IIT Bombay will deliver a lecture on AI in the main auditorium.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">01 Jun</span><div class="notice-body"><h3>Sports Day Registration</h3><p>Register for inter-department sports tournaments by 10 June.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">30 May</span><div class="notice-body"><h3>Fee Payment Reminder</h3><p>Pending semester fees must be paid by 15 June to avoid late fine.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-exam"><span class="notice-date">28 May</span><div class="notice-body"><h3>Internship Placement Drive</h3><p>Google and Microsoft visiting campus for internships. Apply now.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">25 May</span><div class="notice-body"><h3>Workshop on Python</h3><p>Hands-on workshop on advanced Python programming for data science.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">22 May</span><div class="notice-body"><h3>Cultural Fest Registrations</h3><p>Register your performances for the annual cultural fest.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">20 May</span><div class="notice-body"><h3>Hostel Room Allocation</h3><p>New hostel room allotment list published. Check your rooms.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-exam"><span class="notice-date">18 May</span><div class="notice-body"><h3>Mid-Sem Results Out</h3><p>Mid-semester exam results are now available on the portal.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">15 May</span><div class="notice-body"><h3>Research Paper Submission</h3><p>Submit your research papers for the college journal by 30 May.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">12 May</span><div class="notice-body"><h3>Blood Donation Camp</h3><p>Blood donation camp organized by NSS unit on 18 May.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">10 May</span><div class="notice-body"><h3>Mess Menu Updated</h3><p>New mess menu for June month has been published.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">08 May</span><div class="notice-body"><h3>Internship Report Format</h3><p>Download the standard format for internship reports from the portal.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">05 May</span><div class="notice-body"><h3>Tech Quiz Competition</h3><p>Inter-department tech quiz competition on 12 May. Register now.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">02 May</span><div class="notice-body"><h3>Holiday Notice</h3><p>College will remain closed on 5 May for local festival.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-exam"><span class="notice-date">28 Apr</span><div class="notice-body"><h3>Viva Schedule Announced</h3><p>Practical viva schedules for all branches published.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">25 Apr</span><div class="notice-body"><h3>Summer Training Program</h3><p>Summer training internships available at top companies. Apply.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">22 Apr</span><div class="notice-body"><h3>Photography Contest</h3><p>Submit your best campus photos for the annual photography contest.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">20 Apr</span><div class="notice-body"><h3>Bus Route Changes</h3><p>College bus routes have been revised. Check new schedule.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-exam"><span class="notice-date">18 Apr</span><div class="notice-body"><h3>Lab Manual Submission</h3><p>Final lab manuals must be submitted by 25 April.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">15 Apr</span><div class="notice-body"><h3>Coding Challenge Round 2</h3><p>Qualified students for round 2 of coding challenge announced.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">12 Apr</span><div class="notice-body"><h3>Film Screening</h3><p>Film club screening Interstellar in the auditorium on 15 Apr.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">10 Apr</span><div class="notice-body"><h3>Library New Arrivals</h3><p>New books added to the library. Browse the catalog online.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-exam"><span class="notice-date">08 Apr</span><div class="notice-body"><h3>Grade Card Correction</h3><p>Last date to apply for grade card corrections is 15 Apr.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">05 Apr</span><div class="notice-body"><h3>Debate Competition</h3><p>Inter-college debate competition registrations open.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">02 Apr</span><div class="notice-body"><h3>Tuition Fee Notification</h3><p>Second installment tuition fee deadline is 20 April.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">30 Mar</span><div class="notice-body"><h3>Project Exhibition</h3><p>Annual project exhibition on 10 April. All departments participate.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">28 Mar</span><div class="notice-body"><h3>Sports Selection Trials</h3><p>Trials for cricket and football teams on 5 April.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">25 Mar</span><div class="notice-body"><h3>Medical Camp</h3><p>Free health checkup camp for all students on 30 March.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">22 Mar</span><div class="notice-body"><h3>Assignment Upload Notice</h3><p>Upload all pending assignments to the portal by 1 April.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">20 Mar</span><div class="notice-body"><h3>Cultural Night Auditions</h3><p>Auditions for annual cultural night on 25 March.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">18 Mar</span><div class="notice-body"><h3>Scholarship Results</h3><p>Merit scholarship results published. Check your application status.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">15 Mar</span><div class="notice-body"><h3>Industrial Visit</h3><p>Industrial visit to tech park for CS students on 22 March.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">12 Mar</span><div class="notice-body"><h3>Hackathon Finals</h3><p>Hackathon final round on 18 March. Top 10 teams compete.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-exam"><span class="notice-date">10 Mar</span><div class="notice-body"><h3>Exam Form Submission</h3><p>Final exam form submission deadline extended to 20 March.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">08 Mar</span><div class="notice-body"><h3>Women's Day Event</h3><p>Special event organized for Women's Day on 10 March.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">05 Mar</span><div class="notice-body"><h3>Time Table Update</h3><p>Revised class timetable from March 15. Check your schedule.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">02 Mar</span><div class="notice-body"><h3>Mentor Meeting Schedule</h3><p>Compulsory mentor meeting for all students on 8 March.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">28 Feb</span><div class="notice-body"><h3>Science Fair</h3><p>Annual science fair on 5 March. Register your projects.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">25 Feb</span><div class="notice-body"><h3>Anti-Ragging Notice</h3><p>Strict action against ragging. Report any incidents immediately.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">22 Feb</span><div class="notice-body"><h3>Course Registration</h3><p>Elective course registration for next semester starts 1 March.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">20 Feb</span><div class="notice-body"><h3>Freshers Party</h3><p>Freshers party for batch 2025 on 28 February.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">18 Feb</span><div class="notice-body"><h3>Identity Card</h3><p>New identity cards to be collected from admin office.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">15 Feb</span><div class="notice-body"><h3>Workshop on Blockchain</h3><p>Blockchain technology workshop by industry experts on 22 Feb.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">12 Feb</span><div class="notice-body"><h3>Valentines Day Event</h3><p>Special events organized by cultural committee on 14 Feb.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">10 Feb</span><div class="notice-body"><h3>College Magazine</h3><p>Submit your articles and artwork for college magazine by 25 Feb.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">08 Feb</span><div class="notice-body"><h3>Research Grants</h3><p>Apply for student research grants by 28 February.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">05 Feb</span><div class="notice-body"><h3>Alumni Meet</h3><p>Annual alumni meet on 15 February. Register for the event.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">02 Feb</span><div class="notice-body"><h3>Parking Rules</h3><p>New parking regulations for students effective from 5 Feb.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">30 Jan</span><div class="notice-body"><h3>Seminar on IoT</h3><p>IoT seminar by guest speaker from Cisco on 5 February.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">28 Jan</span><div class="notice-body"><h3>Republic Day Celebration</h3><p>Flag hoisting ceremony at 8 AM on 26 January.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">25 Jan</span><div class="notice-body"><h3>Hostel Leave Rules</h3><p>Updated hostel leave rules for semester break.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">22 Jan</span><div class="notice-body"><h3>Lab Equipment</h3><p>New lab equipment installed in CS and IT labs.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">20 Jan</span><div class="notice-body"><h3>Movie Club Membership</h3><p>Film club membership registrations open for 2026.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">18 Jan</span><div class="notice-body"><h3>Electricity Maintenance</h3><p>Power shutdown in academic block on 22 Jan for maintenance.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">15 Jan</span><div class="notice-body"><h3>Pongal Celebration</h3><p>Pongal celebration in college premises on 16 January.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">12 Jan</span><div class="notice-body"><h3>National Youth Day</h3><p>Youth day celebration with guest lectures on 12 January.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-exam"><span class="notice-date">10 Jan</span><div class="notice-body"><h3>Attendance Shortage</h3><p>Students with less than 75% attendance must meet HOD.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">08 Jan</span><div class="notice-body"><h3>New Year Celebration</h3><p>New Year celebration event on 10 January in the campus.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">05 Jan</span><div class="notice-body"><h3>Semester Registration</h3><p>Online semester registration for even semester starts 10 Jan.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">02 Jan</span><div class="notice-body"><h3>College Reopening</h3><p>College reopens on 3 January after winter break.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">28 Dec</span><div class="notice-body"><h3>Winter Break Notice</h3><p>College remains closed from 29 Dec to 2 Jan for winter break.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">25 Dec</span><div class="notice-body"><h3>Christmas Celebration</h3><p>Christmas celebration in college on 25 December.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-exam"><span class="notice-date">22 Dec</span><div class="notice-body"><h3>Exam Results</h3><p>First semester results published. Check on the portal.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">20 Dec</span><div class="notice-body"><h3>Farewell Party</h3><p>Farewell party for final year students on 22 December.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">18 Dec</span><div class="notice-body"><h3>Library Book Return</h3><p>Return all library books before 25 December.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">15 Dec</span><div class="notice-body"><h3>Project Viva</h3><p>Final project viva for all departments on 20 December.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">12 Dec</span><div class="notice-body"><h3>Coding Marathon</h3><p>24-hour coding marathon on 18 December. Register now.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">10 Dec</span><div class="notice-body"><h3>Hostel Fee Due</h3><p>Hostel fee payment deadline is 20 December.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">08 Dec</span><div class="notice-body"><h3>Guest Lecture on Cybersecurity</h3><p>Cybersecurity expert from Google delivering a lecture on 12 Dec.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">05 Dec</span><div class="notice-body"><h3>Art Exhibition</h3><p>Art and photography exhibition in the main hall on 10 Dec.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">02 Dec</span><div class="notice-body"><h3>College Uniform</h3><p>New college uniform design approved. Order by 15 Dec.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">30 Nov</span><div class="notice-body"><h3>Internship Fair</h3><p>Internship fair with 30+ companies on 10 December.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">28 Nov</span><div class="notice-body"><h3>Thanksgiving Event</h3><p>Thanksgiving potluck organized by student council on 30 Nov.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">25 Nov</span><div class="notice-body"><h3>Seminar Hall Booking</h3><p>New seminar hall booking system live from 1 December.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">22 Nov</span><div class="notice-body"><h3>Research Symposium</h3><p>Submit abstracts for research symposium by 10 December.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">20 Nov</span><div class="notice-body"><h3>Open Mic Night</h3><p>Open mic night on 25 November. Sign up for performances.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">18 Nov</span><div class="notice-body"><h3>Water Cooler Maintenance</h3><p>Water coolers in block B will be serviced on 20 Nov.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">15 Nov</span><div class="notice-body"><h3>Children's Day Event</h3><p>Special cultural events on 14 November for Children's Day.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">12 Nov</span><div class="notice-body"><h3>Diwali Vacation</h3><p>College remains closed from 12 Nov to 16 Nov for Diwali.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">10 Nov</span><div class="notice-body"><h3>Diwali Celebration</h3><p>Diwali celebration and sweets distribution on 11 November.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">08 Nov</span><div class="notice-body"><h3>Placement Training</h3><p>Placement training sessions start from 15 November.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">05 Nov</span><div class="notice-body"><h3>Quiz Competition</h3><p>National level quiz competition on 12 November. Register.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">02 Nov</span><div class="notice-body"><h3>Fee Concession</h3><p>Apply for fee concession before 15 November.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">30 Oct</span><div class="notice-body"><h3>Halloween Event</h3><p>Halloween costume party on 31 October in the campus.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-exam"><span class="notice-date">28 Oct</span><div class="notice-body"><h3>Mid-Sem Schedule</h3><p>Mid-semester exam schedule published for all departments.</p></div><span class="notice-tag exam">Exam</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">25 Oct</span><div class="notice-body"><h3>Workshop on Machine Learning</h3><p>ML workshop using Python on 30 October. Limited seats.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">22 Oct</span><div class="notice-body"><h3>Dandiya Night</h3><p>Dandiya night celebration on 24 October. Entry free.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">20 Oct</span><div class="notice-body"><h3>Bus Pass Renewal</h3><p>College bus pass renewal for next month starts 25 Oct.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">18 Oct</span><div class="notice-body"><h3>Code Debugging Contest</h3><p>Debugging contest on 22 October. Win exciting prizes.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">15 Oct</span><div class="notice-body"><h3>NSS Camp</h3><p>NSS 7-day camp starts from 20 October. Volunteers needed.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">12 Oct</span><div class="notice-body"><h3>Exam Form Correction</h3><p>Last date for exam form correction is 20 October.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">10 Oct</span><div class="notice-body"><h3>Startup Incubation</h3><p>Apply for college startup incubation program by 31 Oct.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">08 Oct</span><div class="notice-body"><h3>Gandhi Jayanti</h3><p>College closed on 2 October for Gandhi Jayanti.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">05 Oct</span><div class="notice-body"><h3>Freshers Induction</h3><p>Induction program for first year students on 10 October.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">02 Oct</span><div class="notice-body"><h3>Cleanliness Drive</h3><p>Swachh Bharat cleanliness drive on 2 October morning.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">30 Sep</span><div class="notice-body"><h3>Library Card</h3><p>New library cards issued. Collect from library counter.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">28 Sep</span><div class="notice-body"><h3>Student Council Elections</h3><p>Student council elections on 5 October. Nominations open.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">25 Sep</span><div class="notice-body"><h3>ITT Workshop</h3><p>Industrial training and internship workshop on 30 Sep.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">22 Sep</span><div class="notice-body"><h3>College Foundation Day</h3><p>College foundation day celebration on 25 September.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">20 Sep</span><div class="notice-body"><h3>Attendance Report</h3><p>Monthly attendance report published. Check your status.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">18 Sep</span><div class="notice-body"><h3>Teachers Day</h3><p>Teachers Day celebration on 5 September.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">15 Sep</span><div class="notice-body"><h3>Academic Calendar</h3><p>Academic calendar for 2026-27 published on the portal.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">12 Sep</span><div class="notice-body"><h3>Onam Celebration</h3><p>Onam celebration and sadya on 15 September.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">10 Sep</span><div class="notice-body"><h3>Hostel Room Change</h3><p>Hostel room change request forms available from admin.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">08 Sep</span><div class="notice-body"><h3>Tech Talk Series</h3><p>Tech talk series every Friday. First talk on 12 September.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">05 Sep</span><div class="notice-body"><h3>Photography Workshop</h3><p>Mobile photography workshop on 10 September.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">02 Sep</span><div class="notice-body"><h3>Ragging Prohibition</h3><p>Anti-ragging committee meeting on 5 September.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">30 Aug</span><div class="notice-body"><h3>Internship Report Submission</h3><p>Submit your internship reports by 15 September.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">28 Aug</span><div class="notice-body"><h3>Janmashtami</h3><p>College closed on 27 August for Janmashtami.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">25 Aug</span><div class="notice-body"><h3>Club Registration</h3><p>Register for student clubs. Deadline 5 September.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">22 Aug</span><div class="notice-body"><h3>Course Materials</h3><p>Course materials uploaded on the learning portal.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">20 Aug</span><div class="notice-body"><h3>Independence Day</h3><p>Flag hoisting at 8 AM on 15 August. All students attend.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">18 Aug</span><div class="notice-body"><h3>Class Committee Meeting</h3><p>Class committee meeting on 22 August at 3 PM.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">15 Aug</span><div class="notice-body"><h3>Fee Structure</h3><p>Fee structure for 2026-27 published on college website.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">12 Aug</span><div class="notice-body"><h3>Cultural Club</h3><p>Cultural club auditions on 18 August. Show your talent.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">10 Aug</span><div class="notice-body"><h3>Lab Batch Division</h3><p>Lab batch division list published for all practical subjects.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">08 Aug</span><div class="notice-body"><h3>College Timings</h3><p>College timings revised. Classes start at 9 AM from 12 Aug.</p></div><span class="notice-tag gen">General</span></div>
+          <div class="notice-item notice-event"><span class="notice-date">05 Aug</span><div class="notice-body"><h3>Welcome Party</h3><p>Welcome party for new batch on 8 August.</p></div><span class="notice-tag event">Event</span></div>
+          <div class="notice-item notice-acad"><span class="notice-date">02 Aug</span><div class="notice-body"><h3>Mentor Allocation</h3><p>Mentor list for 2026-27 published. Check your mentor.</p></div><span class="notice-tag acad">Academic</span></div>
+          <div class="notice-item notice-gen"><span class="notice-date">30 Jul</span><div class="notice-body"><h3>New Academic Year</h3><p>Welcome to academic year 2026-27. Orientation on 1 Aug.</p></div><span class="notice-tag gen">General</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">Student<span>Dashboard</span></div>
+        <div class="footer-links">
+          <a href="#info">Profile</a>
+          <a href="#attendance">Attendance</a>
+          <a href="#assignments">Assignments</a>
+          <a href="#notices">Notices</a>
+        </div>
+      </div>
+      <div class="footer-line"></div>
+      <p class="footer-copy">&copy; 2026 Student Dashboard. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
