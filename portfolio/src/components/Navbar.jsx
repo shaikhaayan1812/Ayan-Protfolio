@@ -1,25 +1,35 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', id: 'hero' },
+  { label: 'About', id: 'about' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Skills', id: 'skills' },
+  { label: 'Contact', id: 'contact' },
 ];
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
-  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (id) => {
+    setMenuOpen(false);
+    scrollToSection(id);
+  };
 
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
@@ -31,17 +41,11 @@ export default function Navbar() {
         </Link>
 
         <div className={`nav-links${menuOpen ? ' open' : ''}`}>
-          {navItems.map((item) =>
-            isHome ? (
-              <a key={item.href} href={item.href} className="nav-link" onClick={() => setMenuOpen(false)}>
-                {item.label}
-              </a>
-            ) : (
-              <Link key={item.href} to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
-                {item.label}
-              </Link>
-            )
-          )}
+          {navItems.map((item) => (
+            <a key={item.id} href={`#${item.id}`} className="nav-link" onClick={(e) => { e.preventDefault(); handleNavClick(item.id); }}>
+              {item.label}
+            </a>
+          ))}
           <a href="../Ayan_Shaikh_Resume.pdf" download className="nav-resume-btn">Resume</a>
         </div>
 

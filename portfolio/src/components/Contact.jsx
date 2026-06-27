@@ -11,7 +11,7 @@ export default function Contact() {
           <p className="section-subtitle">Let's connect! Reach out for collaborations, opportunities, or just a chat</p>
         </div>
 
-        <div className="contact-grid animate-on-scroll">
+        <div className="contact-grid">
           <a href="https://linkedin.com/in/shaikh-ayan-737302385" target="_blank" className="c-card">
             <div className="c-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -59,7 +59,7 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className="resume-section animate-on-scroll">
+        <div className="resume-section">
           <p>Download my resume for more details</p>
           <a href="../Ayan_Shaikh_Resume.pdf" download className="btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>

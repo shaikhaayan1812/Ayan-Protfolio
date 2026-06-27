@@ -12,21 +12,21 @@ export default function About() {
         </div>
 
         <div className="about-cards">
-          <div className="about-card animate-on-scroll">
+          <div className="about-card">
             <div className="about-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-1)" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
             <h3>Who I Am</h3>
             <p>I'm Ayan Shaikh, a BCA student at Lokmanya Commerce College and a Full Stack Developer course student at Top Technologies (ongoing). I work as a Business Development Executive at Orah Consultancy Services and have completed an internship at Patel Solutions.</p>
           </div>
-          <div className="about-card animate-on-scroll">
+          <div className="about-card">
             <div className="about-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
             <h3>What I Do</h3>
             <p>I build modern web applications using Python Django, React, HTML/CSS, and JavaScript. I'm also skilled in communication and negotiation through my current role at Orah Consultancy Services.</p>
           </div>
-          <div className="about-card animate-on-scroll">
+          <div className="about-card">
             <div className="about-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-3)" strokeWidth="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
             </div>
@@ -35,7 +35,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="timeline-section animate-on-scroll">
+        <div className="timeline-section">
           <h3 style={{ fontFamily: 'Space Grotesk', fontSize: '1.4rem', marginBottom: '32px', textAlign: 'center', color: 'var(--text-primary)' }}>Experience & Education</h3>
           <div className="timeline">
             <div className="timeline-item">
@@ -85,7 +85,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="stats-grid animate-on-scroll">
+        <div className="stats-grid">
           <div className="stat-item"><span className="stat-num">18+</span><span className="stat-lbl">Projects</span></div>
           <div className="stat-item"><span className="stat-num">10+</span><span className="stat-lbl">Technologies</span></div>
           <div className="stat-item"><span className="stat-num">2</span><span className="stat-lbl">Work Experiences</span></div>
