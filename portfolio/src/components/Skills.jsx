@@ -2,23 +2,23 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const skillCategories = [
   {
+    title: 'Backend',
+    skills: ['Python', 'Django', 'REST APIs', 'SQL'],
+    color: '#6c63ff',
+  },
+  {
     title: 'Frontend',
     skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap 5'],
-    color: '#6c63ff',
+    color: '#00d4aa',
   },
   {
     title: '3D & Graphics',
     skills: ['Three.js', 'WebGL', 'OBJLoader', 'PBR Materials', '3D Animation'],
-    color: '#00d4aa',
-  },
-  {
-    title: 'Design',
-    skills: ['UI/UX', 'Responsive Design', 'CSS Animation', 'Typography', 'Color Theory'],
     color: '#ff6b9d',
   },
   {
-    title: 'Tools',
-    skills: ['VS Code', 'Git', 'Vite', 'npm', 'Chrome DevTools'],
+    title: 'Tools & Skills',
+    skills: ['VS Code', 'Git', 'Vite', 'Communication', 'Negotiation'],
     color: '#ff9f43',
   },
 ];

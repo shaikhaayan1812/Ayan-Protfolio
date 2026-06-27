@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import heroImg from '../assets/hero.png';
 
 export default function Hero() {
   const titleRef = useRef(null);
@@ -22,21 +23,29 @@ export default function Hero() {
       </div>
 
       <div className="hero-content">
+        <div className="hero-profile">
+          <div className="hero-image-wrapper">
+            <img src={heroImg} alt="Ayan Shaikh" className="hero-image" />
+            <div className="hero-image-ring"></div>
+          </div>
+        </div>
+
         <div className="hero-badge">
           <span className="badge-dot"></span>
-          HTML CSS JavaScript React Developer
+          Full Stack Developer | Python Django | React
         </div>
 
         <h1 ref={titleRef} className="hero-title">
           Hi, I'm{' '}
           <span className="gradient-text">Ayan Shaikh</span>
           <br />
-          <span className="hero-title-sub">Web Developer &amp; Designer</span>
+          <span className="hero-title-sub">Full Stack Developer &amp; Business Development Executive</span>
         </h1>
 
         <p ref={subtitleRef} className="hero-subtitle">
-          I build interactive web experiences with HTML, CSS, JavaScript, React, and 3D technologies.
-          Explore my journey through 18+ projects showcasing creativity and technical skills.
+          BCA student at Lokmanya Commerce College | Full Stack course at Top Technologies (ongoing)
+          | Business Development Executive at Orah Consultancy Services.
+          Building modern web apps with Python Django, React, and more.
         </p>
 
         <div ref={ctaRef} className="hero-cta">
@@ -102,6 +111,40 @@ export default function Hero() {
           z-index: 1;
           text-align: center;
           max-width: 800px;
+        }
+
+        .hero-profile {
+          margin-bottom: 32px;
+        }
+
+        .hero-image-wrapper {
+          position: relative;
+          width: 150px;
+          height: 150px;
+          margin: 0 auto;
+        }
+
+        .hero-image {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+          position: relative;
+          z-index: 1;
+        }
+
+        .hero-image-ring {
+          position: absolute;
+          inset: -4px;
+          border-radius: 50%;
+          background: var(--accent-gradient);
+          z-index: 0;
+          animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
         }
 
         .hero-badge {
