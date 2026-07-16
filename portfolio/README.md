@@ -1,16 +1,29 @@
-# React + Vite
+# Ayan Shaikh Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React and Vite power the portfolio UI. The site includes an experience timeline, skills, project filtering, project detail views, and links to the original project demos stored in the repository.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Requirements: Node.js 22.12 or newer.
 
-## React Compiler
+```bash
+npm ci
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Release checks
 
-## Expanding the Oxlint configuration
+```bash
+npm run check
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+`npm run build` writes the production site to `portfolio/dist`. The repository's root `index.html` redirects GitHub Pages visitors to that directory. Because the published site references the project demos stored at repository root, keep the `dist` directory committed after a verified production build.
+
+## Project structure
+
+- `src/components`: portfolio sections and project detail UI
+- `src/data/projects.js`: project metadata and demo locations
+- `src/assets`: source images used by the React app
+- `public`: static files copied into the production build
+- `dist`: production build served by GitHub Pages

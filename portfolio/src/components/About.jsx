@@ -12,7 +12,7 @@ export default function About() {
       <div className="container">
         <div ref={ref} className="animate-on-scroll">
           <h2 className="section-title"><span>About Me</span></h2>
-          <p className="section-subtitle">BCA Student | Full Stack Developer | Business Development Executive</p>
+          <p className="section-subtitle">BCA Graduate | Full Stack Developer | Business Development Executive</p>
         </div>
 
         <div className="about-cards">
@@ -21,21 +21,21 @@ export default function About() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-1)" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
             <h3>Who I Am</h3>
-            <p>I'm Ayan Shaikh, a BCA student at Lokmanya Commerce College and a Full Stack Developer course student at Top Technologies (ongoing). I work as a Business Development Executive at Orah Consultancy Services and have completed an internship at Patel Solutions.</p>
+            <p>I'm Ayan Shaikh, a BCA graduate from Lokmanya Commerce College and a Full Stack Development learner at TOPS Technologies. I work as a Business Development Executive at Orah Consultancy Services and have completed a Python and Django internship at Patel Solutions.</p>
           </div>
           <div className="about-card">
             <div className="about-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
             <h3>What I Do</h3>
-            <p>I build modern web applications using Python Django, React, HTML/CSS, and JavaScript. I'm also skilled in communication and negotiation through my current role at Orah Consultancy Services.</p>
+            <p>I build modern web applications using Python, Django, React, HTML, CSS, and JavaScript. I'm also skilled in communication and negotiation through my current role at Orah Consultancy Services.</p>
           </div>
           <div className="about-card">
             <div className="about-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-3)" strokeWidth="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
             </div>
             <h3>My Journey</h3>
-            <p>Started with HTML & CSS, then progressed to JavaScript, Python Django, React, and Three.js. With 18+ completed projects and professional experience in both development and business development, I bring a unique blend of technical and soft skills.</p>
+            <p>I started with HTML and CSS, then progressed to JavaScript, Python, Django, React, and Three.js. Across 18+ completed projects and roles in development and business development, I have built a practical mix of technical, communication, and problem-solving skills.</p>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export default function About() {
                 </div>
                 <p className="tl-company">Orah Consultancy Services · Full-time · On-site</p>
                 <p className="tl-desc">Communication and Negotiation</p>
-                <img src={orahLogo} alt="Orah" className="tl-logo" />
+                <img src={orahLogo} alt="Orah Consultancy Services logo" className="tl-logo" loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="timeline-item">
@@ -63,7 +63,7 @@ export default function About() {
                 </div>
                 <p className="tl-company">Patel Solutions - The Perfect Web Solutions · Internship · On-site</p>
                 <p className="tl-desc">Python with Django, CSS, and related technologies</p>
-                <img src={patelLogo} alt="Patel Solutions" className="tl-logo" />
+                <img src={patelLogo} alt="Patel Solutions logo" className="tl-logo" loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="timeline-item">
@@ -71,11 +71,11 @@ export default function About() {
               <div className="tl-content">
                 <div className="tl-top">
                   <h4>Full Stack Course (Ongoing)</h4>
-                  <span className="tl-date">2026 - Present</span>
+                  <span className="tl-date">May 2026 - Present</span>
                 </div>
-                <p className="tl-company">Top Technologies</p>
-                <p className="tl-desc">Currently learning current top technologies in full stack development</p>
-                <img src={topLogo} alt="Top Technologies" className="tl-logo" />
+                <p className="tl-company">TOPS Technologies</p>
+                <p className="tl-desc">Hands-on full-stack development training covering programming, web technologies, and project work</p>
+                <img src={topLogo} alt="TOPS Technologies logo" className="tl-logo" loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="timeline-item">
@@ -87,18 +87,18 @@ export default function About() {
                 </div>
                 <p className="tl-company">Lokmanya Commerce College</p>
                 <p className="tl-desc">Grade: B</p>
-                <img src={collegLogo} alt="Lokmanya Commerce College" className="tl-logo" />
+                <img src={collegLogo} alt="Lokmanya Commerce College logo" className="tl-logo" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
         </div>
 
         <div className="stats-grid">
-          <div className="stat-item"><span className="stat-num">1</span><span className="stat-lbl">Year Experience</span></div>
           <div className="stat-item"><span className="stat-num">18+</span><span className="stat-lbl">Projects</span></div>
           <div className="stat-item"><span className="stat-num">10+</span><span className="stat-lbl">Technologies</span></div>
-          <div className="stat-item"><span className="stat-num">2</span><span className="stat-lbl">Work Experiences</span></div>
-          <div className="stat-item"><span className="stat-num">100%</span><span className="stat-lbl">Passion</span></div>
+          <div className="stat-item"><span className="stat-num">120</span><span className="stat-lbl">Internship Hours</span></div>
+          <div className="stat-item"><span className="stat-num">2</span><span className="stat-lbl">Professional Roles</span></div>
+          <div className="stat-item"><span className="stat-num">1</span><span className="stat-lbl">Full Stack Course</span></div>
         </div>
       </div>
 
@@ -288,6 +288,7 @@ export default function About() {
           .about-cards { grid-template-columns: 1fr; }
           .stats-grid { grid-template-columns: repeat(2, 1fr); }
           .tl-top { flex-direction: column; }
+          .tl-content:hover { transform: none; }
         }
       `}</style>
     </section>
