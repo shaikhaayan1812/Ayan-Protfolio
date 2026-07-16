@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const navItems = [
   { label: 'Home', id: 'hero' },
@@ -12,13 +12,15 @@ const navItems = [
 function scrollToSection(id) {
   const el = document.getElementById(id);
   if (el) {
-    el.scrollIntoView({ behavior: 'smooth' });
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    el.scrollIntoView({ behavior });
   }
 }
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -26,13 +28,36 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [menuOpen]);
+
   const handleNavClick = (id) => {
     setMenuOpen(false);
-    scrollToSection(id);
+    if (document.getElementById(id)) {
+      scrollToSection(id);
+      return;
+    }
+
+    navigate('/');
+    window.setTimeout(() => scrollToSection(id), 0);
   };
 
   return (
-    <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
+    <nav className={`navbar${scrolled ? ' scrolled' : ''}`} aria-label="Primary navigation">
       <div className="nav-container">
         <Link to="/" className="nav-logo" onClick={() => setMenuOpen(false)}>
           <span className="logo-dev">&lt;</span>
@@ -40,20 +65,27 @@ export default function Navbar() {
           <span className="logo-dev">/&gt;</span>
         </Link>
 
-        <div className={`nav-links${menuOpen ? ' open' : ''}`}>
+        <div id="primary-navigation" className={`nav-links${menuOpen ? ' open' : ''}`}>
           {navItems.map((item) => (
             <a key={item.id} href={`#${item.id}`} className="nav-link" onClick={(e) => { e.preventDefault(); handleNavClick(item.id); }}>
               {item.label}
             </a>
           ))}
-          <a href="../Ayan_Shaikh_Resume.pdf" download className="nav-resume-btn">Resume</a>
+          <a href="./Ayan_Shaikh_Resume.pdf" download className="nav-resume-btn">Resume</a>
         </div>
 
-        <button className={`hamburger${menuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+        <button
+          type="button"
+          className={`hamburger${menuOpen ? ' open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-controls="primary-navigation"
+          aria-expanded={menuOpen}
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
-      {menuOpen && <div className="nav-overlay" onClick={() => setMenuOpen(false)} />}
+      {menuOpen && <button type="button" className="nav-overlay" onClick={() => setMenuOpen(false)} aria-label="Close navigation menu" />}
 
       <style>{`
         .navbar {
@@ -185,6 +217,8 @@ export default function Navbar() {
             background: rgba(0,0,0,0.5);
             z-index: 998;
             animation: fadeIn 0.3s ease;
+            border: 0;
+            cursor: pointer;
           }
         }
       `}</style>

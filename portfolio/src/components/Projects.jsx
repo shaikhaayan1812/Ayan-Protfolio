@@ -20,7 +20,13 @@ export default function Projects() {
 
         <div className="project-filters">
           {categories.map((cat) => (
-            <button key={cat} className={`filter-btn${filter === cat ? ' active' : ''}`} onClick={() => setFilter(cat)}>
+            <button
+              key={cat}
+              type="button"
+              className={`filter-btn${filter === cat ? ' active' : ''}`}
+              aria-pressed={filter === cat}
+              onClick={() => setFilter(cat)}
+            >
               {cat === 'all' ? 'All Projects' : cat}
             </button>
           ))}
@@ -69,37 +75,6 @@ export default function Projects() {
           grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
           gap: 20px;
         }
-      `}</style>
-    </section>
-  );
-}
-
-function ProjectCard({ project, index }) {
-  const cardRef = useScrollAnimation();
-  const relPath = `../${project.folder}`;
-
-  return (
-    <Link to={`/project/${project.id}`} className="card-link">
-      <div ref={cardRef} className="project-card" style={{ transitionDelay: `${(index % 6) * 0.08}s` }}>
-        <div className="p-card-top" style={{ '--card-clr': project.color }}>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={project.color} strokeWidth="1.5">
-            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-          </svg>
-          <a href={relPath} target="_blank" className="p-ext-link" onClick={(e) => e.stopPropagation()} title="Open project">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
-          </a>
-        </div>
-        <h3 className="p-title">{project.title}</h3>
-        <p className="p-desc">{project.description}</p>
-        <div className="p-tech">
-          {project.tech.map((t) => <span key={t} className="p-tag">{t}</span>)}
-        </div>
-      </div>
-
-      <style>{`
-        .card-link { text-decoration: none; display: block; }
         .project-card {
           background: var(--glass-bg);
           -webkit-backdrop-filter: blur(8px);
@@ -108,10 +83,11 @@ function ProjectCard({ project, index }) {
           border-radius: 14px;
           padding: 24px;
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-          cursor: pointer;
           height: 100%;
           position: relative;
           overflow: hidden;
+          display: flex;
+          flex-direction: column;
         }
         .project-card::before {
           content: '';
@@ -126,7 +102,7 @@ function ProjectCard({ project, index }) {
         }
         .project-card:hover {
           transform: translateY(-8px);
-          border-color: rgba(var(--card-clr, 88, 166, 255), 0.3);
+          border-color: var(--card-clr-soft, rgba(88, 166, 255, 0.3));
           box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
         .project-card:hover::before { opacity: 1; }
@@ -153,6 +129,8 @@ function ProjectCard({ project, index }) {
           margin-bottom: 10px;
           color: var(--text-primary);
         }
+        .p-title-link { transition: color 0.3s; }
+        .p-title-link:hover { color: var(--card-clr, var(--accent-1)); }
         .p-desc {
           color: var(--text-secondary);
           font-size: 0.85rem;
@@ -160,7 +138,7 @@ function ProjectCard({ project, index }) {
           flex-grow: 1;
           margin-bottom: 16px;
         }
-        .p-tech { display: flex; flex-wrap: wrap; gap: 6px; }
+        .p-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
         .p-tag {
           padding: 3px 10px;
           background: rgba(88, 166, 255, 0.08);
@@ -174,7 +152,66 @@ function ProjectCard({ project, index }) {
           background: rgba(88, 166, 255, 0.15);
           transform: translateY(-1px);
         }
+        .p-actions {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 12px;
+          margin-top: auto;
+          padding-top: 14px;
+          border-top: 1px solid var(--glass-border);
+        }
+        .p-detail-link, .p-demo-link {
+          color: var(--text-secondary);
+          font-size: 0.78rem;
+          font-weight: 600;
+          transition: color 0.3s, transform 0.3s;
+        }
+        .p-detail-link:hover, .p-demo-link:hover {
+          color: var(--card-clr, var(--accent-1));
+          transform: translateY(-1px);
+        }
+        @media (max-width: 480px) {
+          .projects-grid { grid-template-columns: 1fr; }
+        }
       `}</style>
-    </Link>
+    </section>
+  );
+}
+
+function ProjectCard({ project, index }) {
+  const cardRef = useScrollAnimation();
+  const relPath = `../../${project.folder}`;
+
+  return (
+    <article
+      ref={cardRef}
+      className="project-card animate-on-scroll"
+      style={{
+        '--card-clr': project.color,
+        '--card-clr-soft': `${project.color}4d`,
+        transitionDelay: `${(index % 6) * 0.08}s`,
+      }}
+    >
+      <div className="p-card-top">
+          <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={project.color} strokeWidth="1.5">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+          </svg>
+          <a href={relPath} target="_blank" rel="noopener noreferrer" className="p-ext-link" aria-label={`Open ${project.title} demo in a new tab`}>
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+      </div>
+      <h3 className="p-title"><Link to={`/project/${project.id}`} className="p-title-link">{project.title}</Link></h3>
+      <p className="p-desc">{project.description}</p>
+      <div className="p-tech">
+        {project.tech.map((t) => <span key={t} className="p-tag">{t}</span>)}
+      </div>
+      <div className="p-actions">
+        <Link to={`/project/${project.id}`} className="p-detail-link">View details <span aria-hidden="true">→</span></Link>
+        <a href={relPath} target="_blank" rel="noopener noreferrer" className="p-demo-link">Live demo <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
   );
 }

@@ -19,20 +19,28 @@ export default function Hero() {
     <section id="hero" className="hero-section">
       <div className="hero-content">
         <div className="hero-profile">
-          <img src={heroImg} alt="Ayan Shaikh" className="hero-image" />
+          <img
+            src={heroImg}
+            alt="Portrait of Ayan Shaikh"
+            className="hero-image"
+            width="140"
+            height="140"
+            decoding="async"
+            fetchPriority="high"
+          />
         </div>
-        <div className="hero-badge">BCA Student | Full Stack Developer | Business Development Executive</div>
+        <div className="hero-badge">BCA Graduate | Full Stack Developer | Business Development Executive</div>
         <h1 ref={titleRef} className="hero-title">
           Hi, I'm <span style={{ color: 'var(--accent-1)' }}>Ayan Shaikh</span>
         </h1>
         <p ref={subtitleRef} className="hero-subtitle">
-          Building modern web apps with Python Django, React, and more. 
+          Building modern web apps with Python, Django, React, and JavaScript.
           Currently working as Business Development Executive at Orah Consultancy Services.
         </p>
         <div ref={ctaRef} className="hero-cta">
           <a href="#projects" className="btn-primary" onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }); }}>View Projects</a>
           <a href="#contact" className="btn-secondary" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Contact Me</a>
-          <a href="../Ayan_Shaikh_Resume.pdf" download className="btn-secondary">
+          <a href="./Ayan_Shaikh_Resume.pdf" download className="btn-secondary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download Resume
           </a>

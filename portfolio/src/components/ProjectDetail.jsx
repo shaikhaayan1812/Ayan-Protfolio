@@ -4,7 +4,7 @@ import { projects } from '../data/projects';
 export default function ProjectDetail() {
   const { id } = useParams();
   const project = projects.find((p) => p.id === Number(id));
-  const relPath = `../${project?.folder}`;
+  const relPath = `../../${project?.folder}`;
 
   if (!project) {
     return (
@@ -44,6 +44,7 @@ export default function ProjectDetail() {
             title={project.title}
             style={{ width: '100%', height: '100%', border: 'none' }}
             loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
           />
         </div>
       </div>

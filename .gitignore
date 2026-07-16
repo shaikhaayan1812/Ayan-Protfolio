@@ -1,1 +1,8 @@
-node_modules
+node_modules/
+.vite/
+coverage/
+*.log
+.DS_Store
+
+# Legacy generated bundle directory. The deployable build lives in portfolio/dist.
+portfolio/assets/

@@ -59,6 +59,12 @@ body::before {
 img { max-width: 100%; height: auto; }
 a { text-decoration: none; color: inherit; }
 
+:where(a, button, [tabindex]):focus-visible {
+  outline: 3px solid var(--accent-1);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -254,6 +260,10 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--glass-border);
 }
 
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  :root { --glass-bg: rgba(28, 35, 51, 0.96); }
+}
+
 .card-glow {
   position: relative;
   overflow: hidden;
@@ -281,4 +291,22 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 768px) {
   .section { padding: 60px 0; }
   .section-title { font-size: 1.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .animate-on-scroll,
+  .animate-scale {
+    opacity: 1;
+    transform: none;
+  }
 }
