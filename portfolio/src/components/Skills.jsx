@@ -1,108 +1,231 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const skillCategories = [
-  { title: 'Backend', skills: ['Python', 'Django', 'REST APIs', 'SQL'], color: '#58a6ff' },
-  { title: 'Frontend', skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap 5'], color: '#3fb950' },
-  { title: '3D & Graphics', skills: ['Three.js', 'WebGL', 'OBJLoader', 'PBR Materials', '3D Animation'], color: '#f0883e' },
-  { title: 'Tools & Skills', skills: ['VS Code', 'Git', 'Vite', 'Communication', 'Negotiation'], color: '#bc8cff' },
+  {
+    title: 'Backend systems',
+    label: 'Logic & data',
+    skills: ['Python', 'Django', 'REST APIs', 'SQL'],
+    color: 'var(--cyan)',
+    symbol: '{ }',
+  },
+  {
+    title: 'Frontend craft',
+    label: 'Interface & motion',
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap 5'],
+    color: 'var(--acid)',
+    symbol: '</>',
+  },
+  {
+    title: '3D experiences',
+    label: 'Depth & interaction',
+    skills: ['Three.js', 'WebGL', 'OBJLoader', 'PBR Materials', '3D Animation'],
+    color: 'var(--coral)',
+    symbol: '◇',
+  },
+  {
+    title: 'Workflow & people',
+    label: 'Tools & collaboration',
+    skills: ['VS Code', 'Git', 'Vite', 'Communication', 'Negotiation'],
+    color: 'var(--violet)',
+    symbol: '→',
+  },
 ];
 
 export default function Skills() {
-  const ref = useScrollAnimation();
+  const introRef = useScrollAnimation();
 
   return (
-    <section id="skills" className="section">
-      <div className="container">
-        <div ref={ref} className="animate-on-scroll">
-          <h2 className="section-title"><span>Skills & Technologies</span></h2>
-          <p className="section-subtitle">Technologies and tools I use to bring ideas to life</p>
+    <section id="skills" className="section section-shell skills-section">
+      <div className="container skills-layout">
+        <div ref={introRef} className="skills-intro animate-on-scroll">
+          <p className="section-index">03 / Stack</p>
+          <h2 className="skills-title">My digital<br /><span>toolbox.</span></h2>
+          <p className="skills-copy">
+            From clean interface code to real-time 3D scenes—I choose the right tool,
+            then push it far enough to make the result feel alive.
+          </p>
+          <div className="skills-signal" aria-label="Always learning">
+            <span className="signal-dot" aria-hidden="true" />
+            Always learning / always shipping
+          </div>
         </div>
 
-        <div className="skills-grid">
-          {skillCategories.map((cat, i) => (
-            <div key={cat.title} className="skill-cat" style={{ transitionDelay: `${i * 0.1}s`, '--cat-clr': cat.color }}>
-              <h3 className="sc-title">{cat.title}</h3>
-              <div className="sc-skills">
-                {cat.skills.map((skill) => (
-                  <span key={skill} className="sc-tag">{skill}</span>
-                ))}
-              </div>
-            </div>
+        <div className="skill-lanes">
+          {skillCategories.map((category, index) => (
+            <SkillLane key={category.title} category={category} index={index} />
           ))}
         </div>
       </div>
 
       <style>{`
-        .skills-grid {
+        .skills-section {
+          background:
+            linear-gradient(90deg, transparent 49.95%, var(--line) 50%, transparent 50.05%),
+            radial-gradient(circle at 16% 40%, rgba(155, 124, 255, 0.08), transparent 25%);
+        }
+
+        .skills-layout {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
+          grid-template-columns: minmax(320px, 0.78fr) minmax(440px, 1.22fr);
+          gap: clamp(60px, 9vw, 130px);
+          align-items: start;
         }
-        .skill-cat {
-          background: var(--glass-bg);
-          -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-          border: 1px solid var(--glass-border);
-          border-radius: 14px;
-          padding: 28px;
-          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+        .skills-intro { position: sticky; top: 135px; }
+
+        .skills-title {
+          margin: 34px 0 30px;
+          font-family: var(--display);
+          font-size: clamp(3.5rem, 7.5vw, 7.8rem);
+          font-weight: 800;
+          line-height: 0.78;
+          letter-spacing: -0.085em;
+          text-transform: uppercase;
+        }
+
+        .skills-title span {
+          color: transparent;
+          -webkit-text-stroke: 1px var(--cyan);
+          text-stroke: 1px var(--cyan);
+        }
+
+        .skills-copy { max-width: 440px; color: var(--muted); font-size: 0.94rem; line-height: 1.85; }
+
+        .skills-signal {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 40px;
+          color: var(--paper);
+          font-size: 0.67rem;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+
+        .signal-dot {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: var(--acid);
+          box-shadow: 0 0 0 6px rgba(199, 255, 61, 0.1);
+          animation: blink 1.8s ease infinite;
+        }
+
+        .skill-lanes { border-top: 1px solid var(--line-strong); }
+
+        .skill-lane {
           position: relative;
+          display: grid;
+          grid-template-columns: 52px minmax(0, 1fr) auto;
+          gap: 22px;
+          min-height: 220px;
+          padding-block: 38px;
           overflow: hidden;
+          border-bottom: 1px solid var(--line-strong);
+          transition: padding 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s ease;
         }
-        .skill-cat::before {
+
+        .skill-lane::before {
           content: '';
           position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, var(--cat-clr, var(--accent-1)), transparent);
+          inset: 0;
+          z-index: -1;
+          background: linear-gradient(105deg, color-mix(in srgb, var(--lane-color) 11%, transparent), transparent 64%);
           opacity: 0;
-          transition: opacity 0.4s;
+          transition: opacity 0.35s ease;
         }
-        .skill-cat:hover {
-          border-color: rgba(255,255,255,0.08);
-          transform: translateY(-8px);
-          box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+
+        .skill-lane:hover { padding-inline: 24px; }
+        .skill-lane:hover::before { opacity: 1; }
+
+        .skill-number {
+          color: var(--lane-color);
+          font-family: var(--display);
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0.08em;
         }
-        .skill-cat:hover::before { opacity: 1; }
-        .sc-title {
-          font-family: 'Space Grotesk', sans-serif;
-          font-size: 1.1rem;
-          font-weight: 600;
-          margin-bottom: 20px;
-          color: var(--cat-clr, var(--accent-1));
-          position: relative;
-          z-index: 1;
+
+        .skill-label {
+          margin-bottom: 12px;
+          color: var(--muted);
+          font-size: 0.65rem;
+          font-weight: 800;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
         }
-        .sc-skills {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          position: relative;
-          z-index: 1;
+
+        .skill-name {
+          font-family: var(--display);
+          font-size: clamp(1.9rem, 3.5vw, 3.5rem);
+          line-height: 1;
+          letter-spacing: -0.055em;
         }
-        .sc-tag {
-          padding: 7px 18px;
-          background: rgba(88, 166, 255, 0.06);
-          border: 1px solid var(--border-color);
-          border-radius: 8px;
-          font-size: 0.85rem;
-          color: var(--text-secondary);
-          transition: all 0.3s;
-          cursor: default;
+
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+
+        .skill-tag {
+          padding: 6px 11px;
+          border: 1px solid var(--line);
+          border-radius: 99px;
+          color: var(--muted);
+          background: rgba(255, 255, 255, 0.018);
+          font-size: 0.68rem;
+          font-weight: 700;
+          transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
         }
-        .sc-tag:hover {
-          border-color: var(--cat-clr, var(--accent-1));
-          color: var(--text-primary);
-          background: rgba(88, 166, 255, 0.1);
-          transform: translateY(-2px) scale(1.03);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+        .skill-tag:hover { color: var(--paper); border-color: var(--lane-color); transform: translateY(-2px); }
+
+        .skill-symbol {
+          align-self: center;
+          color: var(--lane-color);
+          font-family: var(--display);
+          font-size: clamp(2rem, 4vw, 4rem);
+          font-weight: 800;
+          opacity: 0.55;
+          transition: transform 0.35s ease, opacity 0.35s ease;
         }
-        @media (max-width: 768px) {
-          .skills-grid { grid-template-columns: 1fr; }
+
+        .skill-lane:hover .skill-symbol { transform: rotate(-8deg) scale(1.12); opacity: 1; }
+
+        @media (max-width: 980px) {
+          .skills-section { background: radial-gradient(circle at 16% 25%, rgba(155, 124, 255, 0.08), transparent 25%); }
+          .skills-layout { grid-template-columns: 1fr; gap: 72px; }
+          .skills-intro { position: static; }
+          .skills-title { font-size: clamp(4.2rem, 14vw, 8rem); }
+        }
+
+        @media (max-width: 560px) {
+          .skill-lane { grid-template-columns: 34px 1fr; min-height: 200px; gap: 12px; }
+          .skill-symbol { display: none; }
+          .skill-tags { grid-column: 2; }
+          .skill-lane:hover { padding-inline: 10px; }
         }
       `}</style>
     </section>
+  );
+}
+
+function SkillLane({ category, index }) {
+  const ref = useScrollAnimation();
+
+  return (
+    <article
+      ref={ref}
+      className="skill-lane animate-on-scroll"
+      style={{ '--lane-color': category.color, transitionDelay: `${index * 0.08}s` }}
+    >
+      <span className="skill-number">0{index + 1}</span>
+      <div>
+        <p className="skill-label">{category.label}</p>
+        <h3 className="skill-name">{category.title}</h3>
+        <div className="skill-tags">
+          {category.skills.map((skill) => <span key={skill} className="skill-tag">{skill}</span>)}
+        </div>
+      </div>
+      <span className="skill-symbol" aria-hidden="true">{category.symbol}</span>
+    </article>
   );
 }

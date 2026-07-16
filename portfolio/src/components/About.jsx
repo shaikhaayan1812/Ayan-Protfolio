@@ -1,294 +1,256 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import orahLogo from '../assets/orah.png';
 import patelLogo from '../assets/patel-logo.png';
-import topLogo from '../assets/topdownload.png';
-import collegLogo from '../assets/colleg.png';
+import topsLogo from '../assets/topdownload.png';
+import collegeLogo from '../assets/colleg.png';
+
+const journey = [
+  {
+    period: '2025 — NOW',
+    title: 'Business Development Executive',
+    place: 'Orah Consultancy Services',
+    detail: 'Turning conversations into opportunity through communication, research, and negotiation.',
+    logo: orahLogo,
+    alt: 'Orah Consultancy Services logo',
+    color: 'var(--acid)',
+  },
+  {
+    period: '2025 — 2026',
+    title: 'Python & Django Intern',
+    place: 'Patel Solutions',
+    detail: '120 hours of hands-on development across Python, Django, CSS, and practical web workflows.',
+    logo: patelLogo,
+    alt: 'Patel Solutions logo',
+    color: 'var(--cyan)',
+  },
+  {
+    period: '2026 — NOW',
+    title: 'Full Stack Development',
+    place: 'TOPS Technologies',
+    detail: 'Deepening programming fundamentals and building production-minded full-stack projects.',
+    logo: topsLogo,
+    alt: 'TOPS Technologies logo',
+    color: 'var(--coral)',
+  },
+  {
+    period: '2023 — 2026',
+    title: 'Bachelor of Computer Applications',
+    place: 'Lokmanya Commerce College',
+    detail: 'Built the academic foundation that connects software, systems, and business thinking.',
+    logo: collegeLogo,
+    alt: 'Lokmanya Commerce College logo',
+    color: 'var(--violet)',
+  },
+];
+
+const metrics = [
+  ['18+', 'Projects'],
+  ['10+', 'Technologies'],
+  ['120', 'Internship hours'],
+  ['02', 'Professional roles'],
+];
 
 export default function About() {
   const ref = useScrollAnimation();
 
   return (
-    <section id="about" className="section">
+    <section id="about" className="section section-shell about-section">
       <div className="container">
-        <div ref={ref} className="animate-on-scroll">
-          <h2 className="section-title"><span>About Me</span></h2>
-          <p className="section-subtitle">BCA Graduate | Full Stack Developer | Business Development Executive</p>
+        <div className="section-heading animate-on-scroll" ref={ref}>
+          <span className="section-index">01 / About</span>
+          <h2 className="display-title">More than a <span className="accent-text">developer.</span></h2>
+          <p className="section-copy">I combine code, design awareness, and business communication—so the work is not only functional, but also clear, engaging, and useful.</p>
         </div>
 
-        <div className="about-cards">
-          <div className="about-card">
-            <div className="about-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-1)" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <h3>Who I Am</h3>
-            <p>I'm Ayan Shaikh, a BCA graduate from Lokmanya Commerce College and a Full Stack Development learner at TOPS Technologies. I work as a Business Development Executive at Orah Consultancy Services and have completed a Python and Django internship at Patel Solutions.</p>
-          </div>
-          <div className="about-card">
-            <div className="about-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <h3>What I Do</h3>
-            <p>I build modern web applications using Python, Django, React, HTML, CSS, and JavaScript. I'm also skilled in communication and negotiation through my current role at Orah Consultancy Services.</p>
-          </div>
-          <div className="about-card">
-            <div className="about-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-3)" strokeWidth="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-            </div>
-            <h3>My Journey</h3>
-            <p>I started with HTML and CSS, then progressed to JavaScript, Python, Django, React, and Three.js. Across 18+ completed projects and roles in development and business development, I have built a practical mix of technical, communication, and problem-solving skills.</p>
+        <div className="about-manifesto">
+          <div className="manifesto-mark" aria-hidden="true">“</div>
+          <p className="manifesto-lead">
+            The best digital work feels <em>obvious</em> after someone builds it.
+          </p>
+          <div className="manifesto-body">
+            <p>I’m a BCA graduate and full-stack learner who enjoys moving between technical problem-solving and human conversation.</p>
+            <p>From React interfaces and Django backends to Three.js experiments, every project is a chance to learn faster and make the next idea sharper.</p>
           </div>
         </div>
 
-        <div className="timeline-section">
-          <h3 style={{ fontFamily: 'Space Grotesk', fontSize: '1.4rem', marginBottom: '32px', textAlign: 'center', color: 'var(--text-primary)' }}>Experience & Education</h3>
-          <div className="timeline">
-            <div className="timeline-item">
-              <div className="tl-dot" style={{ background: 'var(--accent-1)' }}></div>
-              <div className="tl-content">
-                <div className="tl-top">
-                  <h4>Business Development Executive</h4>
-                  <span className="tl-date">Nov 2025 - Present</span>
-                </div>
-                <p className="tl-company">Orah Consultancy Services · Full-time · On-site</p>
-                <p className="tl-desc">Communication and Negotiation</p>
-                <img src={orahLogo} alt="Orah Consultancy Services logo" className="tl-logo" loading="lazy" decoding="async" />
-              </div>
+        <div className="metric-ribbon" aria-label="Key portfolio metrics">
+          {metrics.map(([value, label], index) => (
+            <div className="metric" key={label}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <strong>{value}</strong>
+              <small>{label}</small>
             </div>
-            <div className="timeline-item">
-              <div className="tl-dot" style={{ background: 'var(--accent-2)' }}></div>
-              <div className="tl-content">
-                <div className="tl-top">
-                  <h4>Python Django Intern</h4>
-                  <span className="tl-date">Dec 2025 - Jan 2026</span>
-                </div>
-                <p className="tl-company">Patel Solutions - The Perfect Web Solutions · Internship · On-site</p>
-                <p className="tl-desc">Python with Django, CSS, and related technologies</p>
-                <img src={patelLogo} alt="Patel Solutions logo" className="tl-logo" loading="lazy" decoding="async" />
-              </div>
-            </div>
-            <div className="timeline-item">
-              <div className="tl-dot" style={{ background: 'var(--accent-3)' }}></div>
-              <div className="tl-content">
-                <div className="tl-top">
-                  <h4>Full Stack Course (Ongoing)</h4>
-                  <span className="tl-date">May 2026 - Present</span>
-                </div>
-                <p className="tl-company">TOPS Technologies</p>
-                <p className="tl-desc">Hands-on full-stack development training covering programming, web technologies, and project work</p>
-                <img src={topLogo} alt="TOPS Technologies logo" className="tl-logo" loading="lazy" decoding="async" />
-              </div>
-            </div>
-            <div className="timeline-item">
-              <div className="tl-dot" style={{ background: 'var(--accent-4)' }}></div>
-              <div className="tl-content">
-                <div className="tl-top">
-                  <h4>Bachelor of Computer Applications (BCA)</h4>
-                  <span className="tl-date">Jul 2023 - Feb 2026</span>
-                </div>
-                <p className="tl-company">Lokmanya Commerce College</p>
-                <p className="tl-desc">Grade: B</p>
-                <img src={collegLogo} alt="Lokmanya Commerce College logo" className="tl-logo" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
-        <div className="stats-grid">
-          <div className="stat-item"><span className="stat-num">18+</span><span className="stat-lbl">Projects</span></div>
-          <div className="stat-item"><span className="stat-num">10+</span><span className="stat-lbl">Technologies</span></div>
-          <div className="stat-item"><span className="stat-num">120</span><span className="stat-lbl">Internship Hours</span></div>
-          <div className="stat-item"><span className="stat-num">2</span><span className="stat-lbl">Professional Roles</span></div>
-          <div className="stat-item"><span className="stat-num">1</span><span className="stat-lbl">Full Stack Course</span></div>
+        <div className="journey-layout">
+          <div className="journey-intro">
+            <p className="eyebrow">The journey so far</p>
+            <h3>Learning in public. Building with intent.</h3>
+            <p>Every step adds a different layer: technology, communication, real-world execution, and the discipline to keep improving.</p>
+          </div>
+
+          <div className="journey-list">
+            {journey.map((item, index) => (
+              <article className="journey-row" key={item.title} style={{ '--journey-color': item.color }}>
+                <div className="journey-number">{String(index + 1).padStart(2, '0')}</div>
+                <div className="journey-logo">
+                  <img src={item.logo} alt={item.alt} loading="lazy" decoding="async" />
+                </div>
+                <div className="journey-main">
+                  <span>{item.period}</span>
+                  <h4>{item.title}</h4>
+                  <strong>{item.place}</strong>
+                  <p>{item.detail}</p>
+                </div>
+                <span className="journey-arrow" aria-hidden="true">↗</span>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
 
       <style>{`
-        .about-cards {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
-          margin-bottom: 60px;
-        }
-        .about-card {
-          background: var(--glass-bg);
-          -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-          border: 1px solid var(--glass-border);
-          border-radius: 14px;
-          padding: 32px 28px;
-          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        .about-section { overflow: hidden; }
+        .about-manifesto {
           position: relative;
+          display: grid;
+          grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+          gap: clamp(40px, 8vw, 120px);
+          padding: clamp(36px, 6vw, 72px);
+          border: 1px solid var(--line);
+          background:
+            linear-gradient(135deg, rgba(89,231,255,0.07), transparent 35%),
+            var(--ink-soft);
           overflow: hidden;
         }
-        .about-card::before {
+        .about-manifesto::after {
           content: '';
           position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, var(--accent-1), transparent);
-          opacity: 0;
-          transition: opacity 0.4s;
-        }
-        .about-card:hover {
-          border-color: rgba(88, 166, 255, 0.3);
-          transform: translateY(-8px);
-          box-shadow: 0 12px 40px rgba(88, 166, 255, 0.1);
-        }
-        .about-card:hover::before { opacity: 1; }
-        .about-card:nth-child(2)::before { background: linear-gradient(90deg, transparent, var(--accent-2), transparent); }
-        .about-card:nth-child(3)::before { background: linear-gradient(90deg, transparent, var(--accent-3), transparent); }
-        .about-icon { margin-bottom: 14px; transition: transform 0.3s; }
-        .about-card:hover .about-icon { transform: scale(1.1); }
-        .about-card h3 {
-          font-family: 'Space Grotesk', sans-serif;
-          font-size: 1.1rem;
-          margin-bottom: 10px;
-          color: var(--text-primary);
-        }
-        .about-card p {
-          color: var(--text-secondary);
-          line-height: 1.7;
-          font-size: 0.9rem;
-        }
-        .timeline-section { margin-bottom: 60px; }
-        .timeline {
-          position: relative;
-          max-width: 650px;
-          margin: 0 auto;
-          padding-left: 28px;
-        }
-        .timeline::before {
-          content: '';
-          position: absolute;
-          left: 6px;
-          top: 0;
-          bottom: 0;
-          width: 2px;
-          background: linear-gradient(180deg, var(--accent-1), var(--accent-2), var(--accent-3), var(--accent-4));
-          border-radius: 1px;
-        }
-        .timeline-item { position: relative; margin-bottom: 24px; }
-        .tl-dot {
-          position: absolute;
-          left: -22px;
-          top: 4px;
-          width: 12px;
-          height: 12px;
+          width: 220px;
+          height: 220px;
+          right: -110px;
+          bottom: -110px;
+          border: 1px solid var(--line-strong);
           border-radius: 50%;
-          border: 2px solid var(--bg-primary);
-          z-index: 1;
-          box-shadow: 0 0 8px var(--accent-1);
-          transition: all 0.3s;
+          box-shadow: 0 0 0 30px rgba(199,255,61,0.025), 0 0 0 60px rgba(199,255,61,0.018);
         }
-        .timeline-item:hover .tl-dot { transform: scale(1.3); }
-        .tl-content {
-          background: var(--glass-bg);
-          -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-          border: 1px solid var(--glass-border);
-          border-radius: 12px;
-          padding: 18px 22px;
-          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        .manifesto-mark {
+          position: absolute;
+          top: -40px;
+          left: 12px;
+          color: rgba(199,255,61,0.1);
+          font-family: Georgia, serif;
+          font-size: 13rem;
+          line-height: 1;
         }
-        .tl-content:hover {
-          border-color: rgba(88, 166, 255, 0.3);
-          transform: translateX(8px);
-          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-        }
-        .tl-top {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          flex-wrap: wrap;
-          gap: 6px;
-          margin-bottom: 4px;
-        }
-        .tl-top h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; color: var(--text-primary); }
-        .tl-date {
-          font-size: 0.75rem;
-          color: var(--accent-1);
-          background: rgba(88, 166, 255, 0.1);
-          padding: 2px 10px;
-          border-radius: 4px;
-          white-space: nowrap;
-          -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-        }
-        .tl-company { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
-        .tl-desc { font-size: 0.8rem; color: var(--text-secondary); opacity: 0.8; }
-        .tl-logo {
-          height: 28px;
-          margin-top: 10px;
-          opacity: 0.7;
-          object-fit: contain;
-          transition: all 0.3s;
-          filter: grayscale(0.5);
-        }
-        .tl-content:hover .tl-logo {
-          opacity: 1;
-          filter: grayscale(0);
-          transform: scale(1.05);
-        }
-
-        .stats-grid {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 16px;
-        }
-        .stat-item {
-          background: var(--glass-bg);
-          -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-          border: 1px solid var(--glass-border);
-          border-radius: 12px;
-          padding: 28px 16px;
-          text-align: center;
-          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        .manifesto-lead {
           position: relative;
-          overflow: hidden;
+          z-index: 1;
+          max-width: 690px;
+          font-family: var(--display);
+          font-size: clamp(2rem, 4.2vw, 4.2rem);
+          font-weight: 650;
+          line-height: 1.05;
+          letter-spacing: -0.045em;
         }
-        .stat-item::before {
+        .manifesto-lead em { color: var(--acid); font-style: normal; }
+        .manifesto-body { display: grid; align-content: end; gap: 18px; color: var(--muted); font-size: 0.94rem; line-height: 1.85; }
+        .metric-ribbon {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          border-inline: 1px solid var(--line);
+          border-bottom: 1px solid var(--line);
+        }
+        .metric {
+          position: relative;
+          min-height: 170px;
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          border-right: 1px solid var(--line);
+          overflow: hidden;
+          transition: color 0.35s ease, background 0.35s ease;
+        }
+        .metric:last-child { border-right: 0; }
+        .metric > span { position: absolute; top: 18px; right: 18px; color: var(--muted); font-size: 0.6rem; }
+        .metric strong { font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: 0.9; letter-spacing: -0.06em; }
+        .metric small { margin-top: 10px; color: var(--muted); font-size: 0.63rem; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; }
+        .metric:hover { color: var(--ink); background: var(--acid); }
+        .metric:hover span, .metric:hover small { color: rgba(6,9,20,0.62); }
+
+        .journey-layout {
+          display: grid;
+          grid-template-columns: minmax(260px, 0.34fr) minmax(0, 0.66fr);
+          gap: clamp(50px, 8vw, 120px);
+          margin-top: clamp(90px, 12vw, 150px);
+          align-items: start;
+        }
+        .journey-intro { position: sticky; top: 130px; }
+        .journey-intro h3 {
+          margin: 26px 0 24px;
+          font-family: var(--display);
+          font-size: clamp(2rem, 3.8vw, 3.6rem);
+          line-height: 1.02;
+          letter-spacing: -0.045em;
+        }
+        .journey-intro > p:last-child { color: var(--muted); font-size: 0.9rem; line-height: 1.85; }
+        .journey-list { border-top: 1px solid var(--line); }
+        .journey-row {
+          position: relative;
+          display: grid;
+          grid-template-columns: 44px 66px minmax(0, 1fr) 24px;
+          gap: 20px;
+          align-items: start;
+          padding: 32px 6px;
+          border-bottom: 1px solid var(--line);
+          transition: padding 0.35s ease, background 0.35s ease;
+        }
+        .journey-row::before {
           content: '';
           position: absolute;
-          inset: 0;
-          background: radial-gradient(circle at center, rgba(88, 166, 255, 0.06), transparent 70%);
-          opacity: 0;
-          transition: opacity 0.4s;
+          inset: 0 auto 0 0;
+          width: 3px;
+          background: var(--journey-color);
+          transform: scaleY(0);
+          transform-origin: bottom;
+          transition: transform 0.35s ease;
         }
-        .stat-item:hover {
-          border-color: rgba(88, 166, 255, 0.3);
-          transform: translateY(-6px);
-          box-shadow: 0 8px 30px rgba(88, 166, 255, 0.1);
+        .journey-row:hover { padding-inline: 20px 12px; background: rgba(255,255,255,0.025); }
+        .journey-row:hover::before { transform: scaleY(1); transform-origin: top; }
+        .journey-number { padding-top: 5px; color: var(--journey-color); font-size: 0.58rem; font-weight: 800; }
+        .journey-logo {
+          width: 58px;
+          height: 58px;
+          padding: 8px;
+          display: grid;
+          place-items: center;
+          border: 1px solid var(--line);
+          background: var(--paper);
         }
-        .stat-item:hover::before { opacity: 1; }
-        .stat-num {
-          font-family: 'Space Grotesk', sans-serif;
-          font-size: 2rem;
-          font-weight: 700;
-          display: block;
-          background: var(--accent-gradient);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          position: relative;
-          z-index: 1;
-        }
-        .stat-lbl {
-          color: var(--text-secondary);
-          font-size: 0.85rem;
-          margin-top: 4px;
-          display: block;
-          position: relative;
-          z-index: 1;
-        }
+        .journey-logo img { width: 100%; max-height: 40px; object-fit: contain; }
+        .journey-main > span { color: var(--journey-color); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.12em; }
+        .journey-main h4 { margin: 9px 0 2px; font-family: var(--display); font-size: clamp(1.25rem, 2.3vw, 1.85rem); line-height: 1.1; }
+        .journey-main strong { color: var(--muted); font-size: 0.72rem; }
+        .journey-main p { max-width: 610px; margin-top: 14px; color: var(--muted); font-size: 0.82rem; line-height: 1.75; }
+        .journey-arrow { color: var(--journey-color); font-size: 1.2rem; transition: transform 0.3s ease; }
+        .journey-row:hover .journey-arrow { transform: translate(3px, -3px); }
 
-        @media (max-width: 968px) {
-          .about-cards { grid-template-columns: 1fr; }
-          .stats-grid { grid-template-columns: repeat(2, 1fr); }
-          .tl-top { flex-direction: column; }
-          .tl-content:hover { transform: none; }
+        @media (max-width: 900px) {
+          .about-manifesto { grid-template-columns: 1fr; }
+          .metric-ribbon { grid-template-columns: repeat(2, 1fr); }
+          .metric:nth-child(2) { border-right: 0; }
+          .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+          .journey-layout { grid-template-columns: 1fr; }
+          .journey-intro { position: static; max-width: 620px; }
+        }
+        @media (max-width: 560px) {
+          .about-manifesto { padding: 32px 24px; }
+          .metric { min-height: 138px; padding: 18px; }
+          .journey-row { grid-template-columns: 34px 50px minmax(0, 1fr); gap: 12px; }
+          .journey-logo { width: 46px; height: 46px; }
+          .journey-arrow { display: none; }
         }
       `}</style>
     </section>
