@@ -127,6 +127,14 @@ export default function App() {
             <a className="button" href="#about">
               My Story ↘
             </a>
+            <a
+              className="button"
+              href="https://github.com/shaikhaayan1812/Ayan-Protfolio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
           </div>
           <div className="section-jumps" aria-label="Jump to portfolio section">
             <a href="#about">01 — About</a>
@@ -297,6 +305,7 @@ export default function App() {
         </a>
         <div className="contact-links">
           <a href="#projects">View Projects</a>
+          <a href="https://github.com/shaikhaayan1812/Ayan-Protfolio" target="_blank" rel="noreferrer">GitHub ↗</a>
           <a href="mailto:ayan.shaikh@orahconsultancy.com?subject=Resume%20Request%20for%20Ayan%20Shaikh">Request Resume</a>
           <a href="#home">Back to Top ↑</a>
         </div>
