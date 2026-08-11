@@ -1,21 +1,52 @@
-# Ayan Portfolio
+# Ayan Shaikh — Developer Portfolio
 
-This repository contains Ayan Shaikh's React portfolio and the standalone projects it showcases.
+A bold, responsive developer portfolio for **Ayan Shaikh**, a BCA graduate and full-stack learner from Ahmedabad, India.
 
-## Portfolio app
+## Live portfolio
 
-The application source is in [`portfolio`](./portfolio). See [`portfolio/README.md`](./portfolio/README.md) for local development and release instructions.
+[ayan-shaikh-portfolio.ayan-shaikh-018.chatgpt.site](https://ayan-shaikh-portfolio.ayan-shaikh-018.chatgpt.site)
 
-## Published structure
+## What the portfolio includes
 
-- `index.html` redirects visitors to the production portfolio build.
-- `portfolio/dist` contains the verified production build.
-- `Task_1` through `Task_15`, `3D`, and `Game` contain the standalone project demos linked from the portfolio.
+- 24 verified builds from Ayan's GitHub, coursework and local project work
+- featured case studies for MovieVerse, New Lucky Embroidery and STRUTHERS
+- SQL and C mini-projects from TOPS Technologies
+- two Three.js model viewers and a Three.js flying game
+- 15 standalone HTML/CSS/JavaScript practice websites
+- experience, education, skills and direct contact information
 
-Before publishing changes, run the portfolio checks:
+The copy intentionally distinguishes independent skills, learning-level exposure and AI-assisted project work.
+
+## Technology
+
+- Next.js / React
+- TypeScript
+- CSS
+- Vinext / Vite
+- Cloudflare-compatible Worker output
+
+## Run locally
+
+Requirements: Node.js `>=22.13.0`.
 
 ```bash
-cd portfolio
-npm ci
-npm run check
+npm install
+npm run dev
 ```
+
+Open the local address printed by the development server.
+
+## Validate
+
+```bash
+npm run lint
+npm run build
+```
+
+## Contact
+
+- Email: [shaikhaayan1812@gmail.com](mailto:shaikhaayan1812@gmail.com)
+- LinkedIn: [shaikh-ayan-737302385](https://www.linkedin.com/in/shaikh-ayan-737302385)
+- GitHub: [shaikhaayan1812](https://github.com/shaikhaayan1812)
+
+© 2026 Ayan Shaikh

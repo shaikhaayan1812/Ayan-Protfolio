@@ -62,7 +62,7 @@
     <div class="ayan-noise" aria-hidden="true"></div>
 
     <aside class="ayan-showcase" aria-label="Portfolio project navigation">
-      <a class="ayan-showcase-home" href="${resolve('portfolio/dist/')}" target="_top" aria-label="Return to Ayan Shaikh portfolio">
+      <a class="ayan-showcase-home" href="https://ayan-shaikh-portfolio.ayan-shaikh-018.chatgpt.site" target="_top" aria-label="Return to Ayan Shaikh portfolio">
         <b>AS</b><span>Portfolio</span>
       </a>
       <button class="ayan-project-index" type="button" aria-expanded="false" aria-controls="ayan-project-drawer">
@@ -89,7 +89,7 @@
         <div class="ayan-drawer-grid">${projectLinks}</div>
         <div class="ayan-drawer-foot">
           <span>18 experiments / one growing portfolio</span>
-          <a href="${resolve('portfolio/dist/#/')}" target="_top" aria-label="Return to portfolio">Main portfolio ↗</a>
+          <a href="https://ayan-shaikh-portfolio.ayan-shaikh-018.chatgpt.site" target="_top" aria-label="Return to portfolio">Main portfolio ↗</a>
         </div>
       </div>
     </div>
