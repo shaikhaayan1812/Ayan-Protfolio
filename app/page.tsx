@@ -450,10 +450,10 @@ export default function Home() {
         </div>
         <div className="archive-heading">
           <div>
-            <p className="archive-overline">18 standalone GitHub projects</p>
+            <p className="archive-overline">18 standalone projects · live previews</p>
             <h3>Web &amp; 3D Project Archive</h3>
           </div>
-          <p>These builds document my hands-on progress across responsive layouts, forms, media, dashboards, Three.js and browser interaction.</p>
+          <p>Open any project directly in your browser, or inspect its source code on GitHub. These builds document my hands-on progress across responsive layouts, forms, media, dashboards, Three.js and browser interaction.</p>
         </div>
         <div className="archive-grid">
           {archiveProjects.map((project) => (
@@ -467,14 +467,26 @@ export default function Home() {
               <div className="tag-row">
                 {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
               </div>
-              <a
-                className="archive-link"
-                href={`https://github.com/shaikhaayan1812/Ayan-Protfolio/tree/master/${project.folder}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                View project source ↗
-              </a>
+              <div className="archive-actions">
+                <a
+                  className="archive-link archive-link-live"
+                  href={`https://shaikhaayan1812.github.io/Ayan-Protfolio/${project.folder}/`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open live preview of ${project.title}`}
+                >
+                  Live Preview ↗
+                </a>
+                <a
+                  className="archive-link"
+                  href={`https://github.com/shaikhaayan1812/Ayan-Protfolio/tree/master/${project.folder}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`View source code for ${project.title}`}
+                >
+                  View Code ↗
+                </a>
+              </div>
             </article>
           ))}
         </div>
