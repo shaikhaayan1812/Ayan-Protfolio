@@ -323,7 +323,11 @@ footer,
 .archive-card > p { flex: 1; margin: 0 0 24px; color: #81817e; font-size: .9rem; line-height: 1.7; }
 .archive-card .tag-row { margin-bottom: 25px; }
 .archive-card .tag-row span { padding: 7px 8px; font-size: 7px; }
+.archive-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .archive-link { align-self: flex-start; }
+.archive-link-live { color: #fff; border-color: var(--accent); background: var(--accent); }
+.archive-link-live:hover,
+.archive-link-live:focus-visible { color: var(--accent); border-color: var(--accent); background: transparent; }
 
 .education-list { border-top: 1px solid var(--line); }
 .education-list article { display: grid; grid-template-columns: 240px 1fr; gap: 40px; padding: 38px 0; border-bottom: 1px solid var(--line); }
