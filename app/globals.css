@@ -111,23 +111,13 @@ footer,
 .hero-art::before { width: 52%; aspect-ratio: 3 / 4; }
 .hero-art::after { width: 42%; aspect-ratio: 3 / 4; transform: rotate(6deg); }
 
-.portrait-monogram {
-  font-size: clamp(11rem, 26vw, 28rem);
-  line-height: .8;
-  font-weight: 800;
-  letter-spacing: -.12em;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255,255,255,.13);
-  transform: translateX(-.05em);
-}
-
-.image-slot-label {
+.portrait-image {
   position: absolute;
-  right: 3vw;
-  bottom: 9vw;
-  font-size: 8px;
-  color: #7d7d7d;
-  writing-mode: vertical-rl;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
 }
 
 .hero-shade {

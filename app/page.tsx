@@ -272,9 +272,12 @@ export default function Home() {
       </header>
 
       <section className="hero" id="home">
-        <div className="hero-art" aria-label="Reserved space for Ayan's portrait">
-          <div className="portrait-monogram">AS</div>
-          <div className="image-slot-label">01 / PORTRAIT IMAGE SLOT</div>
+        <div className="hero-art">
+          <img
+            className="portrait-image"
+            src="/ayan-shaikh-portrait.png"
+            alt="Portrait of Ayan Shaikh"
+          />
         </div>
         <div className="hero-shade" />
         <div className="hero-content">
